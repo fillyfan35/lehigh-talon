@@ -15,6 +15,10 @@ header {
   header .container {
     position: sticky;
     top: 0; }
+    header .container .row .menu .navbar .navbar-collapse {
+      background-color: #502d0e; }
+      header .container .row .menu .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+        color: #fff; }
     header .container .row .logo {
       display: flex;
       justify-content: center; }
@@ -27,7 +31,8 @@ header {
         transition: height 0.2s; }
     header .container .row .search {
       display: flex;
-      justify-content: flex-end; }
+      justify-content: flex-end;
+      height: 72px; }
   header.scrolling {
     height: 66px; }
     header.scrolling .container .row .logo img {
@@ -37,3 +42,5 @@ header {
       -ms-transition: height 0.2s;
       -o-transition: height 0.2s;
       transition: height 0.2s; }
+    header.scrolling .container .row .search {
+      height: 50px; }
