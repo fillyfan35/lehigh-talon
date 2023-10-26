@@ -21,6 +21,22 @@ header {
 		top: 0;
 
     .row {
+      .menu {
+        .navbar {
+          .navbar-collapse {
+            background-color: $lehigh_brown;
+            
+            .navbar-nav {
+              .nav-item {
+                .nav-link {
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+      
       .logo {
         display: flex;
         justify-content: center;
@@ -38,6 +54,7 @@ header {
       .search {
         display: flex;
         justify-content: flex-end;
+        height: 72px;
       }
     }
 	}
@@ -56,6 +73,10 @@ header {
             -o-transition: height 0.2s;
             transition: height 0.2s;
           }
+        }
+
+        .search {
+          height: 50px;
         }
       }
     }
