@@ -10,7 +10,7 @@ header {
 	height: 88px;
   z-index: 1000;
   border-bottom: 2px solid $lehigh_brown;
-  // -webkit-transition: height 0.2s;
+  -webkit-transition: height 0.2s;
   -moz-transition: height 0.2s;
   -ms-transition: height 0.2s;
   -o-transition: height 0.2s;
@@ -24,8 +24,9 @@ header {
       .menu {
         .navbar {
           .navbar-collapse {
-            background-color: $lehigh_brown;
-            
+            background-color: $darkest_grey;
+            opacity: .95;
+
             .navbar-nav {
               .nav-item {
                 .nav-link {
