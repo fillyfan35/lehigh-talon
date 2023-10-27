@@ -16,7 +16,8 @@ header {
     position: sticky;
     top: 0; }
     header .container .row .menu .navbar .navbar-collapse {
-      background-color: #502d0e; }
+      background-color: #222;
+      opacity: .95; }
       header .container .row .menu .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
         color: #fff; }
     header .container .row .logo {

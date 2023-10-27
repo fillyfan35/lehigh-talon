@@ -24,8 +24,9 @@ header {
       .menu {
         .navbar {
           .navbar-collapse {
-            background-color: $lehigh_brown;
-            
+            background-color: $darkest_grey;
+            opacity: .95;
+
             .navbar-nav {
               .nav-item {
                 .nav-link {
