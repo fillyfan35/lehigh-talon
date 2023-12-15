@@ -7,18 +7,36 @@ header {
   height: 88px;
   z-index: 1000;
   border-bottom: 2px solid #502d0e;
-  -webkit-transition: height 0.2s;
-  -moz-transition: height 0.2s;
-  -ms-transition: height 0.2s;
-  -o-transition: height 0.2s;
-  transition: height 0.2s; }
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -ms-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease; }
   header .container {
     position: sticky;
     top: 0; }
-    header .container .row .menu .navbar .navbar-collapse {
+    header .container .row .menu .main-nav .navbar-collapse {
+      position: fixed;
+      left: 0;
+      top: 88px;
+      width: 100vw;
+      height: 100vh;
+      padding: 5rem;
       background-color: #222;
-      opacity: .95; }
-      header .container .row .menu .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+      background-size: cover !important;
+      -webkit-transition: height 0.35s ease;
+      -moz-transition: height 0.35s ease;
+      -ms-transition: height 0.35s ease;
+      -o-transition: height 0.35s ease;
+      transition: height 0.35s ease; }
+      header .container .row .menu .main-nav .navbar-collapse.collapsing {
+        height: 0;
+        -webkit-transition: height 0.35s ease;
+        -moz-transition: height 0.35s ease;
+        -ms-transition: height 0.35s ease;
+        -o-transition: height 0.35s ease;
+        transition: height 0.35s ease; }
+      header .container .row .menu .main-nav .navbar-collapse .navbar-nav .nav-item .nav-link {
         color: #fff; }
     header .container .row .logo {
       display: flex;
@@ -36,6 +54,8 @@ header {
       height: 72px; }
   header.scrolling {
     height: 66px; }
+    header.scrolling .container .row .menu .main-nav .navbar-collapse {
+      top: 66px; }
     header.scrolling .container .row .logo img {
       height: 50px;
       -webkit-transition: height 0.2s;
