@@ -1,113 +1,13 @@
-@import 'variables';
+@import '_variables';
+@import '_header';
 
-body {
-	color: var(--black);
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-	margin: 0 auto;
-	position: sticky;
-	height: 88px;
-  z-index: 1000;
-  border-bottom: 2px solid $lehigh_brown;
-  -webkit-transition: height 0.35s ease;
-  -moz-transition: height 0.35s ease;
-  -ms-transition: height 0.35s ease;
-  -o-transition: height 0.35s ease;
-  transition: height 0.35s ease;
-	
-	.container {
-		position: sticky;
-		top: 0;
-
-    .row {
-      .menu {
-        .main-nav {
-          .navbar-collapse {
-            position: fixed;
-            left: 0;
-            top: 88px;
-            width: 100vw;
-            height: 100vh;
-            padding: $space_five;
-            background-color: $darkest_grey;
-            background-size: cover !important;
-            -webkit-transition: height 0.35s ease;
-            -moz-transition: height 0.35s ease;
-            -ms-transition: height 0.35s ease;
-            -o-transition: height 0.35s ease;
-            transition: height 0.35s ease;
-
-            &.collapsing {
-              height: 0;
-              -webkit-transition: height 0.35s ease;
-              -moz-transition: height 0.35s ease;
-              -ms-transition: height 0.35s ease;
-              -o-transition: height 0.35s ease;
-              transition: height 0.35s ease;
-            }
-
-            .navbar-nav {
-              .nav-item {
-                .nav-link {
-                  color: $white;
-                }
-              }
-            }
-          }
-        }
-      }
-      
-      .logo {
-        display: flex;
-        justify-content: center;
-        
-        img {
-          height: 72px;
-          -webkit-transition: height 0.2s;
-          -moz-transition: height 0.2s;
-          -ms-transition: height 0.2s;
-          -o-transition: height 0.2s;
-          transition: height 0.2s;
-        }
-      }
-
-      .search {
-        display: flex;
-        justify-content: flex-end;
-        height: 72px;
-      }
-    }
-	}
-
-  &.scrolling {
-    height: 66px;
-    
-    .container {
-      .row {
-        .menu {
-          .main-nav {
-            .navbar-collapse {
-              top: 66px;
-            }
-          }
-        }
-
-        .logo {
-          img {
-            height: 50px;
-            -webkit-transition: height 0.2s;
-            -moz-transition: height 0.2s;
-            -ms-transition: height 0.2s;
-            -o-transition: height 0.2s;
-            transition: height 0.2s;
-          }
-        }
-
-        .search {
-          height: 50px;
-        }
-      }
-    }
-  }
+body {
+	color: var(--black, $black);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
