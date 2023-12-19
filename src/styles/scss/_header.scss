@@ -40,6 +40,10 @@ header {
 		position: sticky;
 		top: 0;
 
+    @include media-breakpoint-down(md) {
+      margin: 0 !important;
+    }
+
     .row {
       .menu {
         .main_nav {

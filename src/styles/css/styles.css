@@ -1,10 +1,7 @@
-body {
-  color: var(--black); }
-
 header {
   margin: 0 auto;
   position: sticky;
-  height: 88px;
+  height: 134px;
   z-index: 1000;
   border-bottom: 2px solid #502d0e;
   -webkit-transition: height 0.35s ease;
@@ -12,16 +9,32 @@ header {
   -ms-transition: height 0.35s ease;
   -o-transition: height 0.35s ease;
   transition: height 0.35s ease; }
-  header .container {
+  header .department_bar {
+    background-color: #502d0e;
+    background-color: var(--lehigh_brown, #502d0e); }
+    header .department_bar a {
+      font-family: "Merriweather", Georgia, Palatino, serif;
+      font-weight: 300;
+      color: #fff;
+      color: var(--white, #fff);
+      font-size: 1.25rem;
+      width: unset;
+      text-decoration: none;
+      -webkit-transition: font-size 0.35s ease;
+      -moz-transition: font-size 0.35s ease;
+      -ms-transition: font-size 0.35s ease;
+      -o-transition: font-size 0.35s ease;
+      transition: font-size 0.35s ease; }
+      header .department_bar a:hover, header .department_bar a:focus {
+        text-decoration: underline; }
+  header .menu_bar {
     position: sticky;
     top: 0; }
-    header .container .row .menu .main-nav .navbar-collapse {
+    header .menu_bar .row .menu .main_nav .navbar-collapse {
       position: fixed;
       left: 0;
-      top: 88px;
+      top: 134px;
       width: 100vw;
-      height: 100vh;
-      padding: 5rem;
       background-color: #222;
       background-size: cover !important;
       -webkit-transition: height 0.35s ease;
@@ -29,39 +42,63 @@ header {
       -ms-transition: height 0.35s ease;
       -o-transition: height 0.35s ease;
       transition: height 0.35s ease; }
-      header .container .row .menu .main-nav .navbar-collapse.collapsing {
+      header .menu_bar .row .menu .main_nav .navbar-collapse.show {
+        height: 100vh;
+        -webkit-transition: height 0.35s ease;
+        -moz-transition: height 0.35s ease;
+        -ms-transition: height 0.35s ease;
+        -o-transition: height 0.35s ease;
+        transition: height 0.35s ease; }
+      header .menu_bar .row .menu .main_nav .navbar-collapse.collapsing {
         height: 0;
         -webkit-transition: height 0.35s ease;
         -moz-transition: height 0.35s ease;
         -ms-transition: height 0.35s ease;
         -o-transition: height 0.35s ease;
         transition: height 0.35s ease; }
-      header .container .row .menu .main-nav .navbar-collapse .navbar-nav .nav-item .nav-link {
+      header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .navbar-nav .nav-item .nav-link {
         color: #fff; }
-    header .container .row .logo {
+    header .menu_bar .row .logo {
       display: flex;
       justify-content: center; }
-      header .container .row .logo img {
+      header .menu_bar .row .logo img {
         height: 72px;
-        -webkit-transition: height 0.2s;
-        -moz-transition: height 0.2s;
-        -ms-transition: height 0.2s;
-        -o-transition: height 0.2s;
-        transition: height 0.2s; }
-    header .container .row .search {
+        -webkit-transition: height 0.35s ease;
+        -moz-transition: height 0.35s ease;
+        -ms-transition: height 0.35s ease;
+        -o-transition: height 0.35s ease;
+        transition: height 0.35s ease; }
+    header .menu_bar .row .search {
       display: flex;
-      justify-content: flex-end;
-      height: 72px; }
+      justify-content: flex-end; }
+      header .menu_bar .row .search .search_btn {
+        display: flex;
+        align-items: center;
+        font-size: 36px; }
   header.scrolling {
-    height: 66px; }
-    header.scrolling .container .row .menu .main-nav .navbar-collapse {
-      top: 66px; }
-    header.scrolling .container .row .logo img {
+    height: 112px; }
+    header.scrolling .department_bar a {
+      font-size: 1rem;
+      -webkit-transition: font-size 0.35s ease;
+      -moz-transition: font-size 0.35s ease;
+      -ms-transition: font-size 0.35s ease;
+      -o-transition: font-size 0.35s ease;
+      transition: font-size 0.35s ease; }
+    header.scrolling .menu_bar .row .menu .main_nav .navbar-collapse {
+      top: 112px; }
+    header.scrolling .menu_bar .row .logo img {
       height: 50px;
-      -webkit-transition: height 0.2s;
-      -moz-transition: height 0.2s;
-      -ms-transition: height 0.2s;
-      -o-transition: height 0.2s;
-      transition: height 0.2s; }
-    header.scrolling .container .row .search {
-      height: 50px; }
+      -webkit-transition: height 0.35s ease;
+      -moz-transition: height 0.35s ease;
+      -ms-transition: height 0.35s ease;
+      -o-transition: height 0.35s ease;
+      transition: height 0.35s ease; }
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  color: var(--black, #000);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px; }

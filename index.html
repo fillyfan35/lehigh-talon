@@ -9,13 +9,22 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=optional"
+    rel="stylesheet">
   <link rel="stylesheet" href="src/styles/css/styles.css">
 </head>
 
 <body>
 
-  <header class="sticky-top bg-white pt-2 pb-2">
-    <div class="container p-0">
+  <header class="sticky-top bg-white pb-2">
+    <div class="container-fluid department_bar px-0 py-2 m-0">
+      <div class="container">
+        <a href="#">Department Name Here</a>
+      </div>
+    </div>
+    <div class="container menu_bar py-2">
       <div class="row justify-content-between">
         <div class="menu navbar navbar-light col-3">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -23,34 +32,41 @@
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <nav class="navbar navbar-light main-nav">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent"
+          <nav class="navbar navbar-light main_nav">
+            <div class="collapse navbar-collapse p-3 p-md-5" id="navbarSupportedContent"
               style="background: linear-gradient(90deg, rgba(33, 18, 5, 1.0), rgba(33, 18, 5, 1.0), rgba(33, 18, 5, .97), rgba(33, 18, 5, 0.95)), url(src/img/stainedglass.jpg);">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Last Item</a>
-                </li>
-              </ul>
+              <div class="container navbar-wrapper p-0">
+                <form class="d-flex header-search" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit"><i
+                      class="fa-solid fa-magnifying-glass"></i><span class="sr-only">Search</span></button>
+                </form>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Last Item</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </nav>
         </div><!-- end menu -->
@@ -58,17 +74,25 @@
           <img src="src/img/lehigh_logo.png" alt="Lehigh University logo" />
         </div><!-- end logo -->
         <div class="search col-3 pb-2">
-          <form class="d-flex header-search" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i><span
-                class="sr-only">Search</span></button>
-          </form>
+          <div class="fa-solid fa-magnifying-glass btn search_btn navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation"><span class="sr-only">Search</span></div>
         </div><!-- end search -->
       </div>
     </div>
   </header>
 
   <div class="body">
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
     <p>Hi</p>
     <p>Hi</p>
     <p>Hi</p>
