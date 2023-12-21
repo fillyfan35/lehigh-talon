@@ -94,6 +94,18 @@ header {
             }
 
             .navbar-wrapper {
+              .header-search {
+                .search_box {
+                  font-size: 2rem;
+                  border: 3px solid #fff;
+
+                  &:focus,
+                  &:focus-within {
+                    border: 3px solid #fecb86;
+                  }
+                }
+              }
+
               .navbar-nav {
                 .nav-item {
                   .nav-link {

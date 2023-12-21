@@ -9359,6 +9359,11 @@ header {
         -ms-transition: height 0.35s ease;
         -o-transition: height 0.35s ease;
         transition: height 0.35s ease; }
+      header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .header-search .search_box {
+        font-size: 2rem;
+        border: 3px solid #fff; }
+        header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .header-search .search_box:focus, header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .header-search .search_box:focus-within {
+          border: 3px solid #fecb86; }
       header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .navbar-nav .nav-item .nav-link {
         color: #fff; }
     @media (max-width: 767.98px) {
