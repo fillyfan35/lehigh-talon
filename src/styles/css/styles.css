@@ -9288,20 +9288,24 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important; } }
 
+/**************
+* General Mixins (put specific ones in component files where applicable)
+
+* Mixin - Clearfix.
+* Adds clearfix based on http://bourbon.io/docs/#clearfix
+* use example =   @include clearfix
+**************/
 header {
   margin: 0 auto;
   position: sticky;
-  height: 122px;
   z-index: 1000;
   border-bottom: 2px solid #502d0e;
+  border-bottom: 2px solid var(--lehigh_brown, #502d0e);
   -webkit-transition: height 0.35s ease;
   -moz-transition: height 0.35s ease;
   -ms-transition: height 0.35s ease;
   -o-transition: height 0.35s ease;
   transition: height 0.35s ease; }
-  @media (min-width: 768px) {
-    header {
-      height: 134px; } }
   header .department_bar {
     background-color: #502d0e;
     background-color: var(--lehigh_brown, #502d0e); }
@@ -9315,7 +9319,7 @@ header {
       font-weight: 300;
       color: #fff;
       color: var(--white, #fff);
-      font-size: 1.25rem;
+      font-size: .875rem;
       width: unset;
       text-decoration: none;
       -webkit-transition: font-size 0.35s ease;
@@ -9323,6 +9327,9 @@ header {
       -ms-transition: font-size 0.35s ease;
       -o-transition: font-size 0.35s ease;
       transition: font-size 0.35s ease; }
+      @media (min-width: 576px) {
+        header .department_bar .container a {
+          font-size: 1.25rem; } }
       header .department_bar .container a:hover, header .department_bar .container a:focus {
         text-decoration: underline; }
   header .menu_bar {
@@ -9333,12 +9340,53 @@ header {
         max-width: 100vw;
         padding-right: 1rem !important;
         padding-left: 1rem !important; } }
+    header .menu_bar .row .menu .nav-toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 28px;
+      width: 32px;
+      color: unset;
+      border: unset;
+      border-color: unset;
+      padding: unset; }
+      @media (max-width: 767.98px) {
+        header .menu_bar .row .menu .nav-toggle {
+          height: 22px;
+          width: 28px; } }
+      header .menu_bar .row .menu .nav-toggle:focus {
+        box-shadow: unset; }
+      header .menu_bar .row .menu .nav-toggle .bar {
+        height: 3px;
+        width: 100%;
+        background-color: #000;
+        transition: all .35s ease-in-out; }
+    header .menu_bar .row .menu .x:nth-of-type(1) {
+      transition: all .35s ease-in-out;
+      transform: rotate(45deg);
+      transform-origin: top left;
+      width: 37px; }
+      @media (max-width: 767.98px) {
+        header .menu_bar .row .menu .x:nth-of-type(1) {
+          width: 28px; } }
+    header .menu_bar .row .menu .x:nth-of-type(2) {
+      transition: all .35s ease-in-out;
+      transform-origin: center;
+      width: 0; }
+    header .menu_bar .row .menu .x:nth-of-type(3) {
+      transition: all .35s ease-in-out;
+      transform: rotate(-45deg);
+      transform-origin: bottom left;
+      width: 37px; }
+      @media (max-width: 767.98px) {
+        header .menu_bar .row .menu .x:nth-of-type(3) {
+          width: 28px; } }
     header .menu_bar .row .menu .main_nav .navbar-collapse {
       position: fixed;
       left: 0;
-      top: 134px;
       width: 100vw;
       background-color: #222;
+      background-color: var(--darkest_grey, #222);
       background-size: cover !important;
       -webkit-transition: height 0.35s ease;
       -moz-transition: height 0.35s ease;
@@ -9359,8 +9407,34 @@ header {
         -ms-transition: height 0.35s ease;
         -o-transition: height 0.35s ease;
         transition: height 0.35s ease; }
-      header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .navbar-nav .nav-item .nav-link {
-        color: #fff; }
+      header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper {
+        position: relative; }
+        header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .header-search .search_box {
+          font-size: 2rem;
+          border: 3px solid #fff;
+          border: 3px solid var(--white, #fff); }
+          header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .header-search .search_box:focus, header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .header-search .search_box:focus-within {
+            border: 3px solid #fecb86; }
+        header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .navbar-nav .nav-item .nav-link {
+          color: #fff;
+          color: var(--white, #fff); }
+        header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .quick-links-nav {
+          position: fixed;
+          bottom: 0; }
+          header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .quick-links-nav .nav-item {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin: 0 1rem;
+            padding: 0.5rem;
+            background-color: red; }
+            header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .quick-links-nav .nav-item:first-of-type {
+              margin: 0 1rem 0 0; }
+            header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .quick-links-nav .nav-item:last-of-type {
+              margin: 0 0 0 1rem; }
+            header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .quick-links-nav .nav-item .nav-link {
+              color: #fff;
+              color: var(--white, #fff); }
     @media (max-width: 767.98px) {
       header .menu_bar .row .menu .navbar-toggler-icon {
         width: 1em !important;
@@ -9369,12 +9443,15 @@ header {
       display: flex;
       justify-content: center; }
       header .menu_bar .row .logo img {
-        height: 50px;
+        height: 35px;
         -webkit-transition: height 0.35s ease;
         -moz-transition: height 0.35s ease;
         -ms-transition: height 0.35s ease;
         -o-transition: height 0.35s ease;
         transition: height 0.35s ease; }
+        @media (min-width: 576px) {
+          header .menu_bar .row .logo img {
+            height: 50px; } }
         @media (min-width: 768px) {
           header .menu_bar .row .logo img {
             height: 72px; } }
@@ -9388,33 +9465,23 @@ header {
         @media (max-width: 767.98px) {
           header .menu_bar .row .search .search_btn {
             font-size: 24px; } }
-  header.scrolling {
-    height: 100px; }
+  header.scrolling .department_bar a {
+    font-size: 1rem;
+    -webkit-transition: font-size 0.35s ease;
+    -moz-transition: font-size 0.35s ease;
+    -ms-transition: font-size 0.35s ease;
+    -o-transition: font-size 0.35s ease;
+    transition: font-size 0.35s ease; }
+  header.scrolling .menu_bar .row .logo img {
+    height: 38px;
+    -webkit-transition: height 0.35s ease;
+    -moz-transition: height 0.35s ease;
+    -ms-transition: height 0.35s ease;
+    -o-transition: height 0.35s ease;
+    transition: height 0.35s ease; }
     @media (min-width: 768px) {
-      header.scrolling {
-        height: 112px; } }
-    header.scrolling .department_bar a {
-      font-size: 1rem;
-      -webkit-transition: font-size 0.35s ease;
-      -moz-transition: font-size 0.35s ease;
-      -ms-transition: font-size 0.35s ease;
-      -o-transition: font-size 0.35s ease;
-      transition: font-size 0.35s ease; }
-    header.scrolling .menu_bar .row .menu .main_nav .navbar-collapse {
-      top: 100px; }
-      @media (min-width: 768px) {
-        header.scrolling .menu_bar .row .menu .main_nav .navbar-collapse {
-          top: 112px; } }
-    header.scrolling .menu_bar .row .logo img {
-      height: 38px;
-      -webkit-transition: height 0.35s ease;
-      -moz-transition: height 0.35s ease;
-      -ms-transition: height 0.35s ease;
-      -o-transition: height 0.35s ease;
-      transition: height 0.35s ease; }
-      @media (min-width: 768px) {
-        header.scrolling .menu_bar .row .logo img {
-          height: 50px; } }
+      header.scrolling .menu_bar .row .logo img {
+        height: 50px; } }
 
 * {
   -webkit-font-smoothing: antialiased;

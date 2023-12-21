@@ -21,51 +21,69 @@
   <header class="sticky-top bg-white pb-2">
     <div class="container-fluid department_bar px-0 py-2 m-0">
       <div class="container">
-        <a href="#">Department Name Here</a>
+        <a href="#">Department Name Here Department Name Here</a>
       </div>
     </div>
     <div class="container menu_bar py-2">
       <div class="row justify-content-between">
-        <div class="menu navbar navbar-light col-3 py-0">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        <div class="menu navbar navbar-light col-3 ps-2">
+          <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
           </button>
           <nav class="navbar navbar-light main_nav">
             <div class="collapse navbar-collapse p-3 p-md-5" id="navbarSupportedContent"
               style="background: linear-gradient(90deg, rgba(33, 18, 5, 1.0), rgba(33, 18, 5, 1.0), rgba(33, 18, 5, .97), rgba(33, 18, 5, 0.95)), url(src/img/stainedglass.jpg);">
               <div class="container navbar-wrapper p-0">
                 <form class="d-flex header-search" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <input class="form-control me-2 search_box" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit"><i
                       class="fa-solid fa-magnifying-glass"></i><span class="sr-only">Search</span></button>
                 </form>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li>
-                        <hr class="dropdown-divider">
-                      </li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Last Item</a>
-                  </li>
-                </ul>
+                <div class="nav-wrapper me-auto mb-2 mb-lg-0 mt-3 mt-md-5">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Last Item</a>
+                    </li>
+                  </ul>
+                  <ul class="quick-links-nav d-flex flex-row flex-wrap">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Quick Link 1</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Quick Link Long Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Quick Link 3</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Quick Link 4</a>
+                    </li>
+                  </ul>
+                </div><!-- end nav_wrapper -->
               </div>
             </div>
           </nav>
