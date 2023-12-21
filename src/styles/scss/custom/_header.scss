@@ -3,7 +3,7 @@
 header {
 	margin: 0 auto;
 	position: sticky;
-	height: 134px;
+	height: 122px;
   z-index: 1000;
   border-bottom: 2px solid $lehigh_brown;
   -webkit-transition: height 0.35s ease;
@@ -11,28 +11,40 @@ header {
   -ms-transition: height 0.35s ease;
   -o-transition: height 0.35s ease;
   transition: height 0.35s ease;
+  
+  @include media-breakpoint-up(md) {
+    height: 134px;
+  }
 
   .department_bar {
     background-color: $lehigh_brown;
     background-color: var(--lehigh_brown, $lehigh_brown);
 
-    a {
-      font-family: "Merriweather", Georgia, Palatino, serif;
-      font-weight: 300;
-      color: $white;
-      color: var(--white, $white);
-      font-size: 1.25rem;
-      width: unset;
-      text-decoration: none;
-      -webkit-transition: font-size 0.35s ease;
-      -moz-transition: font-size 0.35s ease;
-      -ms-transition: font-size 0.35s ease;
-      -o-transition: font-size 0.35s ease;
-      transition: font-size 0.35s ease;
+    .container {
+      @include media-breakpoint-down(md) {
+        max-width: 100vw;
+        padding-right: $spacer !important;
+        padding-left: $spacer !important;
+      }
 
-      &:hover,
-      &:focus {
-        text-decoration: underline;
+      a {
+        font-family: "Merriweather", Georgia, Palatino, serif;
+        font-weight: 300;
+        color: $white;
+        color: var(--white, $white);
+        font-size: 1.25rem;
+        width: unset;
+        text-decoration: none;
+        -webkit-transition: font-size 0.35s ease;
+        -moz-transition: font-size 0.35s ease;
+        -ms-transition: font-size 0.35s ease;
+        -o-transition: font-size 0.35s ease;
+        transition: font-size 0.35s ease;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -40,9 +52,11 @@ header {
 	.menu_bar {
 		position: sticky;
 		top: 0;
-
+    
     @include media-breakpoint-down(md) {
-      margin: 0 !important;
+      max-width: 100vw;
+      padding-right: $spacer !important;
+      padding-left: $spacer !important;
     }
 
     .row {
@@ -90,6 +104,13 @@ header {
             }
           }
         }
+
+        .navbar-toggler-icon {
+          @include media-breakpoint-down(md) {
+            width: 1em !important;
+            height: 1em !important;
+          }
+        }
       }
       
       .logo {
@@ -97,12 +118,16 @@ header {
         justify-content: center;
         
         img {
-          height: 72px;
+          height: 50px;
           -webkit-transition: height 0.35s ease;
           -moz-transition: height 0.35s ease;
           -ms-transition: height 0.35s ease;
           -o-transition: height 0.35s ease;
           transition: height 0.35s ease;
+
+          @include media-breakpoint-up(md) {
+            height: 72px;
+          }
         }
       }
 
@@ -114,13 +139,21 @@ header {
           display: flex;
           align-items: center;
           font-size: 36px;
+          
+          @include media-breakpoint-down(md) {
+            font-size: 24px;
+          }
         }
       }
     }
 	}
 
   &.scrolling {
-    height: 112px;
+    height: 100px;
+    
+    @include media-breakpoint-up(md) {
+      height: 112px;
+    }
 
     .department_bar {
       a {
@@ -138,19 +171,27 @@ header {
         .menu {
           .main_nav {
             .navbar-collapse {
-              top: 112px;
+              top: 100px;
+              
+              @include media-breakpoint-up(md) {
+                top: 112px;
+              }
             }
           }
         }
 
         .logo {
           img {
-            height: 50px;
+            height: 38px;
             -webkit-transition: height 0.35s ease;
             -moz-transition: height 0.35s ease;
             -ms-transition: height 0.35s ease;
             -o-transition: height 0.35s ease;
             transition: height 0.35s ease;
+            
+            @include media-breakpoint-up(md) {
+              height: 50px;
+            }
           }
         }
       }
