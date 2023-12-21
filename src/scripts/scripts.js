@@ -25,14 +25,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function hamburgerX() {
     // this function set changes the hamburger to and 'X' and vice-versa
-    let navToggle = document.querySelector('.nav-toggle')
-    let bars = document.querySelectorAll('.bar')
+    let navToggle = document.querySelector('.nav-toggle');
+    let searchIcon = document.querySelector('.search .search_btn');
+    let bars = document.querySelectorAll('.bar');
 
     function toggleHamburger(e) {
       bars.forEach(bar => bar.classList.toggle('x'))
     }
 
-    navToggle.addEventListener('click', toggleHamburger)
+    navToggle.addEventListener('click', toggleHamburger);
+    searchIcon.addEventListener('click', toggleHamburger);
   }
 
   function headerHeight() {

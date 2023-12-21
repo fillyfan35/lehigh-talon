@@ -25,6 +25,12 @@
   list-style: none;
 }
 
+@mixin reset-list-style {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 @mixin transition {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;

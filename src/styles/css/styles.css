@@ -9288,6 +9288,13 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important; } }
 
+/**************
+* General Mixins (put specific ones in component files where applicable)
+
+* Mixin - Clearfix.
+* Adds clearfix based on http://bourbon.io/docs/#clearfix
+* use example =   @include clearfix
+**************/
 header {
   margin: 0 auto;
   position: sticky;
@@ -9353,9 +9360,9 @@ header {
         height: 3px;
         width: 100%;
         background-color: #000;
-        transition: all 100ms ease-in-out; }
+        transition: all .35s ease-in-out; }
     header .menu_bar .row .menu .x:nth-of-type(1) {
-      transition: all 100ms ease-in-out;
+      transition: all .35s ease-in-out;
       transform: rotate(45deg);
       transform-origin: top left;
       width: 37px; }
@@ -9363,11 +9370,11 @@ header {
         header .menu_bar .row .menu .x:nth-of-type(1) {
           width: 28px; } }
     header .menu_bar .row .menu .x:nth-of-type(2) {
-      transition: all 100ms ease-in-out;
+      transition: all .35s ease-in-out;
       transform-origin: center;
       width: 0; }
     header .menu_bar .row .menu .x:nth-of-type(3) {
-      transition: all 100ms ease-in-out;
+      transition: all .35s ease-in-out;
       transform: rotate(-45deg);
       transform-origin: bottom left;
       width: 37px; }
@@ -9400,15 +9407,34 @@ header {
         -ms-transition: height 0.35s ease;
         -o-transition: height 0.35s ease;
         transition: height 0.35s ease; }
-      header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .header-search .search_box {
-        font-size: 2rem;
-        border: 3px solid #fff;
-        border: 3px solid var(--white, #fff); }
-        header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .header-search .search_box:focus, header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .header-search .search_box:focus-within {
-          border: 3px solid #fecb86; }
-      header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .navbar-nav .nav-item .nav-link {
-        color: #fff;
-        color: var(--white, #fff); }
+      header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper {
+        position: relative; }
+        header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .header-search .search_box {
+          font-size: 2rem;
+          border: 3px solid #fff;
+          border: 3px solid var(--white, #fff); }
+          header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .header-search .search_box:focus, header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .header-search .search_box:focus-within {
+            border: 3px solid #fecb86; }
+        header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .navbar-nav .nav-item .nav-link {
+          color: #fff;
+          color: var(--white, #fff); }
+        header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .quick-links-nav {
+          position: fixed;
+          bottom: 0; }
+          header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .quick-links-nav .nav-item {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin: 0 1rem;
+            padding: 0.5rem;
+            background-color: red; }
+            header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .quick-links-nav .nav-item:first-of-type {
+              margin: 0 1rem 0 0; }
+            header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .quick-links-nav .nav-item:last-of-type {
+              margin: 0 0 0 1rem; }
+            header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .nav-wrapper .quick-links-nav .nav-item .nav-link {
+              color: #fff;
+              color: var(--white, #fff); }
     @media (max-width: 767.98px) {
       header .menu_bar .row .menu .navbar-toggler-icon {
         width: 1em !important;
