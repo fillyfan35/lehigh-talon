@@ -5,6 +5,25 @@ $lehigh_brown: #502d0e;
 $light_grey: #f9fafb;
 $white: #fff;
 
+// breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// reset max widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1280px,
+  xxl: 1600px
+) !default;
+
 // Spacing
 $spacer: 1rem;
 $spacer_and_half: 1.5rem;
