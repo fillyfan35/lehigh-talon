@@ -7,11 +7,7 @@ header {
   z-index: 1000;
   border-bottom: 2px solid $lehigh_brown;
   border-bottom: 2px solid var(--lehigh_brown, $lehigh_brown);
-  -webkit-transition: height 0.35s ease;
-  -moz-transition: height 0.35s ease;
-  -ms-transition: height 0.35s ease;
-  -o-transition: height 0.35s ease;
-  transition: height 0.35s ease;
+  @include transition;
 
   .department_bar {
     background-color: $lehigh_brown;
@@ -32,11 +28,7 @@ header {
         font-size: .875rem;
         width: unset;
         text-decoration: none;
-        -webkit-transition: font-size 0.35s ease;
-        -moz-transition: font-size 0.35s ease;
-        -ms-transition: font-size 0.35s ease;
-        -o-transition: font-size 0.35s ease;
-        transition: font-size 0.35s ease;
+        @include transition;
         
         @include media-breakpoint-up(sm) {
           font-size: 1.25rem;
@@ -128,46 +120,30 @@ header {
             background-color: $darkest_grey;
             background-color: var(--darkest_grey, $darkest_grey);
             background-size: cover !important;
-            -webkit-transition: height 0.35s ease;
-            -moz-transition: height 0.35s ease;
-            -ms-transition: height 0.35s ease;
-            -o-transition: height 0.35s ease;
-            transition: height 0.35s ease;
-
-            &.show {
-              height: 100vh;
-              -webkit-transition: height 0.35s ease;
-              -moz-transition: height 0.35s ease;
-              -ms-transition: height 0.35s ease;
-              -o-transition: height 0.35s ease;
-              transition: height 0.35s ease;
-            }
+            @include transition;
 
             &.collapsing {
               height: 0;
-              -webkit-transition: height 0.35s ease;
-              -moz-transition: height 0.35s ease;
-              -ms-transition: height 0.35s ease;
-              -o-transition: height 0.35s ease;
-              transition: height 0.35s ease;
+              @include transition;
             }
 
             .navbar-wrapper {
-              .nav-wrapper {
-                position: relative;
+              .header-search {
+                .search_box {
+                  font-size: 2rem;
+                  border: 3px solid $white;
+                  border: 3px solid var(--white, $white);
 
-                .header-search {
-                  .search_box {
-                    font-size: 2rem;
-                    border: 3px solid $white;
-                    border: 3px solid var(--white, $white);
-
-                    &:focus,
-                    &:focus-within {
-                      border: 3px solid #fecb86;
-                    }
+                  &:focus,
+                  &:focus-within {
+                    border: 3px solid #fecb86;
                   }
                 }
+              }
+
+              .nav-wrapper {
+                position: relative;
+                height: 100vh;
 
                 .navbar-nav {
                   .nav-item {
@@ -181,25 +157,45 @@ header {
                 .quick-links-nav {
                   position: fixed;
                   bottom: 0;
+                  visibility: hidden;
 
                   .nav-item {
                     @include reset-list-style;
                     margin: 0 $spacer;
-                    padding: $space_half;
-                    background-color: red;
-
+                    
                     &:first-of-type {
                       margin: 0 $spacer 0 0;
                     }
-
+                    
                     &:last-of-type {
                       margin: 0 0 0 $spacer;
                     }
-
+                    
                     .nav-link {
-                      color: $white;
-                      color: var(--white, $white);
+                      font-size: 1.25rem;
+                      color: $black;
+                      color: var(--black, $black);
+                      background-color: $beige;
+                      background-color: var(--beige, $beige);
+                      padding: $spacer;
+
+                      &:hover,
+                      &:focus {
+                        background-color: $white;
+                      }
                     }
+                  }
+                }
+              }
+            }
+
+            &.show {
+              @include transition;
+              
+              .navbar-wrapper {
+                .nav-wrapper {
+                  .quick-links-nav {
+                    visibility: visible;
                   }
                 }
               }
@@ -221,11 +217,7 @@ header {
         
         img {
           height: 35px;
-          -webkit-transition: height 0.35s ease;
-          -moz-transition: height 0.35s ease;
-          -ms-transition: height 0.35s ease;
-          -o-transition: height 0.35s ease;
-          transition: height 0.35s ease;
+          @include transition;
           
           @include media-breakpoint-up(sm) {
             height: 50px;
@@ -258,11 +250,7 @@ header {
     .department_bar {
       a {
         font-size: 1rem;
-        -webkit-transition: font-size 0.35s ease;
-        -moz-transition: font-size 0.35s ease;
-        -ms-transition: font-size 0.35s ease;
-        -o-transition: font-size 0.35s ease;
-        transition: font-size 0.35s ease;
+        @include transition;
       }
     }
     
@@ -271,11 +259,7 @@ header {
         .logo {
           img {
             height: 38px;
-            -webkit-transition: height 0.35s ease;
-            -moz-transition: height 0.35s ease;
-            -ms-transition: height 0.35s ease;
-            -o-transition: height 0.35s ease;
-            transition: height 0.35s ease;
+            @include transition;
             
             @include media-breakpoint-up(md) {
               height: 50px;
