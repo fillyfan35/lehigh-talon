@@ -9395,11 +9395,11 @@ header {
       transition: all 0.35s ease; }
       header .menu_bar .row .menu .main_nav .navbar-collapse.collapsing {
         height: 0;
-        -webkit-transition: all 0.35s ease;
-        -moz-transition: all 0.35s ease;
-        -ms-transition: all 0.35s ease;
-        -o-transition: all 0.35s ease;
-        transition: all 0.35s ease; }
+        -webkit-transition: all 0.20s ease;
+        -moz-transition: all 0.20s ease;
+        -ms-transition: all 0.20s ease;
+        -o-transition: all 0.20s ease;
+        transition: all 0.20s ease; }
       header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .header-search .search_box {
         font-size: 2rem;
         border: 3px solid #fff;
@@ -9498,3 +9498,5 @@ body {
   color: var(--black, #000);
   font-family: 'Open Sans', sans-serif;
   font-size: 16px; }
+  body.no-scroll {
+    overflow: hidden; }

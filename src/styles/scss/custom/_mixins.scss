@@ -39,6 +39,14 @@
   transition: all 0.35s ease;
 }
 
+@mixin fast_transition {
+  -webkit-transition: all 0.20s ease;
+  -moz-transition: all 0.20s ease;
+  -ms-transition: all 0.20s ease;
+  -o-transition: all 0.20s ease;
+  transition: all 0.20s ease;
+}
+
 @mixin font-awesome-base {
   font-family: $font-awesome;
   font-weight: 600;
