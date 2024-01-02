@@ -124,7 +124,7 @@ header {
 
             &.collapsing {
               height: 0;
-              @include transition;
+              @include fast_transition;
             }
 
             .navbar-wrapper {

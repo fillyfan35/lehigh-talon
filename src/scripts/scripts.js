@@ -16,11 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let searchIcon = document.querySelector('.search .search_btn');
     let searchBox = document.querySelector('.main_nav .search_box');
 
-    if (searchIcon) {
-      searchIcon.addEventListener('click', function () {
-        searchBox.focus();
-      });
-    }
+    searchIcon.addEventListener('click', function () {
+      searchBox.focus();
+      document.body.classList.toggle('no-scroll');
+    });
   }
 
   function hamburgerX() {
@@ -42,14 +41,29 @@ document.addEventListener("DOMContentLoaded", function () {
     let header_height = document.querySelector('header').offsetHeight;
     let navbarCollapse = document.querySelector('.navbar-collapse');
 
-    navbarCollapse.style.top = header_height + 'px';
+    navbarCollapse.style.top = header_height - 27 + 'px';
   }
 
-  window.addEventListener('resize', headerHeight);
+  // window.addEventListener('resize', headerHeight);
+  // window.addEventListener('scroll', headerHeight);
+
+  function stopScroll() {
+    let navbarToggler = document.querySelector('.navbar-toggler');
+
+    navbarToggler.addEventListener('click', function () {
+      document.body.classList.toggle('no-scroll');
+
+      let header = document.querySelector('header');
+
+      // change the height to smaller height when clicked
+      header.classList.toggle('scrolling');
+    });
+  }
 
   // Initial check in case the page is already scrolled when the script is executed
   handleScroll();
   focusSearch();
   hamburgerX();
   headerHeight();
+  stopScroll();
 });
