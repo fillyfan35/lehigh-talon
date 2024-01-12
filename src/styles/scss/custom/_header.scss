@@ -141,9 +141,9 @@ header {
                 }
               }
 
-              .nav-wrapper {
-                position: relative;
-                height: 100vh;
+              .main-menu {
+                height: calc(100% - 62px); //62px is the height of the buttons
+                overflow: scroll;
 
                 .navbar-nav {
                   .nav-item {
@@ -153,36 +153,40 @@ header {
                     }
                   }
                 }
+              }
 
-                .quick-links-nav {
-                  position: fixed;
-                  bottom: 0;
-                  visibility: hidden;
+              .quick-links-nav {
+                position: fixed;
+                bottom: 0;
+                visibility: hidden;
 
-                  .nav-item {
-                    @include reset-list-style;
-                    margin: 0 $spacer;
+                .nav-item {
+                  @include reset-list-style;
+                  margin: 0 $spacer;
+                  
+                  &:first-of-type {
+                    margin: 0 $spacer 0 0;
+                  }
+                  
+                  &:last-of-type {
+                    margin: 0 0 0 $spacer;
+                  }
+                  
+                  .nav-link {
+                    font-size: 1rem;
+                    color: $black;
+                    color: var(--black, $black);
+                    background-color: $beige;
+                    background-color: var(--beige, $beige);
+                    padding: $space_quarter;
                     
-                    &:first-of-type {
-                      margin: 0 $spacer 0 0;
+                    @include media-breakpoint-up(md) {
+                      padding: $space_half;
                     }
-                    
-                    &:last-of-type {
-                      margin: 0 0 0 $spacer;
-                    }
-                    
-                    .nav-link {
-                      font-size: 1.25rem;
-                      color: $black;
-                      color: var(--black, $black);
-                      background-color: $beige;
-                      background-color: var(--beige, $beige);
-                      padding: $spacer;
 
-                      &:hover,
-                      &:focus {
-                        background-color: $white;
-                      }
+                    &:hover,
+                    &:focus {
+                      background-color: $white;
                     }
                   }
                 }
@@ -190,13 +194,16 @@ header {
             }
 
             &.show {
+              height: 100vh;
               @include transition;
               
               .navbar-wrapper {
-                .nav-wrapper {
-                  .quick-links-nav {
-                    visibility: visible;
-                  }
+                height: calc(100% - 125px);
+                overflow: hidden;
+                background-color: red;
+
+                .quick-links-nav {
+                  visibility: visible;
                 }
               }
             }
@@ -246,7 +253,8 @@ header {
     }
 	}
 
-  &.scrolling {
+  &.scrolling,
+  .no-scroll & {
     .department_bar {
       a {
         font-size: 1rem;
@@ -258,8 +266,12 @@ header {
       .row {
         .logo {
           img {
-            height: 38px;
+            height: 35px;
             @include transition;
+
+            @include media-breakpoint-up(sm) {
+              height: 38px;
+            }
             
             @include media-breakpoint-up(md) {
               height: 50px;

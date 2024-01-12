@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function handleScroll() {
     // this function adds the class 'scrolling' to the header when the page scrolls
     let header = document.querySelector('header');
-    if (window.scrollY >= 25) {
+    if (window.scrollY >= 40) {
       header.classList.add('scrolling');
     } else {
       header.classList.remove('scrolling');
@@ -41,11 +41,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let header_height = document.querySelector('header').offsetHeight;
     let navbarCollapse = document.querySelector('.navbar-collapse');
 
-    navbarCollapse.style.top = header_height - 27 + 'px';
-  }
+    let screenWidth = window.screen.width;
 
-  // window.addEventListener('resize', headerHeight);
-  // window.addEventListener('scroll', headerHeight);
+    if (screenWidth < 575) {
+      navbarCollapse.style.top = header_height + 'px';
+    } else {
+      navbarCollapse.style.top = header_height - 28 + 'px';
+    }
+  }
 
   function stopScroll() {
     let navbarToggler = document.querySelector('.navbar-toggler');
@@ -56,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let header = document.querySelector('header');
 
       // change the height to smaller height when clicked
-      header.classList.toggle('scrolling');
+      // header.classList.toggle('scrolling');
     });
   }
 
