@@ -142,14 +142,43 @@ header {
               }
 
               .main-menu {
+                align-content: flex-start;
                 height: calc(100% - 62px); //62px is the height of the buttons
                 overflow: scroll;
 
                 .navbar-nav {
+                  margin: 0 $spacer_and_half $space_three 0;
+
+                  @include media-breakpoint-up(md) {
+                    max-width: 25%;
+                  }
+
+                  &:last-of-type {
+                    margin: 0 0 $space_three 0;
+                  }
+
                   .nav-item {
                     .nav-link {
                       color: $white;
                       color: var(--white, $white);
+                      padding: 0;
+                      margin: 0 0 .875rem 0;
+
+                      &:hover, 
+                      &:focus {
+                        text-decoration: underline;
+                      }
+
+                      &.title {
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                      }
+                    }
+
+                    &:last-of-type {
+                      .nav-link {
+                        margin: 0;
+                      }
                     }
                   }
                 }
@@ -192,15 +221,18 @@ header {
                 }
               }
             }
-
+            
             &.show {
               height: 100vh;
               @include transition;
               
               .navbar-wrapper {
-                height: calc(100% - 125px);
+                height: calc(100% - 175px);
                 overflow: hidden;
-                background-color: red;
+
+                @include media-breakpoint-up(md) {
+                  height: calc(100% - 125px);
+                }
 
                 .quick-links-nav {
                   visibility: visible;
