@@ -165,12 +165,13 @@ header {
 
 
                   .nav-item {
+                    margin: 0 0 .875rem 0;
+
                     .nav-link {
                       &.title {
                         color: $white;
                         color: var(--white, $white);
                         padding: 0;
-                        margin: 0 0 .875rem 0;
                         font-size: 1.5rem;
                         font-weight: bold;
                       }
@@ -207,11 +208,50 @@ header {
                     }
 
                     .dropdown-menu {
-                      // display: unset;
-                      // visibility: hidden;
-                      // height: 0;
                       background-color: unset;
-                      @include transition;
+
+                      .dropdown-item {
+                        color: $white;
+                        color: var(--white, $white);
+
+                        &:hover,
+                        &:focus {
+                          background-color: unset;
+                          text-decoration: underline;
+                        }
+
+                        &.dropdown-toggle {
+                          &::after {
+                            display: none;
+                          }
+  
+                          i {
+                            display: none;
+
+                            @include media-breakpoint-up(md) {
+                              margin: 0 0 0 $space_half;
+                              transform: rotate(0deg);
+                              @include transition;
+                            }
+                          }
+  
+                          @include media-breakpoint-up(md) {
+                            &.show {
+                              i {
+                                transform: rotate(180deg);
+                                @include transition;
+                              }
+                            }
+                          }
+                        }
+                      }
+
+                      .dropdown {
+                        .submenu {
+                          margin: 0 0 0 $space_half;
+                          display: block;
+                        }
+                      }
                     }
                   }
                 }
