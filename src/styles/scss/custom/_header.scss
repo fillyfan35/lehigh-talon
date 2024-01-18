@@ -136,7 +136,7 @@ header {
 
                   &:focus,
                   &:focus-within {
-                    border: 3px solid #fecb86;
+                    border: 3px solid $peach;
                   }
                 }
               }
@@ -147,31 +147,56 @@ header {
                 overflow: scroll;
 
                 .navbar-nav {
-                  margin: 0 $spacer_and_half $space_three 0;
+                  margin: 0 0 $spacer_and_half 0;
+                  width: 100%;
 
-                  @include media-breakpoint-up(md) {
-                    max-width: 25%;
+                  @include media-breakpoint-up(sm) {
+                    margin: 0 $spacer $space_three 0;
+                    width: 45%;
+
+                    &:last-of-type {
+                      margin: 0 0 $space_three 0;
+                    }
                   }
 
-                  &:last-of-type {
-                    margin: 0 0 $space_three 0;
+                  @include media-breakpoint-up(lg) {
+                    width: 25%;
                   }
+
 
                   .nav-item {
                     .nav-link {
-                      color: $white;
-                      color: var(--white, $white);
-                      padding: 0;
-                      margin: 0 0 .875rem 0;
+                      &.title {
+                        color: $white;
+                        color: var(--white, $white);
+                        padding: 0;
+                        margin: 0 0 .875rem 0;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                      }
 
                       &:hover, 
                       &:focus {
                         text-decoration: underline;
                       }
 
-                      &.title {
-                        font-size: 1.5rem;
-                        font-weight: bold;
+                      &.dropdown-toggle {
+                        &::after {
+                          display: none;
+                        }
+
+                        i {
+                          margin: 0 0 0 $space_half;
+                          transform: rotate(0deg);
+                          @include transition;
+                        }
+
+                        &.show {
+                          i {
+                            transform: rotate(180deg);
+                            @include transition;
+                          }
+                        }
                       }
                     }
 
@@ -179,6 +204,14 @@ header {
                       .nav-link {
                         margin: 0;
                       }
+                    }
+
+                    .dropdown-menu {
+                      // display: unset;
+                      // visibility: hidden;
+                      // height: 0;
+                      background-color: unset;
+                      @include transition;
                     }
                   }
                 }
@@ -299,15 +332,8 @@ header {
         .logo {
           img {
             height: 35px;
+            height: 50px;
             @include transition;
-
-            @include media-breakpoint-up(sm) {
-              height: 38px;
-            }
-            
-            @include media-breakpoint-up(md) {
-              height: 50px;
-            }
           }
         }
       }

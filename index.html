@@ -34,7 +34,7 @@
             <span class="bar"></span>
             <span class="bar"></span>
           </button>
-          <nav class="navbar navbar-light main_nav">
+          <div class="navbar navbar-light main_nav">
             <div class="collapse navbar-collapse p-3 p-md-5" id="navbarSupportedContent"
               style="background: linear-gradient(90deg, rgba(33, 18, 5, 1.0), rgba(33, 18, 5, 1.0), rgba(33, 18, 5, .97), rgba(33, 18, 5, 0.95)), url(src/img/stainedglass.jpg);">
               <div class="container navbar-wrapper p-0">
@@ -43,64 +43,87 @@
                   <button class="btn btn-outline-success" type="submit"><i
                       class="fa-solid fa-magnifying-glass"></i><span class="sr-only">Search</span></button>
                 </form>
-                <div class="main-menu d-flex flex-column flex-md-row flex-wrap me-auto mb-2 mb-lg-0 mt-3 mt-md-5">
+                <nav class="main-menu d-flex flex-column flex-md-row flex-wrap me-auto mb-2 mb-lg-0 mt-3 mt-md-5">
                   <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link title" href="#">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Creative Inquiry Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Faculty Advisory Committee</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Partners</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Map to Lehigh</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Giving to Creative Inquiry</a></li>
-                  </ul>
-                  <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link title" href="#">Creative Inquiry</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Creative Inquiry 101</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Why Creative Inquiry?</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Fruits of Creative Inquiry</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Student Outcomes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Why Inquiry to Impact?</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Lehigh Expo</a></li>
-                  </ul>
-                  <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link title" href="#">Lehigh 360</a></li>
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">AccelerateX</a>
+                    <li class="nav-item dropdown"><a class="nav-link title dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">About Us <i
+                          class="fa-solid fa-chevron-down"></i></a>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Design Labs Maker Bootcamp</a></li>
-                        <li><a class="dropdown-item" href="#">Sustainable Happiness Institute</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Creative Inquiry Team</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Faculty Advisory Committee</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Partners</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Map to Lehigh</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Giving to Creative Inquiry</a></li>
                       </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Lehigh 360: High-Impact Programs Database</a></li>
-                  </ul>
-                  <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link title" href="#">CI Programs</a>
+                    <li class="nav-item dropdown"><a class="nav-link title dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Creative Inquiry <i
+                          class="fa-solid fa-chevron-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item"><a class="dropdown-item" href="#">Creative Inquiry 101</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Why Creative Inquiry?</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Fruits of Creative Inquiry</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Student Outcomes</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Why Inquiry to Impact?</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Lehigh Expo</a></li>
+                      </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Mountaintop Summer Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Data for Impact Summer Institute</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Inquiry to Impact Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Creative Inquiry Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Creative Scholarship Institute</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">LearnX | MakeX | SprintX</a></li>
-                  </ul>
-                  <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link title" href="#">Impact Fellowships</a>
+
+                    <li class="nav-item dropdown"><a class="nav-link title dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Lehigh 360 <i
+                          class="fa-solid fa-chevron-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">AccelerateX <i
+                              class="fa-solid fa-chevron-down"></i></a>
+                          <ul class="dropdown-menu submenu">
+                            <li><a class="dropdown-item" href="#">Design Labs Maker Bootcamp</a></li>
+                            <li><a class="dropdown-item" href="#">Sustainable Happiness Institute</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Lehigh 360: High-Impact Programs Database</a>
+                        </li>
+                      </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Global Social Impact Fellowship</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Lehigh Valley Social Impact Fellowship</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Campus Sustainable Impact Fellowship</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Silicon Valley Social Impact Fellowship</a></li>
-                  </ul>
-                  <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link title" href="#">Outreach</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Impact-Focused Education Unconference</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">TESSI Institute</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Projects for Peace</a></li>
-                  </ul>
-                  <ul class="navbar-nav">
+
+                    <li class="nav-item dropdown"><a class="nav-link title dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">CI Programs <i
+                          class="fa-solid fa-chevron-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item"><a class="dropdown-item" href="#">Mountaintop Summer Experience</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Data for Impact Summer Institute</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Inquiry to Impact Projects</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Creative Inquiry Projects</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Creative Scholarship Institute</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">LearnX | MakeX | SprintX</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link title dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Impact Fellowships <i
+                          class="fa-solid fa-chevron-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item"><a class="dropdown-item" href="#">Global Social Impact Fellowship</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Lehigh Valley Social Impact
+                            Fellowship</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Campus Sustainable Impact Fellowship</a>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Silicon Valley Social Impact
+                            Fellowship</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link title dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Outreach <i
+                          class="fa-solid fa-chevron-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item"><a class="dropdown-item" href="#">Impact-Focused Education Unconference</a>
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">TESSI Institute</a></li>
+                        <li class="nav-item"><a class="dropdown-item" href="#">Projects for Peace</a></li>
+                      </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link title" href="#">News</a></li>
                   </ul>
-                </div><!-- end main-menu -->
+                </nav><!-- end main-menu -->
                 <div class="quick-nav">
                   <ul class="navbar-nav quick-links-nav flex-row flex-wrap">
                     <li class="nav-item"><a class="nav-link btn" href="#">Quick Link 1</a></li>
@@ -111,7 +134,7 @@
                 </div><!-- end quick-nav -->
               </div>
             </div>
-          </nav>
+          </div>
         </div><!-- end menu -->
         <div class="logo col-6">
           <img src="src/img/lehigh_logo.png" alt="Lehigh University logo" />
