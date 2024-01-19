@@ -64,6 +64,7 @@ header {
           border: unset;
           border-color: unset;
           padding: unset;
+          @include transition;
 
           @include media-breakpoint-down(md) {
             height: 22px;
@@ -83,6 +84,8 @@ header {
         }
 
         .x {
+          @include transition;
+
           &:nth-of-type(1) {
             transition: all .35s ease-in-out;
             transform: rotate(45deg);
@@ -157,27 +160,31 @@ header {
               }
 
               .main-menu {
-                align-content: flex-start;
                 overflow: scroll;
                 
                 @include media-breakpoint-up(md) {
-                  height: calc(100% - 62px); //62px is the height of the buttons
+                  // height: calc(100% - 62px); //62px is the height of the buttons
                 }
 
                 .navbar-nav {
-                  width: 100%;
-
-                  @include media-breakpoint-up(md) {
-                    margin: 0 $spacer $space_three 0;
-                  }
-
-                  @include media-breakpoint-up(lg) {
-                    width: 25%;
-                  }
-
+                  align-content: flex-start;
 
                   .nav-item {
                     margin: 0 0 .875rem 0;
+                    width: 100%;
+  
+                    @include media-breakpoint-up(md) {
+                      width: 45%;
+                      margin: 0 $spacer $space_three 0;
+                    }
+                    
+                    @include media-breakpoint-up(lg) {
+                      width: 31%;
+                    }
+
+                    @include media-breakpoint-up(xl) {
+                      width: 23%;
+                    }
 
                     .nav-link {
                       &.title {
@@ -202,6 +209,10 @@ header {
                           margin: 0 0 0 $space_half;
                           transform: rotate(0deg);
                           @include transition;
+
+                          @include media-breakpoint-up(md) {
+                            display: none;
+                          }
                         }
 
                         &.show {
@@ -222,9 +233,14 @@ header {
                     .dropdown-menu {
                       background-color: unset;
 
+                      @include media-breakpoint-up(md) {
+                        display: block;
+                      }
+
                       .dropdown-item {
                         color: $white;
                         color: var(--white, $white);
+                        white-space: inherit;
 
                         &:hover,
                         &:focus {
@@ -394,6 +410,32 @@ header {
           img {
             height: 35px;
             @include transition;
+
+            // @include media-breakpoint-up(md) {
+            //   height: 50px;
+            // }
+          }
+        }
+
+        .search {
+          .search_btn {
+            font-size: 28px;
+          }
+        }
+
+        .menu {
+          .nav-toggle {
+            height: 24px;
+            width: 28px;
+            @include transition;
+          }
+
+          .x {
+            &:nth-of-type(1),
+            &:nth-of-type(3) {
+              width: 32px;
+              @include transition;
+            }
           }
         }
       }
