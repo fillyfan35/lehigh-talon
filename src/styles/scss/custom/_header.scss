@@ -139,6 +139,21 @@ header {
                     border: 3px solid $peach;
                   }
                 }
+
+                .btn {
+                  background-color: $success;
+                  background-color: var(--success, $success);
+                  color: $white;
+                  color: var(--white, $white);
+
+                  &:focus,
+                  &:hover {
+                    background-color: $white;
+                    background-color: var(--white, $white);
+                    color: $success;
+                    color: var(--success, $success);
+                  }
+                }
               }
 
               .main-menu {
@@ -339,7 +354,7 @@ header {
           @include transition;
 
           @include media-breakpoint-up(md) {
-            height: 72px;
+            height: 50px;
           }
         }
       }
