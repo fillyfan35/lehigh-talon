@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (screenWidth < 575) {
       navbarCollapse.style.top = header_height + 'px';
     } else {
-      navbarCollapse.style.top = header_height - 28 + 'px';
+      navbarCollapse.style.top = header_height - 16 + 'px';
     }
   }
 
@@ -55,11 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     navbarToggler.addEventListener('click', function () {
       document.body.classList.toggle('no-scroll');
-
-      let header = document.querySelector('header');
-
-      // change the height to smaller height when clicked
-      // header.classList.toggle('scrolling');
     });
   }
 

@@ -2,6 +2,17 @@
 @import 'custom/header';
 // @import "../../../node_modules/bootstrap/scss/bootstrap";
 
+:root {
+  --beige: #fff6da;
+  --black: #000;
+  --darkest_grey: #222;
+  --lehigh_brown: #502d0e;
+  --light_grey: #f9fafb;
+  --peach: #fecb86;
+  --success: #198754;
+  --white: #fff;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

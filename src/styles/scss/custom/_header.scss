@@ -64,6 +64,7 @@ header {
           border: unset;
           border-color: unset;
           padding: unset;
+          @include transition;
 
           @include media-breakpoint-down(md) {
             height: 22px;
@@ -83,6 +84,8 @@ header {
         }
 
         .x {
+          @include transition;
+
           &:nth-of-type(1) {
             transition: all .35s ease-in-out;
             transform: rotate(45deg);
@@ -130,42 +133,62 @@ header {
             .navbar-wrapper {
               .header-search {
                 .search_box {
-                  font-size: 2rem;
+                  font-size: 1rem;
                   border: 3px solid $white;
                   border: 3px solid var(--white, $white);
+                  
+                  @include media-breakpoint-up(md) {
+                    font-size: 2rem;
+                  }
 
                   &:focus,
                   &:focus-within {
                     border: 3px solid $peach;
                   }
                 }
+
+                .btn {
+                  background-color: $success;
+                  background-color: var(--success, $success);
+                  color: $white;
+                  color: var(--white, $white);
+
+                  &:focus,
+                  &:hover {
+                    background-color: $white;
+                    background-color: var(--white, $white);
+                    color: $success;
+                    color: var(--success, $success);
+                  }
+                }
               }
 
               .main-menu {
-                align-content: flex-start;
-                height: calc(100% - 62px); //62px is the height of the buttons
                 overflow: scroll;
+                
+                @include media-breakpoint-up(md) {
+                  // height: calc(100% - 62px); //62px is the height of the buttons
+                }
 
                 .navbar-nav {
-                  margin: 0 0 $spacer_and_half 0;
-                  width: 100%;
-
-                  @include media-breakpoint-up(sm) {
-                    margin: 0 $spacer $space_three 0;
-                    width: 45%;
-
-                    &:last-of-type {
-                      margin: 0 0 $space_three 0;
-                    }
-                  }
-
-                  @include media-breakpoint-up(lg) {
-                    width: 25%;
-                  }
-
+                  align-content: flex-start;
 
                   .nav-item {
                     margin: 0 0 .875rem 0;
+                    width: 100%;
+  
+                    @include media-breakpoint-up(md) {
+                      width: 45%;
+                      margin: 0 $spacer $space_three 0;
+                    }
+                    
+                    @include media-breakpoint-up(lg) {
+                      width: 31%;
+                    }
+
+                    @include media-breakpoint-up(xl) {
+                      width: 23%;
+                    }
 
                     .nav-link {
                       &.title {
@@ -190,6 +213,10 @@ header {
                           margin: 0 0 0 $space_half;
                           transform: rotate(0deg);
                           @include transition;
+
+                          @include media-breakpoint-up(md) {
+                            display: none;
+                          }
                         }
 
                         &.show {
@@ -210,9 +237,14 @@ header {
                     .dropdown-menu {
                       background-color: unset;
 
+                      @include media-breakpoint-up(md) {
+                        display: block;
+                      }
+
                       .dropdown-item {
                         color: $white;
                         color: var(--white, $white);
+                        white-space: inherit;
 
                         &:hover,
                         &:focus {
@@ -248,7 +280,7 @@ header {
 
                       .dropdown {
                         .submenu {
-                          margin: 0 0 0 $space_half;
+                          margin: 0 0 0 $space_three_quarter;
                           display: block;
                         }
                       }
@@ -258,20 +290,34 @@ header {
               }
 
               .quick-links-nav {
-                position: fixed;
                 bottom: 0;
                 visibility: hidden;
+                position: relative;
 
+                @include media-breakpoint-up(md) {
+                  position: fixed;
+                }
+                
                 .nav-item {
                   @include reset-list-style;
-                  margin: 0 $spacer;
+                  margin: 0 0 $space_half 0;
+                  
+                  @include media-breakpoint-up(md) {
+                    margin: 0 $spacer;
+                  }
                   
                   &:first-of-type {
-                    margin: 0 $spacer 0 0;
+                    @include media-breakpoint-up(md) {
+                      margin: 0 $spacer 0 0;
+                    }  
                   }
                   
                   &:last-of-type {
-                    margin: 0 0 0 $spacer;
+                    margin: 0;
+
+                    @include media-breakpoint-up(md) {
+                      margin: 0 0 0 $spacer;
+                    }
                   }
                   
                   .nav-link {
@@ -300,12 +346,8 @@ header {
               @include transition;
               
               .navbar-wrapper {
-                height: calc(100% - 175px);
-                overflow: hidden;
-
-                @include media-breakpoint-up(md) {
-                  height: calc(100% - 125px);
-                }
+                height: calc(100% - 125px);
+                overflow: scroll;
 
                 .quick-links-nav {
                   visibility: visible;
@@ -330,13 +372,9 @@ header {
         img {
           height: 35px;
           @include transition;
-          
-          @include media-breakpoint-up(sm) {
-            height: 50px;
-          }
 
           @include media-breakpoint-up(md) {
-            height: 72px;
+            height: 50px;
           }
         }
       }
@@ -362,7 +400,10 @@ header {
   .no-scroll & {
     .department_bar {
       a {
-        font-size: 1rem;
+        @include media-breakpoint-up(md) {  
+          font-size: 1rem;
+        }
+
         @include transition;
       }
     }
@@ -372,8 +413,33 @@ header {
         .logo {
           img {
             height: 35px;
-            height: 50px;
             @include transition;
+
+            // @include media-breakpoint-up(md) {
+            //   height: 50px;
+            // }
+          }
+        }
+
+        .search {
+          .search_btn {
+            font-size: 28px;
+          }
+        }
+
+        .menu {
+          .nav-toggle {
+            height: 24px;
+            width: 28px;
+            @include transition;
+          }
+
+          .x {
+            &:nth-of-type(1),
+            &:nth-of-type(3) {
+              width: 32px;
+              @include transition;
+            }
           }
         }
       }
