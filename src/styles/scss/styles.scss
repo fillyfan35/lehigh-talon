@@ -1,6 +1,8 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import 'custom/mixins';
 @import 'custom/variables';
 @import 'custom/header';
-// @import "../../../node_modules/bootstrap/scss/bootstrap";
+@import 'custom/footer';
 
 :root {
   --beige: #fff6da;

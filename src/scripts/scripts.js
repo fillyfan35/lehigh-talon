@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let navbarToggler = document.querySelector('.navbar-toggler');
 
     navbarToggler.addEventListener('click', function () {
-      document.body.classList.toggle('no-scroll');
+      document.body.classList.toggle('no_scroll');
     });
   }
 
