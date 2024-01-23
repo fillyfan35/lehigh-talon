@@ -1,6 +1,54 @@
-@import "mixins";
-
 footer {
   background-color: $lehigh_brown;
   background-color: var(--lehigh_brown, $lehigh_brown);
+  color: $white;
+  color: var(--white, $white);
+  font-size: .875rem;
+  
+  .row > * {
+    width: unset;
+  }
+  
+  a {
+    color: $white;
+    color: var(--white, $white);
+    
+    &:focus,
+    &:hover {
+      color: $white;
+      color: var(--white, $white);
+      text-decoration: none;
+    }
+
+    .extlink {
+      margin: 0 0 0 $space_quarter;
+      font-size: .75rem;
+    }
+  }
+
+  .logo {
+    width: 300px;
+  }
+  
+  .common_links {
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      @include reset-list-nav;
+
+      li {
+        margin: 0 $space_half;
+
+        &:first-of-type {
+          margin: 0 $space_half 0 0;
+        }
+
+        &:last-of-type {
+          margin: 0 0 0 $space_half;
+        }
+      }
+    }
+  }
 }

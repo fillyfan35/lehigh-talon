@@ -1,5 +1,3 @@
-@import "mixins";
-
 header {
 	margin: 0 auto;
 	position: sticky;
@@ -15,8 +13,6 @@ header {
     .container {      
       @include media-breakpoint-down(md) {
         max-width: 100vw;
-        padding-right: $spacer !important;
-        padding-left: $spacer !important;
       }
 
       a {
@@ -33,8 +29,8 @@ header {
           font-size: 1.25rem;
         }
 
-        &:hover,
-        &:focus {
+        &:focus,
+        &:hover {
           text-decoration: underline;
         }
       }
@@ -162,12 +158,8 @@ header {
                 }
               }
 
-              .main-menu {
+              .main_menu {
                 overflow: scroll;
-                
-                @include media-breakpoint-up(md) {
-                  // height: calc(100% - 62px); //62px is the height of the buttons
-                }
 
                 .navbar-nav {
                   align-content: flex-start;
@@ -198,8 +190,8 @@ header {
                         font-weight: bold;
                       }
 
-                      &:hover, 
-                      &:focus {
+                      &:focus,
+                      &:hover {
                         text-decoration: underline;
                       }
 
@@ -245,8 +237,8 @@ header {
                         color: var(--white, $white);
                         white-space: inherit;
 
-                        &:hover,
-                        &:focus {
+                        &:focus,
+                        &:hover {
                           background-color: unset;
                           text-decoration: underline;
                         }
@@ -331,8 +323,8 @@ header {
                       padding: $space_half;
                     }
 
-                    &:hover,
-                    &:focus {
+                    &:focus,
+                    &:hover {
                       background-color: $white;
                     }
                   }
@@ -396,7 +388,7 @@ header {
 	}
 
   &.scrolling,
-  .no-scroll & {
+  .no_scroll & {
     .department_bar {
       a {
         @include media-breakpoint-up(md) {  
