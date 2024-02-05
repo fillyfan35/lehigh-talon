@@ -9606,7 +9606,11 @@ header {
     transition: all 0.35s ease; }
   header.scrolling .menu_bar .row .search .search_btn,
   .no_scroll header .menu_bar .row .search .search_btn {
-    font-size: 28px; }
+    font-size: 24px; }
+    @media (min-width: 768px) {
+      header.scrolling .menu_bar .row .search .search_btn,
+      .no_scroll header .menu_bar .row .search .search_btn {
+        font-size: 28px; } }
   header.scrolling .menu_bar .row .menu .nav-toggle,
   .no_scroll header .menu_bar .row .menu .nav-toggle {
     height: 24px;
@@ -9646,6 +9650,8 @@ footer {
       font-size: .75rem; }
   footer .logo {
     width: 300px; }
+  footer .copyright {
+    text-align: center; }
   footer .common_links ul {
     display: flex;
     flex-direction: row;
