@@ -405,16 +405,16 @@ header {
           img {
             height: 35px;
             @include transition;
-
-            // @include media-breakpoint-up(md) {
-            //   height: 50px;
-            // }
           }
         }
 
         .search {
           .search_btn {
-            font-size: 28px;
+            font-size: 24px;
+            
+            @include media-breakpoint-up(md) { 
+              font-size: 28px;
+            }
           }
         }
 
