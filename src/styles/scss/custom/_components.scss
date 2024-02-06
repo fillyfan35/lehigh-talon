@@ -1,5 +1,19 @@
 // hero
 .hero {
-  aspect-ratio: 989 / 406;
+  position: relative;
+  aspect-ratio: 3 / 1;
   background-size: cover;
+
+  .hero_content {
+    position: absolute;
+    bottom: 9px;
+    background-color: $gold;
+    background-color: var(--gold, $gold);
+    padding: $space_three_quarter;
+
+    @include media-breakpoint-up(md) {
+      left: 10%;
+      bottom: -1.2%;
+    }
+  }
 }

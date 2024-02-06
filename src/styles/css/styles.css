@@ -9649,8 +9649,19 @@ header {
     transition: all 0.35s ease; }
 
 .hero {
-  aspect-ratio: 989 / 406;
+  position: relative;
+  aspect-ratio: 3 / 1;
   background-size: cover; }
+  .hero .hero_content {
+    position: absolute;
+    bottom: 9px;
+    background-color: #ffe41e;
+    background-color: var(--gold, #ffe41e);
+    padding: 0.75rem; }
+    @media (min-width: 768px) {
+      .hero .hero_content {
+        left: 10%;
+        bottom: -1.2%; } }
 
 footer {
   background-color: #502d0e;
@@ -9697,7 +9708,8 @@ footer {
   --light_grey: #f9fafb;
   --peach: #fecb86;
   --success: #198754;
-  --white: #fff; }
+  --white: #fff;
+  --gold: #ffe41e; }
 
 * {
   -webkit-font-smoothing: antialiased;
