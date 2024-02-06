@@ -29,3 +29,26 @@ body {
     overflow: hidden;
   }
 }
+
+.skip-link {
+  background-color: $white;
+  background-color: var(--white, $white);
+  color: $lehigh_brown;
+  color: var(--lehigh_brown, $lehigh_brown);
+  padding: $space_half;
+  left: 50%;
+  position: absolute;
+  transform: translateY(-100%);
+  @include transition;
+  z-index: 1021;
+  
+  &:hover {
+    color: $lehigh_brown;
+    color: var(--lehigh_brown, $lehigh_brown);
+    text-decoration: none;
+  }
+
+  &:focus {
+    transform: translateY(0%);
+  }
+}

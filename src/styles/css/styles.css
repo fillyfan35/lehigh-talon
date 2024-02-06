@@ -9297,8 +9297,6 @@ textarea.form-control-lg {
 **************/
 header {
   margin: 0 auto;
-  position: sticky;
-  z-index: 1000;
   border-bottom: 2px solid #502d0e;
   border-bottom: 2px solid var(--lehigh_brown, #502d0e);
   -webkit-transition: all 0.35s ease;
@@ -9707,3 +9705,25 @@ body {
   font-size: 16px; }
   body.no-scroll {
     overflow: hidden; }
+
+.skip-link {
+  background-color: #fff;
+  background-color: var(--white, #fff);
+  color: #502d0e;
+  color: var(--lehigh_brown, #502d0e);
+  padding: 0.5rem;
+  left: 50%;
+  position: absolute;
+  transform: translateY(-100%);
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  -ms-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  z-index: 1021; }
+  .skip-link:hover {
+    color: #502d0e;
+    color: var(--lehigh_brown, #502d0e);
+    text-decoration: none; }
+  .skip-link:focus {
+    transform: translateY(0%); }
