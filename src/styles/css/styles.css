@@ -9581,10 +9581,20 @@ header {
       header .menu_bar .row .search .search_btn {
         display: flex;
         align-items: center;
-        font-size: 36px; }
+        font-size: 36px;
+        -webkit-transition: all 0.35s ease;
+        -moz-transition: all 0.35s ease;
+        -ms-transition: all 0.35s ease;
+        -o-transition: all 0.35s ease;
+        transition: all 0.35s ease; }
         @media (max-width: 767.98px) {
           header .menu_bar .row .search .search_btn {
-            font-size: 24px; } }
+            font-size: 24px;
+            -webkit-transition: all 0.35s ease;
+            -moz-transition: all 0.35s ease;
+            -ms-transition: all 0.35s ease;
+            -o-transition: all 0.35s ease;
+            transition: all 0.35s ease; } }
   header.scrolling .department_bar a,
   .no_scroll header .department_bar a {
     -webkit-transition: all 0.35s ease;
@@ -9606,11 +9616,21 @@ header {
     transition: all 0.35s ease; }
   header.scrolling .menu_bar .row .search .search_btn,
   .no_scroll header .menu_bar .row .search .search_btn {
-    font-size: 24px; }
+    font-size: 24px;
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease; }
     @media (min-width: 768px) {
       header.scrolling .menu_bar .row .search .search_btn,
       .no_scroll header .menu_bar .row .search .search_btn {
-        font-size: 28px; } }
+        font-size: 28px;
+        -webkit-transition: all 0.35s ease;
+        -moz-transition: all 0.35s ease;
+        -ms-transition: all 0.35s ease;
+        -o-transition: all 0.35s ease;
+        transition: all 0.35s ease; } }
   header.scrolling .menu_bar .row .menu .nav-toggle,
   .no_scroll header .menu_bar .row .menu .nav-toggle {
     height: 24px;

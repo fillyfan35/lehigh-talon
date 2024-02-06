@@ -378,9 +378,11 @@ header {
           display: flex;
           align-items: center;
           font-size: 36px;
+          @include transition;
           
           @include media-breakpoint-down(md) {
             font-size: 24px;
+            @include transition;
           }
         }
       }
@@ -411,9 +413,11 @@ header {
         .search {
           .search_btn {
             font-size: 24px;
+            @include transition;
             
             @include media-breakpoint-up(md) { 
               font-size: 28px;
+              @include transition;
             }
           }
         }
