@@ -1,7 +1,5 @@
 header {
 	margin: 0 auto;
-	position: sticky;
-  z-index: 1000;
   border-bottom: 2px solid $lehigh_brown;
   border-bottom: 2px solid var(--lehigh_brown, $lehigh_brown);
   @include transition;
@@ -378,9 +376,11 @@ header {
           display: flex;
           align-items: center;
           font-size: 36px;
+          @include transition;
           
           @include media-breakpoint-down(md) {
             font-size: 24px;
+            @include transition;
           }
         }
       }
@@ -411,9 +411,11 @@ header {
         .search {
           .search_btn {
             font-size: 24px;
+            @include transition;
             
             @include media-breakpoint-up(md) { 
               font-size: 28px;
+              @include transition;
             }
           }
         }

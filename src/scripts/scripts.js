@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let searchBox = document.querySelector('.main_nav .search_box');
 
     searchIcon.addEventListener('click', function () {
+      // document.body.classList.toggle('no-scroll');
       searchBox.focus();
-      document.body.classList.toggle('no-scroll');
     });
   }
 
@@ -52,8 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function stopScroll() {
     let navbarToggler = document.querySelector('.navbar-toggler');
+    let searchbarToggler = document.querySelector('.search_btn');
 
     navbarToggler.addEventListener('click', function () {
+      document.body.classList.toggle('no_scroll');
+    });
+
+    searchbarToggler.addEventListener('click', function () {
       document.body.classList.toggle('no_scroll');
     });
   }
