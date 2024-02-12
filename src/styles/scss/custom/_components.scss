@@ -4,16 +4,31 @@
   aspect-ratio: 3 / 1;
   background-size: cover;
 
+  @include media-breakpoint-down(md) {
+    background-image: unset !important;
+  }
+
+  .mobile_hero_img {
+    display: block;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
   .hero_content {
-    position: absolute;
-    bottom: 9px;
     background-color: $gold;
     background-color: var(--gold, $gold);
     padding: $space_three_quarter;
-
+    
     @include media-breakpoint-up(md) {
+      position: absolute;
       left: 10%;
-      bottom: -1.2%;
+      bottom: 1.2%;
     }
   }
 }
