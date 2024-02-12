@@ -9652,16 +9652,25 @@ header {
   position: relative;
   aspect-ratio: 3 / 1;
   background-size: cover; }
+  @media (max-width: 767.98px) {
+    .hero {
+      background-image: unset !important; } }
+  .hero .mobile_hero_img {
+    display: block; }
+    @media (min-width: 768px) {
+      .hero .mobile_hero_img {
+        display: none; } }
+    .hero .mobile_hero_img img {
+      max-width: 100%; }
   .hero .hero_content {
-    position: absolute;
-    bottom: 9px;
     background-color: #ffe41e;
     background-color: var(--gold, #ffe41e);
     padding: 0.75rem; }
     @media (min-width: 768px) {
       .hero .hero_content {
+        position: absolute;
         left: 10%;
-        bottom: -1.2%; } }
+        bottom: 1.2%; } }
 
 footer {
   background-color: #502d0e;
