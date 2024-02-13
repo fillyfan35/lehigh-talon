@@ -19,6 +19,13 @@
 <body>
   <a href="#main-content" class="focusable skip-link">Skip to main content</a>
   <header class="sticky-top bg-white">
+    <!--UCPA Emergency Banner Alert-->
+    <div id="emergencyalert">
+      <div id="AppArmorAlertID_2"></div>
+      <script type="text/javascript" src="//lehigh.apparmor.com/Notifications/Feeds/Javascript/?AlertID=2"
+        async></script>
+    </div>
+    <!--End UCPA Emergency Banner Alert-->
     <div class="container-fluid department_bar px-0 py-2 m-0">
       <div class="container px-3 px-md-0">
         <a href="#">Department Name Here Department Name Here</a>
@@ -157,8 +164,29 @@
         The hero caption can go here and nowhere else.
       </div>
     </section>
-    <p>Hi</p>
-    <p>Hi</p>
+    <h2>News Cards</h2>
+    <section class="card-grid d-flex flex-row flex-wrap align-items-start">
+      <div class="card news">
+        <img src="src/img/DJI_0132R.jpg" class="card-img-top" alt="" />
+        <div class="card-body">
+          <h3 class="card-title">News Card title</h3>
+          <p class="card-date"><i class="fa-regular fa-calendar"></i> February 13, 2024</p>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-dark_teal">Go somewhere</a>
+        </div><!-- end card-body -->
+      </div><!-- end card -->
+
+      <div class="card news">
+        <div class="card-body">
+          <h3 class="card-title">News Card title: No Image</h3>
+          <p class="card-date"><i class="fa-regular fa-calendar"></i> February 13, 2024</p>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-dark_teal">Go somewhere</a>
+        </div><!-- end card-body -->
+      </div><!-- end card -->
+    </section>
   </main>
 
   <footer class="footer global_footer px-0 py-5">
