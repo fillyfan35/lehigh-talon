@@ -34,6 +34,10 @@
 }
 
 // card
+.card-grid {
+  gap: $spacer;
+}
+
 .card {
   // news card
   &.news {
@@ -48,6 +52,7 @@
         font-family: "proxima-nova", sans-serif;
         font-size: .875rem;
         font-weight: 600;
+        text-transform: uppercase;
         color: $slate;
         color: var(--slate, $slate);
       }

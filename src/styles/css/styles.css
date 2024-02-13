@@ -9672,6 +9672,9 @@ header {
         left: 10%;
         bottom: 1.2%; } }
 
+.card-grid {
+  gap: 1rem; }
+
 .card.news {
   width: 18rem; }
   .card.news .card-body .card-title {
@@ -9680,6 +9683,7 @@ header {
     font-family: "proxima-nova", sans-serif;
     font-size: .875rem;
     font-weight: 600;
+    text-transform: uppercase;
     color: #6c757d;
     color: var(--slate, #6c757d); }
   .card.news .btn-dark_teal {
