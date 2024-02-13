@@ -8,13 +8,15 @@
 :root {
   --beige: #fff6da;
   --black: #000;
+  --dark_teal: #1d5970;
   --darkest_grey: #222;
+  --gold: #ffe41e;
   --lehigh_brown: #502d0e;
   --light_grey: #f9fafb;
   --peach: #fecb86;
+  --slate: #6c757d;
   --success: #198754;
   --white: #fff;
-  --gold: #ffe41e;
 }
 
 * {
@@ -52,5 +54,21 @@ body {
 
   &:focus {
     transform: translateY(0%);
+  }
+}
+
+h2,
+h3 {
+  position: relative;
+
+  &::after {
+    background-color: $gold;
+    background-color: var(--gold ,$gold);
+    content: "";
+    display: block;
+    height: 0.125rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 5rem;
   }
 }
