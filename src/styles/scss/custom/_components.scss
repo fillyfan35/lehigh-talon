@@ -46,6 +46,7 @@
     .card-body {
       .card-title {
         font-size: 1.25rem;
+        width: fit-content;
       }
 
       .card-date {
@@ -73,6 +74,18 @@
       --bs-btn-disabled-color: #fff;
       --bs-btn-disabled-bg: #1d5970;
       --bs-btn-disabled-border-color: #1d5970;
+    }
+
+    &:focus-within,
+    &:hover {
+      h2,
+      h3 {
+        &::after {
+          position: relative;
+          width: 100%;
+          @include transition;
+        }
+      }
     }
   }
 }

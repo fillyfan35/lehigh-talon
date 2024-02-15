@@ -62,6 +62,7 @@ h3 {
   position: relative;
 
   &::after {
+    position: relative;
     background-color: $gold;
     background-color: var(--gold ,$gold);
     content: "";
@@ -70,5 +71,6 @@ h3 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     width: 5rem;
+    @include transition;
   }
 }
