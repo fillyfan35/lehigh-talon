@@ -9664,7 +9664,7 @@ header {
       max-width: 100%; }
   .hero .hero_content {
     background-color: #ffe41e;
-    background-color: var(--gold, #ffe41e);
+    background-color: var(--accent_color, #ffe41e);
     padding: 0.75rem; }
     @media (min-width: 768px) {
       .hero .hero_content {
@@ -9688,20 +9688,17 @@ header {
     color: #6c757d;
     color: var(--slate, #6c757d); }
   .card.news .btn-dark_teal {
-    --bs-btn-color: #fff;
-    --bs-btn-bg: #1d5970;
-    --bs-btn-border-color: #1d5970;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #17475a;
-    --bs-btn-hover-border-color: #17475a;
-    --bs-btn-focus-shadow-rgb: 49, 132, 253;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #17475a;
-    --bs-btn-active-border-color: #17475a;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #1d5970;
-    --bs-btn-disabled-border-color: #1d5970; }
+    color: #fff;
+    color: var(--white, #fff);
+    background-color: #1d5970;
+    background-color: var(--dark_teal, #1d5970);
+    border-color: #1d5970;
+    border-color: var(--dark_teal, #1d5970); }
+    .card.news .btn-dark_teal:focus, .card.news .btn-dark_teal:hover {
+      background-color: #17475a;
+      background-color: var(--dark_teal_hover, #17475a);
+      border-color: #17475a;
+      border-color: var(--dark_teal_hover, #17475a); }
   .card.news:focus-within h2::after, .card.news:focus-within .h2::after,
   .card.news:focus-within h3::after,
   .card.news:focus-within .h3::after, .card.news:hover h2::after, .card.news:hover .h2::after,
@@ -9753,9 +9750,11 @@ footer {
         margin: 0 0 0 0.5rem; }
 
 :root {
+  --accent_color: #ffe41e;
   --beige: #fff6da;
   --black: #000;
   --dark_teal: #1d5970;
+  --dark_teal_hover: #17475a;
   --darkest_grey: #222;
   --gold: #ffe41e;
   --lehigh_brown: #502d0e;
@@ -9805,7 +9804,7 @@ h2, .h2, h3, .h3 {
   .h3::after {
     position: relative;
     background-color: #ffe41e;
-    background-color: var(--gold, #ffe41e);
+    background-color: var(--accent_color, #ffe41e);
     content: "";
     display: block;
     height: 0.125rem;
