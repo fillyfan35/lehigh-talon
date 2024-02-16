@@ -1,3 +1,51 @@
+// buttons
+.btn {
+  @include transition;
+
+  &:focus,
+  &:hover {
+    @include transition;
+  }
+
+  &.btn-dark_teal {
+    color: $white;
+    color: var(--white, $white);
+    background-color: $dark_teal;
+    background-color: var(--dark_teal, $dark_teal);
+    border-color: $dark_teal;
+    border-color: var(--dark_teal, $dark_teal);
+    
+    &:focus,
+    &:hover {
+      color: $white;
+      color: var(--white, $white);
+      background-color: $dark_teal_hover;
+      background-color: var(--dark_teal_hover, $dark_teal_hover);
+      border-color: $dark_teal_hover;
+      border-color: var(--dark_teal_hover, $dark_teal_hover);
+    }
+  }
+
+  &.btn-navy {
+    color: $white;
+    color: var(--white, $white);
+    background-color: $navy;
+    background-color: var(--navy, $navy);
+    border-color: $navy;
+    border-color: var(--navy, $navy);
+    
+    &:focus,
+    &:hover {
+      color: $white;
+      color: var(--white, $white);
+      background-color: $navy_dark;
+      background-color: var(--navy_dark, $navy_dark);
+      border-color: $navy_dark;
+      border-color: var(--navy_dark, $navy_dark);
+    }
+  }
+}
+
 // hero
 .hero {
   position: relative;
@@ -39,6 +87,40 @@
 }
 
 .card {
+  .card-body {
+    .card-title {
+      width: fit-content;
+    }
+
+    .card-date {
+      font-family: "proxima-nova", sans-serif;
+      font-size: .875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $slate;
+      color: var(--slate, $slate);
+    }
+
+    .card-buttons {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: $spacer;
+    }
+  }
+
+  &:focus-within,
+  &:hover {
+    h2,
+    h3 {
+      &::after {
+        position: relative;
+        width: 100%;
+        @include transition;
+      }
+    }
+  }
+
   // news card
   &.news {
     width: 18rem;
@@ -46,52 +128,12 @@
     .card-body {
       .card-title {
         font-size: 1.25rem;
-        width: fit-content;
-      }
-
-      .card-date {
-        font-family: "proxima-nova", sans-serif;
-        font-size: .875rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: $slate;
-        color: var(--slate, $slate);
-      }
-    }
-
-    .btn-dark_teal {
-      color: $white;
-      color: var(--white, $white);
-      background-color: $dark_teal;
-      background-color: var(--dark_teal, $dark_teal);
-      border-color: $dark_teal;
-      border-color: var(--dark_teal, $dark_teal);
-      
-      &:focus,
-      &:hover {
-        background-color: $dark_teal_hover;
-        background-color: var(--dark_teal_hover, $dark_teal_hover);
-        border-color: $dark_teal_hover;
-        border-color: var(--dark_teal_hover, $dark_teal_hover);
-
-      }
-    }
-
-    &:focus-within,
-    &:hover {
-      h2,
-      h3 {
-        &::after {
-          position: relative;
-          width: 100%;
-          @include transition;
-        }
       }
     }
   }
 
   // call to action
   &.cta {
-
+    //stuff
   }
 }

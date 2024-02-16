@@ -9648,6 +9648,47 @@ header {
     -o-transition: all 0.35s ease;
     transition: all 0.35s ease; }
 
+.btn {
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  -ms-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease; }
+  .btn:focus, .btn:hover {
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease; }
+  .btn.btn-dark_teal {
+    color: #fff;
+    color: var(--white, #fff);
+    background-color: #1d5970;
+    background-color: var(--dark_teal, #1d5970);
+    border-color: #1d5970;
+    border-color: var(--dark_teal, #1d5970); }
+    .btn.btn-dark_teal:focus, .btn.btn-dark_teal:hover {
+      color: #fff;
+      color: var(--white, #fff);
+      background-color: #17475a;
+      background-color: var(--dark_teal_hover, #17475a);
+      border-color: #17475a;
+      border-color: var(--dark_teal_hover, #17475a); }
+  .btn.btn-navy {
+    color: #fff;
+    color: var(--white, #fff);
+    background-color: #273868;
+    background-color: var(--navy, #273868);
+    border-color: #273868;
+    border-color: var(--navy, #273868); }
+    .btn.btn-navy:focus, .btn.btn-navy:hover {
+      color: #fff;
+      color: var(--white, #fff);
+      background-color: #040c21;
+      background-color: var(--navy_dark, #040c21);
+      border-color: #040c21;
+      border-color: var(--navy_dark, #040c21); }
+
 .hero {
   position: relative;
   aspect-ratio: 3 / 1;
@@ -9675,42 +9716,40 @@ header {
 .card-grid {
   gap: 1rem; }
 
+.card .card-body .card-title {
+  width: fit-content; }
+
+.card .card-body .card-date {
+  font-family: "proxima-nova", sans-serif;
+  font-size: .875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #6c757d;
+  color: var(--slate, #6c757d); }
+
+.card .card-body .card-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem; }
+
+.card:focus-within h2::after, .card:focus-within .h2::after,
+.card:focus-within h3::after,
+.card:focus-within .h3::after, .card:hover h2::after, .card:hover .h2::after,
+.card:hover h3::after,
+.card:hover .h3::after {
+  position: relative;
+  width: 100%;
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  -ms-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease; }
+
 .card.news {
   width: 18rem; }
   .card.news .card-body .card-title {
-    font-size: 1.25rem;
-    width: fit-content; }
-  .card.news .card-body .card-date {
-    font-family: "proxima-nova", sans-serif;
-    font-size: .875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #6c757d;
-    color: var(--slate, #6c757d); }
-  .card.news .btn-dark_teal {
-    color: #fff;
-    color: var(--white, #fff);
-    background-color: #1d5970;
-    background-color: var(--dark_teal, #1d5970);
-    border-color: #1d5970;
-    border-color: var(--dark_teal, #1d5970); }
-    .card.news .btn-dark_teal:focus, .card.news .btn-dark_teal:hover {
-      background-color: #17475a;
-      background-color: var(--dark_teal_hover, #17475a);
-      border-color: #17475a;
-      border-color: var(--dark_teal_hover, #17475a); }
-  .card.news:focus-within h2::after, .card.news:focus-within .h2::after,
-  .card.news:focus-within h3::after,
-  .card.news:focus-within .h3::after, .card.news:hover h2::after, .card.news:hover .h2::after,
-  .card.news:hover h3::after,
-  .card.news:hover .h3::after {
-    position: relative;
-    width: 100%;
-    -webkit-transition: all 0.35s ease;
-    -moz-transition: all 0.35s ease;
-    -ms-transition: all 0.35s ease;
-    -o-transition: all 0.35s ease;
-    transition: all 0.35s ease; }
+    font-size: 1.25rem; }
 
 footer {
   background-color: #502d0e;
@@ -9751,6 +9790,7 @@ footer {
 
 :root {
   --accent_color: #ffe41e;
+  --almost_black: #15181b;
   --beige: #fff6da;
   --black: #000;
   --dark_teal: #1d5970;
@@ -9758,7 +9798,10 @@ footer {
   --darkest_grey: #222;
   --gold: #ffe41e;
   --lehigh_brown: #502d0e;
+  --light_blue: #94d0e9;
   --light_grey: #f9fafb;
+  --navy: #273868;
+  --navy_dark: #040c21;
   --peach: #fecb86;
   --slate: #6c757d;
   --success: #198754;
