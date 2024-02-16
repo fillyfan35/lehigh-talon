@@ -6,13 +6,20 @@
 @import 'custom/footer';
 
 :root {
+  --accent_color: #ffe41e;
+
+  --almost_black: #15181b;
   --beige: #fff6da;
   --black: #000;
   --dark_teal: #1d5970;
+  --dark_teal_hover: #17475a;
   --darkest_grey: #222;
   --gold: #ffe41e;
   --lehigh_brown: #502d0e;
+  --light_blue: #94d0e9;
   --light_grey: #f9fafb;
+  --navy: #273868;
+  --navy_dark: #040c21;
   --peach: #fecb86;
   --slate: #6c757d;
   --success: #198754;
@@ -62,13 +69,15 @@ h3 {
   position: relative;
 
   &::after {
-    background-color: $gold;
-    background-color: var(--gold ,$gold);
+    position: relative;
+    background-color: $accent_color;
+    background-color: var(--accent_color ,$accent_color);
     content: "";
     display: block;
     height: 0.125rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     width: 5rem;
+    @include transition;
   }
 }

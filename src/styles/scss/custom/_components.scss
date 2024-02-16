@@ -1,3 +1,51 @@
+// buttons
+.btn {
+  @include transition;
+
+  &:focus,
+  &:hover {
+    @include transition;
+  }
+
+  &.btn-dark_teal {
+    color: $white;
+    color: var(--white, $white);
+    background-color: $dark_teal;
+    background-color: var(--dark_teal, $dark_teal);
+    border-color: $dark_teal;
+    border-color: var(--dark_teal, $dark_teal);
+    
+    &:focus,
+    &:hover {
+      color: $white;
+      color: var(--white, $white);
+      background-color: $dark_teal_hover;
+      background-color: var(--dark_teal_hover, $dark_teal_hover);
+      border-color: $dark_teal_hover;
+      border-color: var(--dark_teal_hover, $dark_teal_hover);
+    }
+  }
+
+  &.btn-navy {
+    color: $white;
+    color: var(--white, $white);
+    background-color: $navy;
+    background-color: var(--navy, $navy);
+    border-color: $navy;
+    border-color: var(--navy, $navy);
+    
+    &:focus,
+    &:hover {
+      color: $white;
+      color: var(--white, $white);
+      background-color: $navy_dark;
+      background-color: var(--navy_dark, $navy_dark);
+      border-color: $navy_dark;
+      border-color: var(--navy_dark, $navy_dark);
+    }
+  }
+}
+
 // hero
 .hero {
   position: relative;
@@ -21,8 +69,8 @@
   }
 
   .hero_content {
-    background-color: $gold;
-    background-color: var(--gold, $gold);
+    background-color: $accent_color;
+    background-color: var(--accent_color, $accent_color);
     padding: $space_three_quarter;
     
     @include media-breakpoint-up(md) {
@@ -39,40 +87,77 @@
 }
 
 .card {
+  overflow: hidden;
+
+  img {
+    @include transition;
+
+    &:focus,
+    &:hover {
+      transform: scale(1.01);
+      @include transition;
+    }
+  }
+  
+  .card-body {
+    .card-title {
+      width: fit-content;
+    }
+
+    .card-date {
+      font-family: "proxima-nova", sans-serif;
+      font-size: .875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $slate;
+      color: var(--slate, $slate);
+    }
+
+    .card-buttons {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: $spacer;
+    }
+  }
+
+  &:focus-within,
+  &:hover {
+    h2,
+    h3 {
+      &::after {
+        position: relative;
+        width: 100%;
+        @include transition;
+      }
+    }
+  }
+
   // news card
   &.news {
-    width: 18rem;
+    width: 20rem;
 
     .card-body {
       .card-title {
         font-size: 1.25rem;
       }
-
-      .card-date {
-        font-family: "proxima-nova", sans-serif;
-        font-size: .875rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: $slate;
-        color: var(--slate, $slate);
-      }
     }
+  }
 
-    .btn-dark_teal {
-      --bs-btn-color: #fff;
-      --bs-btn-bg: #1d5970;
-      --bs-btn-border-color: #1d5970;
-      --bs-btn-hover-color: #fff;
-      --bs-btn-hover-bg: #17475a;
-      --bs-btn-hover-border-color: #17475a;
-      --bs-btn-focus-shadow-rgb: 49, 132, 253;
-      --bs-btn-active-color: #fff;
-      --bs-btn-active-bg: #17475a;
-      --bs-btn-active-border-color: #17475a;
-      --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-      --bs-btn-disabled-color: #fff;
-      --bs-btn-disabled-bg: #1d5970;
-      --bs-btn-disabled-border-color: #1d5970;
+  // call to action
+  &.cta {
+    &-img {
+      // overflow: hidden;
+
+      // img {
+      //   @include transition;
+
+      //   &:focus,
+      //   &:hover {
+      //     transform: scale(1.01);
+      //     @include transition;
+      //   }
+      // }
     }
   }
 }
