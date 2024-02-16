@@ -87,6 +87,18 @@
 }
 
 .card {
+  overflow: hidden;
+
+  img {
+    @include transition;
+
+    &:focus,
+    &:hover {
+      transform: scale(1.01);
+      @include transition;
+    }
+  }
+  
   .card-body {
     .card-title {
       width: fit-content;
@@ -123,7 +135,7 @@
 
   // news card
   &.news {
-    width: 18rem;
+    width: 20rem;
 
     .card-body {
       .card-title {
@@ -134,6 +146,18 @@
 
   // call to action
   &.cta {
-    //stuff
+    &-img {
+      // overflow: hidden;
+
+      // img {
+      //   @include transition;
+
+      //   &:focus,
+      //   &:hover {
+      //     transform: scale(1.01);
+      //     @include transition;
+      //   }
+      // }
+    }
   }
 }

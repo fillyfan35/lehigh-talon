@@ -9716,40 +9716,51 @@ header {
 .card-grid {
   gap: 1rem; }
 
-.card .card-body .card-title {
-  width: fit-content; }
-
-.card .card-body .card-date {
-  font-family: "proxima-nova", sans-serif;
-  font-size: .875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #6c757d;
-  color: var(--slate, #6c757d); }
-
-.card .card-body .card-buttons {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem; }
-
-.card:focus-within h2::after, .card:focus-within .h2::after,
-.card:focus-within h3::after,
-.card:focus-within .h3::after, .card:hover h2::after, .card:hover .h2::after,
-.card:hover h3::after,
-.card:hover .h3::after {
-  position: relative;
-  width: 100%;
-  -webkit-transition: all 0.35s ease;
-  -moz-transition: all 0.35s ease;
-  -ms-transition: all 0.35s ease;
-  -o-transition: all 0.35s ease;
-  transition: all 0.35s ease; }
-
-.card.news {
-  width: 18rem; }
-  .card.news .card-body .card-title {
-    font-size: 1.25rem; }
+.card {
+  overflow: hidden; }
+  .card img {
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease; }
+    .card img:focus, .card img:hover {
+      transform: scale(1.01);
+      -webkit-transition: all 0.35s ease;
+      -moz-transition: all 0.35s ease;
+      -ms-transition: all 0.35s ease;
+      -o-transition: all 0.35s ease;
+      transition: all 0.35s ease; }
+  .card .card-body .card-title {
+    width: fit-content; }
+  .card .card-body .card-date {
+    font-family: "proxima-nova", sans-serif;
+    font-size: .875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #6c757d;
+    color: var(--slate, #6c757d); }
+  .card .card-body .card-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem; }
+  .card:focus-within h2::after, .card:focus-within .h2::after,
+  .card:focus-within h3::after,
+  .card:focus-within .h3::after, .card:hover h2::after, .card:hover .h2::after,
+  .card:hover h3::after,
+  .card:hover .h3::after {
+    position: relative;
+    width: 100%;
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease; }
+  .card.news {
+    width: 20rem; }
+    .card.news .card-body .card-title {
+      font-size: 1.25rem; }
 
 footer {
   background-color: #502d0e;
