@@ -9427,7 +9427,13 @@ header {
           color: #198754;
           color: var(--success, #198754); }
       header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .main_menu {
-        overflow: scroll; }
+        overflow: scroll;
+        -ms-overflow-style: none;
+        /* hide scrollbar for IE and Edge */
+        scrollbar-width: none;
+        /* hide scrollbar for Firefox */ }
+        header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .main_menu::-webkit-scrollbar {
+          display: none; }
         header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .main_menu .navbar-nav {
           align-content: flex-start; }
           header .menu_bar .row .menu .main_nav .navbar-collapse .navbar-wrapper .main_menu .navbar-nav .nav-item {
@@ -9553,7 +9559,13 @@ header {
         transition: all 0.35s ease; }
         header .menu_bar .row .menu .main_nav .navbar-collapse.show .navbar-wrapper {
           height: calc(100% - 125px);
-          overflow: scroll; }
+          overflow: scroll;
+          -ms-overflow-style: none;
+          /* hide scrollbar for IE and Edge */
+          scrollbar-width: none;
+          /* hide scrollbar for Firefox */ }
+          header .menu_bar .row .menu .main_nav .navbar-collapse.show .navbar-wrapper::-webkit-scrollbar {
+            display: none; }
           header .menu_bar .row .menu .main_nav .navbar-collapse.show .navbar-wrapper .quick-links-nav {
             visibility: visible; }
     @media (max-width: 767.98px) {

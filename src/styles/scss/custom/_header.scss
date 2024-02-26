@@ -158,6 +158,13 @@ header {
 
               .main_menu {
                 overflow: scroll;
+                -ms-overflow-style: none;  /* hide scrollbar for IE and Edge */
+                scrollbar-width: none;  /* hide scrollbar for Firefox */
+
+                // hide scrollbar for Chrome, Safari, and Opera
+                &::-webkit-scrollbar {
+                  display: none;
+                }
 
                 .navbar-nav {
                   align-content: flex-start;
@@ -337,6 +344,13 @@ header {
               .navbar-wrapper {
                 height: calc(100% - 125px);
                 overflow: scroll;
+                -ms-overflow-style: none;  /* hide scrollbar for IE and Edge */
+                scrollbar-width: none;  /* hide scrollbar for Firefox */
+
+                // hide scrollbar for Chrome, Safari, and Opera
+                &::-webkit-scrollbar {
+                  display: none;
+                }
 
                 .quick-links-nav {
                   visibility: visible;
