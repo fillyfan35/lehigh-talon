@@ -18,24 +18,30 @@ $slate: #6c757d;
 $success: #198754;
 $white: #fff;
 
-// breakpoints
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-);
+$width_sm: 576px;
+$width_md: 768px;
+$width_lg: 992px;
+$width_xl: 1200px;
+$width_xxl: 1400px;
 
-// reset max widths
-$container-max-widths: (
-  sm: 640px,
-  md: 820px,
-  lg: 960px,
-  xl: 1280px,
-  xxl: 1600px
-) !default;
+// // breakpoints
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px
+// );
+
+// // reset max widths
+// $container-max-widths: (
+//   sm: 640px,
+//   md: 820px,
+//   lg: 960px,
+//   xl: 1280px,
+//   xxl: 1600px
+// ) !default;
 
 // Spacing
 $spacer: 1rem;
