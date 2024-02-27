@@ -31,6 +31,7 @@ header {
         font-size: .875rem;
         width: unset;
         text-decoration: none;
+        @include transition;
 
         @media (min-width: $width_sm) {
           font-size: 1.25rem;
@@ -58,14 +59,19 @@ header {
 
       .menu {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
 
         .navbar-toggler {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 30px;
+          width: 40px;
+          @include transition;
+
           .bar {
-            display: block;
-            height: 4px;
-            width: 40px;
-            margin: 0 0 10px 0;
+            height: 3px;
+            width: 100%;
             background-color: $black;
             @include transition;
 
@@ -277,10 +283,9 @@ header {
           @include transition;
 
           &:nth-of-type(1) {
-            transition: all .35s ease-in-out;
             transform: rotate(45deg);
             transform-origin: top left;
-            width: 40px;
+            width: 37px;
 
             @media (max-width: $width_sm) {
               width: 28px;
@@ -288,16 +293,14 @@ header {
           }
 
           &:nth-of-type(2) {
-            transition: all .35s ease-in-out;
             transform-origin: center;
             width: 0;
           }
 
           &:nth-of-type(3) {
-            transition: all .35s ease-in-out;
             transform: rotate(-45deg);
             transform-origin: bottom left;
-            width: 40px;
+            width: 37px;
 
             @media (max-width: $width_sm) {
               width: 28px;
@@ -312,6 +315,7 @@ header {
 
         img {
           height: 50px;
+          @include transition;
         }
       }
 
@@ -323,6 +327,49 @@ header {
         .search_btn {
           font-size: 36px;
           @include transition;
+        }
+      }
+    }
+  }
+
+  .no_scroll &,
+  &.scrolling {
+    .department_bar {
+      .department_wrapper {
+        a {
+          font-size: 1rem;
+          @include transition;
+        }
+      }
+    }
+
+    .menu_bar {
+      .menu_wrapper {
+        img {
+          height: 35px;
+          @include transition;
+        }
+
+        .search {
+          .search_btn {
+            font-size: 28px;
+            @include transition;
+          }
+        }
+
+        .menu {
+          .navbar-toggler {
+            height: 26px;
+            @include transition;
+            
+            .x {
+              &:nth-of-type(1),
+              &:nth-of-type(3) {
+                width: 32px;
+                @include transition;
+              }
+            }
+          }
         }
       }
     }

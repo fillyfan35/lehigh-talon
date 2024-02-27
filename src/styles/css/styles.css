@@ -136,7 +136,12 @@ header {
         color: var(--white, #fff);
         font-size: .875rem;
         width: unset;
-        text-decoration: none; }
+        text-decoration: none;
+        -webkit-transition: all 0.35s ease;
+        -moz-transition: all 0.35s ease;
+        -ms-transition: all 0.35s ease;
+        -o-transition: all 0.35s ease;
+        transition: all 0.35s ease; }
         @media (min-width: 576px) {
           header .department_bar .department_wrapper a {
             font-size: 1.25rem; } }
@@ -170,20 +175,29 @@ header {
       grid-template-columns: 1fr 1fr 1fr; }
       header .menu_bar .menu_wrapper .menu {
         display: flex;
-        align-items: flex-end; }
-        header .menu_bar .menu_wrapper .menu .navbar-toggler .bar {
-          display: block;
-          height: 4px;
+        align-items: center; }
+        header .menu_bar .menu_wrapper .menu .navbar-toggler {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 30px;
           width: 40px;
-          margin: 0 0 10px 0;
-          background-color: #000;
           -webkit-transition: all 0.35s ease;
           -moz-transition: all 0.35s ease;
           -ms-transition: all 0.35s ease;
           -o-transition: all 0.35s ease;
           transition: all 0.35s ease; }
-          header .menu_bar .menu_wrapper .menu .navbar-toggler .bar::last-of-type {
-            margin: 0; }
+          header .menu_bar .menu_wrapper .menu .navbar-toggler .bar {
+            height: 3px;
+            width: 100%;
+            background-color: #000;
+            -webkit-transition: all 0.35s ease;
+            -moz-transition: all 0.35s ease;
+            -ms-transition: all 0.35s ease;
+            -o-transition: all 0.35s ease;
+            transition: all 0.35s ease; }
+            header .menu_bar .menu_wrapper .menu .navbar-toggler .bar::last-of-type {
+              margin: 0; }
         header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper {
           position: fixed;
           left: 0;
@@ -352,22 +366,19 @@ header {
           -o-transition: all 0.35s ease;
           transition: all 0.35s ease; }
           header .menu_bar .menu_wrapper .menu .x:nth-of-type(1) {
-            transition: all .35s ease-in-out;
             transform: rotate(45deg);
             transform-origin: top left;
-            width: 40px; }
+            width: 37px; }
             @media (max-width: 576px) {
               header .menu_bar .menu_wrapper .menu .x:nth-of-type(1) {
                 width: 28px; } }
           header .menu_bar .menu_wrapper .menu .x:nth-of-type(2) {
-            transition: all .35s ease-in-out;
             transform-origin: center;
             width: 0; }
           header .menu_bar .menu_wrapper .menu .x:nth-of-type(3) {
-            transition: all .35s ease-in-out;
             transform: rotate(-45deg);
             transform-origin: bottom left;
-            width: 40px; }
+            width: 37px; }
             @media (max-width: 576px) {
               header .menu_bar .menu_wrapper .menu .x:nth-of-type(3) {
                 width: 28px; } }
@@ -375,7 +386,12 @@ header {
         display: flex;
         justify-content: center; }
         header .menu_bar .menu_wrapper .logo img {
-          height: 50px; }
+          height: 50px;
+          -webkit-transition: all 0.35s ease;
+          -moz-transition: all 0.35s ease;
+          -ms-transition: all 0.35s ease;
+          -o-transition: all 0.35s ease;
+          transition: all 0.35s ease; }
       header .menu_bar .menu_wrapper .search {
         display: flex;
         justify-content: flex-end;
@@ -387,6 +403,41 @@ header {
           -ms-transition: all 0.35s ease;
           -o-transition: all 0.35s ease;
           transition: all 0.35s ease; }
+  .no_scroll header .department_bar .department_wrapper a, header.scrolling .department_bar .department_wrapper a {
+    font-size: 1rem;
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease; }
+  .no_scroll header .menu_bar .menu_wrapper img, header.scrolling .menu_bar .menu_wrapper img {
+    height: 35px;
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease; }
+  .no_scroll header .menu_bar .menu_wrapper .search .search_btn, header.scrolling .menu_bar .menu_wrapper .search .search_btn {
+    font-size: 28px;
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease; }
+  .no_scroll header .menu_bar .menu_wrapper .menu .navbar-toggler, header.scrolling .menu_bar .menu_wrapper .menu .navbar-toggler {
+    height: 26px;
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease; }
+    .no_scroll header .menu_bar .menu_wrapper .menu .navbar-toggler .x:nth-of-type(1), .no_scroll header .menu_bar .menu_wrapper .menu .navbar-toggler .x:nth-of-type(3), header.scrolling .menu_bar .menu_wrapper .menu .navbar-toggler .x:nth-of-type(1), header.scrolling .menu_bar .menu_wrapper .menu .navbar-toggler .x:nth-of-type(3) {
+      width: 32px;
+      -webkit-transition: all 0.35s ease;
+      -moz-transition: all 0.35s ease;
+      -ms-transition: all 0.35s ease;
+      -o-transition: all 0.35s ease;
+      transition: all 0.35s ease; }
 
 footer {
   background-color: #502d0e;
