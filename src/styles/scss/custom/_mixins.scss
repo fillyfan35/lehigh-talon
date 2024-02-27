@@ -81,3 +81,26 @@
     @content;
   }
 }
+
+@mixin max-width {
+  @media (min-width: 576px) {
+    //sm
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    // md
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    // lg
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    // xl
+    max-width: 1140px;
+  }
+  @media (min-width: 1400px) {
+    // xxl
+    max-width: 1320px;
+  }
+}

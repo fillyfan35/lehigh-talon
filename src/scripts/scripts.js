@@ -46,20 +46,24 @@ document.addEventListener("DOMContentLoaded", function () {
     if (screenWidth < 768) {
       navbarCollapse.style.top = header_height + 'px';
     } else {
-      navbarCollapse.style.top = header_height - 20 + 'px';
+      // navbarCollapse.style.top = header_height - 20 + 'px';
+      navbarCollapse.style.top = header_height + 'px';
     }
   }
 
   function stopScroll() {
     let navbarToggler = document.querySelector('.navbar-toggler');
     let searchbarToggler = document.querySelector('.search_btn');
+    let main_nav = document.querySelector('.main_nav_wrapper');
 
     navbarToggler.addEventListener('click', function () {
       document.body.classList.toggle('no_scroll');
+      main_nav.classList.toggle('show');
     });
 
     searchbarToggler.addEventListener('click', function () {
       document.body.classList.toggle('no_scroll');
+      main_nav.classList.toggle('show');
     });
   }
 

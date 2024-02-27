@@ -1,163 +1,163 @@
-// buttons
-.btn {
-  @include transition;
+// // buttons
+// .btn {
+//   @include transition;
 
-  &:focus,
-  &:hover {
-    @include transition;
-  }
+//   &:focus,
+//   &:hover {
+//     @include transition;
+//   }
 
-  &.btn-dark_teal {
-    color: $white;
-    color: var(--white, $white);
-    background-color: $dark_teal;
-    background-color: var(--dark_teal, $dark_teal);
-    border-color: $dark_teal;
-    border-color: var(--dark_teal, $dark_teal);
+//   &.btn-dark_teal {
+//     color: $white;
+//     color: var(--white, $white);
+//     background-color: $dark_teal;
+//     background-color: var(--dark_teal, $dark_teal);
+//     border-color: $dark_teal;
+//     border-color: var(--dark_teal, $dark_teal);
     
-    &:focus,
-    &:hover {
-      color: $white;
-      color: var(--white, $white);
-      background-color: $dark_teal_hover;
-      background-color: var(--dark_teal_hover, $dark_teal_hover);
-      border-color: $dark_teal_hover;
-      border-color: var(--dark_teal_hover, $dark_teal_hover);
-    }
-  }
+//     &:focus,
+//     &:hover {
+//       color: $white;
+//       color: var(--white, $white);
+//       background-color: $dark_teal_hover;
+//       background-color: var(--dark_teal_hover, $dark_teal_hover);
+//       border-color: $dark_teal_hover;
+//       border-color: var(--dark_teal_hover, $dark_teal_hover);
+//     }
+//   }
 
-  &.btn-navy {
-    color: $white;
-    color: var(--white, $white);
-    background-color: $navy;
-    background-color: var(--navy, $navy);
-    border-color: $navy;
-    border-color: var(--navy, $navy);
+//   &.btn-navy {
+//     color: $white;
+//     color: var(--white, $white);
+//     background-color: $navy;
+//     background-color: var(--navy, $navy);
+//     border-color: $navy;
+//     border-color: var(--navy, $navy);
     
-    &:focus,
-    &:hover {
-      color: $white;
-      color: var(--white, $white);
-      background-color: $navy_dark;
-      background-color: var(--navy_dark, $navy_dark);
-      border-color: $navy_dark;
-      border-color: var(--navy_dark, $navy_dark);
-    }
-  }
-}
+//     &:focus,
+//     &:hover {
+//       color: $white;
+//       color: var(--white, $white);
+//       background-color: $navy_dark;
+//       background-color: var(--navy_dark, $navy_dark);
+//       border-color: $navy_dark;
+//       border-color: var(--navy_dark, $navy_dark);
+//     }
+//   }
+// }
 
-// hero
-.hero {
-  position: relative;
-  aspect-ratio: 3 / 1;
-  background-size: cover;
+// // hero
+// .hero {
+//   position: relative;
+//   aspect-ratio: 3 / 1;
+//   background-size: cover;
 
-  @include media-breakpoint-down(md) {
-    background-image: unset !important;
-  }
+//   @include media-breakpoint-down(md) {
+//     background-image: unset !important;
+//   }
 
-  .mobile_hero_img {
-    display: block;
+//   .mobile_hero_img {
+//     display: block;
 
-    @include media-breakpoint-up(md) {
-      display: none;
-    }
+//     @include media-breakpoint-up(md) {
+//       display: none;
+//     }
 
-    img {
-      max-width: 100%;
-    }
-  }
+//     img {
+//       max-width: 100%;
+//     }
+//   }
 
-  .hero_content {
-    background-color: $accent_color;
-    background-color: var(--accent_color, $accent_color);
-    padding: $space_three_quarter;
+//   .hero_content {
+//     background-color: $accent_color;
+//     background-color: var(--accent_color, $accent_color);
+//     padding: $space_three_quarter;
     
-    @include media-breakpoint-up(md) {
-      position: absolute;
-      left: 10%;
-      bottom: 1.2%;
-    }
-  }
-}
+//     @include media-breakpoint-up(md) {
+//       position: absolute;
+//       left: 10%;
+//       bottom: 1.2%;
+//     }
+//   }
+// }
 
-// card
-.card-grid {
-  gap: $spacer;
-}
+// // card
+// .card-grid {
+//   gap: $spacer;
+// }
 
-.card {
-  overflow: hidden;
+// .card {
+//   overflow: hidden;
 
-  img {
-    @include transition;
+//   img {
+//     @include transition;
 
-    &:focus,
-    &:hover {
-      transform: scale(1.01);
-      @include transition;
-    }
-  }
+//     &:focus,
+//     &:hover {
+//       transform: scale(1.01);
+//       @include transition;
+//     }
+//   }
   
-  .card-body {
-    .card-title {
-      width: fit-content;
-    }
+//   .card-body {
+//     .card-title {
+//       width: fit-content;
+//     }
 
-    .card-date {
-      font-family: "proxima-nova", sans-serif;
-      font-size: .875rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: $slate;
-      color: var(--slate, $slate);
-    }
+//     .card-date {
+//       font-family: "proxima-nova", sans-serif;
+//       font-size: .875rem;
+//       font-weight: 600;
+//       text-transform: uppercase;
+//       color: $slate;
+//       color: var(--slate, $slate);
+//     }
 
-    .card-buttons {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: $spacer;
-    }
-  }
+//     .card-buttons {
+//       display: flex;
+//       flex-direction: row;
+//       flex-wrap: wrap;
+//       gap: $spacer;
+//     }
+//   }
 
-  &:focus-within,
-  &:hover {
-    h2,
-    h3 {
-      &::after {
-        position: relative;
-        width: 100%;
-        @include transition;
-      }
-    }
-  }
+//   &:focus-within,
+//   &:hover {
+//     h2,
+//     h3 {
+//       &::after {
+//         position: relative;
+//         width: 100%;
+//         @include transition;
+//       }
+//     }
+//   }
 
-  // news card
-  &.news {
-    width: 20rem;
+//   // news card
+//   &.news {
+//     width: 20rem;
 
-    .card-body {
-      .card-title {
-        font-size: 1.25rem;
-      }
-    }
-  }
+//     .card-body {
+//       .card-title {
+//         font-size: 1.25rem;
+//       }
+//     }
+//   }
 
-  // call to action
-  &.cta {
-    &-img {
-      // overflow: hidden;
+//   // call to action
+//   &.cta {
+//     &-img {
+//       // overflow: hidden;
 
-      // img {
-      //   @include transition;
+//       // img {
+//       //   @include transition;
 
-      //   &:focus,
-      //   &:hover {
-      //     transform: scale(1.01);
-      //     @include transition;
-      //   }
-      // }
-    }
-  }
-}
+//       //   &:focus,
+//       //   &:hover {
+//       //     transform: scale(1.01);
+//       //     @include transition;
+//       //   }
+//       // }
+//     }
+//   }
+// }

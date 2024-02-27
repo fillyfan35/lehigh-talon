@@ -1,4 +1,5 @@
-@import "../../../node_modules/bootstrap/scss/bootstrap";
+// @import "../../../node_modules/bootstrap/scss/bootstrap";
+@import 'custom/reset';
 @import 'custom/mixins';
 @import 'custom/variables';
 @import 'custom/header';
@@ -35,6 +36,7 @@ body {
 	color: var(--black, $black);
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  margin: 0;
 
   &.no-scroll {
     overflow: hidden;
@@ -80,4 +82,9 @@ h3 {
     width: 5rem;
     @include transition;
   }
+}
+
+main {
+  position: relative;
+  z-index: 2;
 }
