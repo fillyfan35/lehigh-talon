@@ -83,7 +83,6 @@ header {
 
         .main_nav {
           .main_nav_wrapper {
-            // display: none; // TODO
             position: fixed;
             left: 0;
             width: 100vw;
@@ -92,7 +91,7 @@ header {
             background-color: #222;
             background-color: var(--darkest_grey, #222);
             background-size: cover !important;
-            @include transition;
+            @include fast_transition;
 
             .nav-container {
               opacity: 0;

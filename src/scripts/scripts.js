@@ -46,8 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (screenWidth < 768) {
       navbarCollapse.style.top = header_height + 'px';
     } else {
-      // navbarCollapse.style.top = header_height - 20 + 'px';
-      navbarCollapse.style.top = header_height + 'px';
+      navbarCollapse.style.top = header_height - 20 + 'px';
     }
   }
 
