@@ -97,8 +97,12 @@ header {
             .nav-container {
               opacity: 0;
               display: none;
-              margin: $space_two auto 3rem auto;
-              @include max-width;
+              margin: $spacer;
+              
+              @media (min-width: $width_md) {
+                margin: $space_two auto 3rem auto;
+                @include max-width;
+              }
 
               .header-search {
                 display: flex;
@@ -135,6 +139,14 @@ header {
                   color: var(--white, $white);
                   padding: $space_three_quarter;
                   border-radius: 5px;
+                  @include transition;
+
+                  &:focus,
+                  &:hover {
+                    background-color: var(--white, $white);
+                    color: var(--success, $success);
+                    @include transition;
+                  }
                 }
               }
 
@@ -155,7 +167,7 @@ header {
 
                   @media (min-width: $width_md) {
                     display: grid;
-                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-columns: 1fr 1fr;
                     gap: $space_three $spacer;
                   }
                   
@@ -165,6 +177,10 @@ header {
 
                   .nav-item {
                     margin: 0 0 .875rem 0;
+
+                    @media (min-width: $width_md) {
+                      margin: 0;
+                    }
 
                     .nav-link {
                       color: var(--white, $white);
@@ -230,6 +246,21 @@ header {
                             text-decoration: underline;
                           }
                         }
+
+                        &.dropdown {
+                          .submenu {
+                            overflow: unset;
+                            opacity: unset;
+                            max-height: unset;
+                            margin: 0 0 $spacer $spacer;
+                          }
+
+                          &:last-of-type {
+                            .submenu {
+                              margin: 0 0 0 $spacer;
+                            }
+                          }
+                        }
                       }
                     }
                   }
@@ -271,7 +302,8 @@ header {
                   .nav-link {
                     display: block;
                     font-size: 1rem;
-                    color: var(--black, $black);
+                    font-weight: 600;
+                    color: var(--darkest_grey, $darkest_grey);
                     background-color: var(--beige, $beige);
                     padding: $spacer;
                     border-radius: 5px;
@@ -304,9 +336,10 @@ header {
                 
                 .nav-container-wrapper {
                   overflow: scroll;
+                  height: calc(100% - 150px);
                   
                   @media (min-width: $width_md) {
-                    height: calc(100% - 240px);
+                    height: calc(100% - 250px);
                   }
 
                   // hide scroll bar for windows
