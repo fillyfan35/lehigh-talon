@@ -92,9 +92,7 @@ meter {
 **************/
 header {
   margin: 0 auto;
-  background-color: #fff;
   background-color: var(--white, #fff);
-  border-bottom: 2px solid #502d0e;
   border-bottom: 2px solid var(--lehigh_brown, #502d0e);
   position: sticky;
   top: 0;
@@ -105,7 +103,6 @@ header {
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease; }
   header .department_bar {
-    background-color: #502d0e;
     background-color: var(--lehigh_brown, #502d0e);
     width: 100%; }
     header .department_bar .department_wrapper {
@@ -132,7 +129,6 @@ header {
       header .department_bar .department_wrapper a {
         font-family: "Merriweather", Georgia, Palatino, serif;
         font-weight: 300;
-        color: #fff;
         color: var(--white, #fff);
         font-size: .875rem;
         width: unset;
@@ -150,7 +146,6 @@ header {
     top: 0;
     margin: 0 auto;
     padding: 0.5rem 1rem;
-    background-color: #fff;
     background-color: var(--white, #fff);
     max-width: 100vw; }
     @media (min-width: 768px) {
@@ -196,7 +191,7 @@ header {
           header .menu_bar .menu_wrapper .menu .navbar-toggler .bar {
             height: 3px;
             width: 100%;
-            background-color: #000;
+            background-color: var(--black, #000);
             -webkit-transition: all 0.35s ease;
             -moz-transition: all 0.35s ease;
             -ms-transition: all 0.35s ease;
@@ -210,7 +205,6 @@ header {
           width: 100vw;
           height: 0;
           z-index: 1;
-          background-color: #222;
           background-color: var(--darkest_grey, #222);
           background-size: cover !important;
           -webkit-transition: all 0.25s ease;
@@ -250,10 +244,8 @@ header {
                 font-weight: 400;
                 line-height: 1.5;
                 appearance: none;
-                background-color: #fff;
                 background-color: var(--white, #fff);
                 background-clip: padding-box;
-                border: 3px solid #fff;
                 border: 3px solid var(--white, #fff);
                 border-radius: 5px;
                 transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
@@ -263,9 +255,7 @@ header {
                 header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .header-search .search_box:focus, header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .header-search .search_box:focus-within {
                   border: 3px solid #fecb86; }
               header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .header-search .btn {
-                background-color: #198754;
                 background-color: var(--success, #198754);
-                color: #fff;
                 color: var(--white, #fff);
                 padding: 0.75rem;
                 border-radius: 5px; }
@@ -292,7 +282,6 @@ header {
                 header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .main_menu .navbar-nav .nav-item {
                   margin: 0 0 .875rem 0; }
                   header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .main_menu .navbar-nav .nav-item .nav-link {
-                    color: #fff;
                     color: var(--white, #fff); }
                     header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .main_menu .navbar-nav .nav-item .nav-link.title {
                       font-size: 1.5rem;
@@ -346,7 +335,6 @@ header {
                     header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .main_menu .navbar-nav .nav-item .dropdown-menu li {
                       margin: 0.5rem 0; }
                       header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .main_menu .navbar-nav .nav-item .dropdown-menu li .dropdown-item {
-                        color: #fff;
                         color: var(--white, #fff);
                         text-decoration: none; }
                         header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .main_menu .navbar-nav .nav-item .dropdown-menu li .dropdown-item:focus, header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .main_menu .navbar-nav .nav-item .dropdown-menu li .dropdown-item:hover {
@@ -387,7 +375,6 @@ header {
                     header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .quick_nav .quick-links-nav .nav-item .nav-link {
                       padding: 0.5rem; } }
                   header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .quick_nav .quick-links-nav .nav-item .nav-link:focus, header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .quick_nav .quick-links-nav .nav-item .nav-link:hover {
-                    background-color: #fff;
                     background-color: var(--white, #fff); }
           header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper.show {
             height: 100vh;
@@ -579,9 +566,7 @@ body {
     overflow: hidden; }
 
 .skip-link {
-  background-color: #fff;
   background-color: var(--white, #fff);
-  color: #502d0e;
   color: var(--lehigh_brown, #502d0e);
   padding: 0.5rem;
   left: 50%;
@@ -594,7 +579,6 @@ body {
   transition: all 0.35s ease;
   z-index: 1021; }
   .skip-link:hover {
-    color: #502d0e;
     color: var(--lehigh_brown, #502d0e);
     text-decoration: none; }
   .skip-link:focus {
@@ -606,7 +590,6 @@ h3 {
   h2::after,
   h3::after {
     position: relative;
-    background-color: #ffe41e;
     background-color: var(--accent_color, #ffe41e);
     content: "";
     display: block;
