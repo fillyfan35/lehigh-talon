@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let searchBox = document.querySelector('.main_nav .search_box');
 
     searchIcon.addEventListener('click', function () {
-      // document.body.classList.toggle('no-scroll');
       searchBox.focus();
     });
   }
@@ -46,8 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (screenWidth < 768) {
       navbarCollapse.style.top = header_height + 'px';
     } else {
-      // navbarCollapse.style.top = header_height - 20 + 'px';
-      navbarCollapse.style.top = header_height + 'px';
+      navbarCollapse.style.top = header_height - 20 + 'px';
     }
   }
 
@@ -55,22 +53,69 @@ document.addEventListener("DOMContentLoaded", function () {
     let navbarToggler = document.querySelector('.navbar-toggler');
     let searchbarToggler = document.querySelector('.search_btn');
     let main_nav = document.querySelector('.main_nav_wrapper');
+    let dropdownMenus = document.querySelectorAll('.dropdown-menu');
+    let dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
     navbarToggler.addEventListener('click', function () {
       document.body.classList.toggle('no_scroll');
       main_nav.classList.toggle('show');
+      dropdownMenus.forEach(function (dropdownMenu) {
+        dropdownMenu.classList.remove('show');
+      });
+      dropdownToggles.forEach(function (dropdownToggle) {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+      });
     });
 
     searchbarToggler.addEventListener('click', function () {
       document.body.classList.toggle('no_scroll');
       main_nav.classList.toggle('show');
+      dropdownMenus.forEach(function (dropdownMenu) {
+        dropdownMenu.classList.remove('show');
+      });
+      dropdownToggles.forEach(function (dropdownToggle) {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 
+  function initializeDropdownToggles() {
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', function (event) {
+        event.preventDefault();
+        const dropdownMenu = this.nextElementSibling;
+        const isOpen = dropdownMenu.classList.contains('show');
+
+        // Close other dropdown menus and set aria-expanded to false
+        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+          if (menu !== dropdownMenu) {
+            menu.classList.remove('show');
+            const toggle = menu.previousElementSibling;
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        // Toggle the current dropdown menu
+        if (isOpen) {
+          dropdownMenu.classList.remove('show');
+          this.setAttribute('aria-expanded', 'false');
+        } else {
+          dropdownMenu.classList.add('show');
+          this.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  }
+
+
+
   // Initial check in case the page is already scrolled when the script is executed
   handleScroll();
-  focusSearch();
   hamburgerX();
   headerHeight();
   stopScroll();
+  initializeDropdownToggles();
+  focusSearch();
 });
