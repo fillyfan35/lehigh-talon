@@ -33,7 +33,7 @@
 }
 
 body {
-	color: var(--black, $black);
+	color: var(--darkest_grey, $darkest_grey);
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   margin: 0;
@@ -63,6 +63,67 @@ body {
   }
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--bs-heading-color);
+}
+
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
+
+  @media (min-width: $width_xl) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+h2 {
+  font-size: calc(1.325rem + 0.9vw);
+
+  @media (min-width: $width_xl) {
+    h2 {
+      font-size: 2rem; 
+    }
+  }
+}
+
+h3 {
+  font-size: calc(1.3rem + 0.6vw);
+
+  @media (min-width: $width_xl) {
+    h3 {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+h4 {
+  font-size: calc(1.275rem + 0.3vw);
+
+  @media (min-width: $width_xl) {
+    h4 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
 h2,
 h3 {
   position: relative;
@@ -81,6 +142,12 @@ h3 {
 }
 
 main {
-  position: relative;
-  z-index: 2;
+  margin: $spacer;
+  // padding: 0 $spacer;
+  
+  @media (min-width: $width_md) {
+    margin: $space_three auto;
+    padding: 0;
+    @include max-width;
+  }
 }
