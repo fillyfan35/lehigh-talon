@@ -121,7 +121,7 @@ header {
                   background-color: var(--white, $white);
                   background-clip: padding-box;
                   border: 3px solid var(--white, $white);
-                  border-radius: 5px;
+                  border-radius: $border_radius;
                   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
                   
                   @media (min-width: $width_md) {
@@ -138,7 +138,7 @@ header {
                   background-color: var(--success, $success);
                   color: var(--white, $white);
                   padding: $space_three_quarter;
-                  border-radius: 5px;
+                  border-radius: $border_radius;
                   @include transition;
 
                   &:focus,
@@ -306,7 +306,7 @@ header {
                     color: var(--darkest_grey, $darkest_grey);
                     background-color: var(--beige, $beige);
                     padding: $spacer;
-                    border-radius: 5px;
+                    border-radius: $border_radius;
                     width: 100%;
                     text-align: center;
 

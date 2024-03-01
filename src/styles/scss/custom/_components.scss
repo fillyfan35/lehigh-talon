@@ -1,6 +1,6 @@
 // buttons
 .btn {
-  border-radius: 5px;
+  border-radius: $border_radius;
   padding: $space_half $space_three_quarter;
   @include transition;
 
@@ -96,7 +96,7 @@
 .card {
   overflow: hidden;
   border: 1px solid var(--border_color, $border_color);
-  border-radius: 5px;
+  border-radius: $border_radius;
 
   img {
     width: 100%;
