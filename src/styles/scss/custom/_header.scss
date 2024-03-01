@@ -29,7 +29,7 @@ header {
         text-decoration: none;
         @include transition;
 
-        @media (min-width: $width_sm) {
+        @media (min-width: $width_md) {
           font-size: 1.25rem;
         }
       }
