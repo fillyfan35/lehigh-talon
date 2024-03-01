@@ -39,16 +39,21 @@
 // hero
 .hero {
   position: relative;
-  margin: $space_three 0;
-  aspect-ratio: 3 / 1;
+  margin: $spacer 0;
   background-size: cover;
-
+  
   @media (max-width: $width_md) {
     background-image: unset !important;
+  }
+  
+  @media (min-width: $width_md) {
+    margin: $space_three 0;
+    aspect-ratio: 3 / 1;
   }
 
   .mobile_hero_img {
     display: block;
+    // margin: 0 0 -5px 0;
 
     @media (min-width: $width_md) {
       display: none;
@@ -60,13 +65,20 @@
   }
 
   .hero_content {
-    background-color: var(--accent_color, $accent_color);
+    // background-color: rgba(0, 0, 0, .8);
+    background: linear-gradient(to right,rgba(0,0,0,.8) 0,rgba(0,0,0,.6) 100%);
+    color: var(--white, $white);
+    border-left: $space_half solid var(--accent_color, $accent_color);
     padding: $space_three_quarter;
     
     @media (min-width: $width_md) {
       position: absolute;
-      left: 10%;
-      bottom: 1.2%;
+      margin: 0 10%;
+      bottom: 2%;
+    }
+
+    h1 {
+      font-size: 2rem;
     }
   }
 }

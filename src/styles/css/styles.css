@@ -553,12 +553,15 @@ header {
 
 .hero {
   position: relative;
-  margin: 3rem 0;
-  aspect-ratio: 3 / 1;
+  margin: 1rem 0;
   background-size: cover; }
   @media (max-width: 768px) {
     .hero {
       background-image: unset !important; } }
+  @media (min-width: 768px) {
+    .hero {
+      margin: 3rem 0;
+      aspect-ratio: 3 / 1; } }
   .hero .mobile_hero_img {
     display: block; }
     @media (min-width: 768px) {
@@ -567,13 +570,17 @@ header {
     .hero .mobile_hero_img img {
       max-width: 100%; }
   .hero .hero_content {
-    background-color: var(--accent_color, #ffe41e);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.6) 100%);
+    color: var(--white, #fff);
+    border-left: 0.5rem solid var(--accent_color, #ffe41e);
     padding: 0.75rem; }
     @media (min-width: 768px) {
       .hero .hero_content {
         position: absolute;
-        left: 10%;
-        bottom: 1.2%; } }
+        margin: 0 10%;
+        bottom: 2%; } }
+    .hero .hero_content h1 {
+      font-size: 2rem; }
 
 .card-grid {
   display: flex;
@@ -720,7 +727,7 @@ footer {
   -moz-osx-font-smoothing: grayscale; }
 
 body {
-  color: var(--black, #000);
+  color: var(--darkest_grey, #222);
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   margin: 0; }
