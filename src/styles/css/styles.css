@@ -663,8 +663,6 @@ header {
       transition: all 0.35s ease; }
   .card .card-body {
     padding: 1rem; }
-    .card .card-body .card-title {
-      width: fit-content; }
     .card .card-body p {
       margin: 0 0 1rem 0;
       line-height: 1.5rem; }
@@ -695,6 +693,47 @@ header {
     width: 20rem; }
     .card.news .card-body .card-title {
       font-size: 1.25rem; }
+
+.people_directory-column {
+  display: flex;
+  flex-direction: column; }
+  .people_directory-column .card-bio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: unset;
+    border-radius: unset; }
+    .people_directory-column .card-bio .card-img {
+      border: 2px solid var(--navy, #273868);
+      padding: 3px;
+      margin: 0 2rem 0 0; }
+      .people_directory-column .card-bio .card-img img {
+        width: 150px; }
+    .people_directory-column .card-bio .card-body {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 2rem; }
+      .people_directory-column .card-bio .card-body .card-header {
+        display: flex;
+        flex-direction: column; }
+        .people_directory-column .card-bio .card-body .card-header h3 {
+          font-size: 1.5rem; }
+        .people_directory-column .card-bio .card-body .card-header .bio-title {
+          display: flex;
+          flex-direction: column; }
+          .people_directory-column .card-bio .card-body .card-header .bio-title .title {
+            font-weight: 600;
+            font-size: 1.2rem; }
+      .people_directory-column .card-bio .card-body .card-metatags {
+        display: flex;
+        flex-direction: column; }
+        .people_directory-column .card-bio .card-body .card-metatags .meta {
+          margin: 0 0 1rem 0; }
+          .people_directory-column .card-bio .card-body .card-metatags .meta i {
+            margin: 0 0.5rem 0 0; }
+          .people_directory-column .card-bio .card-body .card-metatags .meta:last-of-type {
+            margin: 0; }
 
 footer {
   background-color: var(--lehigh_brown, #502d0e);
@@ -865,7 +904,8 @@ h6 {
 
 h2,
 h3 {
-  position: relative; }
+  position: relative;
+  width: fit-content; }
   h2::after,
   h3::after {
     position: relative;

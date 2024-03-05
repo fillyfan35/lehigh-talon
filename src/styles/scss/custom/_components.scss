@@ -13,7 +13,7 @@
 
     .breadcrumb-nav {
       margin: 0 0 $spacer 0;
-      
+
       .breadcrumbs {
         display: flex;
         flex-direction: row;
@@ -173,10 +173,6 @@
   .card-body {
     padding: $spacer;
 
-    .card-title {
-      width: fit-content;
-    }
-
     p {
       margin: 0 0 $spacer 0;
       line-height: 1.5rem;
@@ -228,4 +224,68 @@
 }
 
 // people
+.people_directory-column {
+  display: flex;
+  flex-direction: column;
 
+  .card-bio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: unset;
+    border-radius: unset;
+
+    .card-img {
+      border: 2px solid var(--navy, $navy);
+      padding: 3px;
+      margin: 0 $space_two 0 0;
+
+      img {
+        width: 150px;
+      }
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: $space_two;
+
+      .card-header {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        .bio-title {
+          display: flex;
+          flex-direction: column;
+
+          .title {
+            font-weight: 600;
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .card-metatags {
+        display: flex;
+        flex-direction: column;
+
+        .meta {
+          margin: 0 0 $spacer 0;
+
+          i {
+            margin: 0 $space_half 0 0;
+          }
+
+          &:last-of-type {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
