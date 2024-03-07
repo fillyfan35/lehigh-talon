@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Lehigh Talon</title>
   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-  <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'> -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
@@ -183,99 +183,228 @@
       </div>
     </div>
   </header>
+  <section class="breadcrumb-section">
+    <div class="breadcrumb-wrapper">
+      <nav class="breadcrumb-nav">
+        <ul class="breadcrumbs">
+          <li id="home"><a href="index.html"><i class="fa-solid fa-house-chimney"></i><span
+                class="sr-only">home</span></a></li>
+          <li><a href="#">fake page</a></li>
+          <li class="active">people on this page</li>
+        </ul>
+      </nav>
+      <h1>People On This Page</h1>
+    </div><!-- end breadcrumb-wrapper -->
+  </section>
 
   <main class="main_content" id="main-content">
-    <section class="hero" style="background-image: url(src/img/alumnibuilding.jpg);">
-      <div class="mobile_hero_img">
-        <img src="src/img/alumnibuilding.jpg" alt="" />
-      </div>
-      <div class="hero_content">
-        <h1>This is a Title</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac imperdiet mauris. Donec dictum maximus
-          egestas. Etiam et lacus nec lacus consequat ullamcorper ac eu erat. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Praesent eu sapien eu sapien molestie imperdiet. Morbi tincidunt dolor non ipsum accumsan, ac
-          consequat neque pharetra.</p>
-      </div>
+    <section class="people_directory-column">
+      <h2>Directory Listing - Column</h2>
+      <div class="card card-bio">
+        <div class="card-img">
+          <img src="src/img/silhoutte.jpg" alt="" />
+        </div>
+        <div class="card-body">
+          <div class="card-header">
+            <h3>
+              <a href="#">Joe Cool</a>
+            </h3>
+            <div class="bio-title">
+              <span class="title">Senior Systems Engineer</span>
+              <span class="subtitle">Systems Engineering</span>
+            </div><!-- end bio-title -->
+          </div>
+          <div class="card-metatags">
+            <span class="meta tertiary"><a href="mailto:email123@lehigh.edu"><i class="fa-solid fa-envelope"></i><span
+                  class="meta-title">email123@lehigh.edu</span></a></span>
+            <span class="meta tertiary">
+              <i class="fa-solid fa-phone-volume"></i>
+              610-758-5555
+            </span>
+          </div><!-- end card-metatags -->
+        </div><!-- end card-body -->
+      </div><!-- end card-bio -->
+
+      <div class="card card-bio">
+        <div class="card-img">
+          <img src="src/img/silhoutte.jpg" alt="" />
+        </div>
+        <div class="card-body">
+          <div class="card-header">
+            <h3>
+              <a href="#">Flying Ace</a>
+            </h3>
+            <div class="bio-title">
+              <span class="title">Senior Systems Engineer</span>
+              <span class="subtitle">Systems Engineering</span>
+            </div><!-- end bio-title -->
+          </div>
+          <div class="card-metatags">
+            <span class="meta tertiary"><a href="mailto:email123@lehigh.edu"><i class="fa-solid fa-envelope"></i><span
+                  class="meta-title">email123@lehigh.edu</span></a></span>
+            <span class="meta tertiary">
+              <i class="fa-solid fa-phone-volume"></i>
+              610-758-5555
+            </span>
+          </div><!-- end card-metatags -->
+        </div><!-- end card-body -->
+      </div><!-- end card-bio -->
+
+      <div class="card card-bio">
+        <div class="card-img">
+          <img src="src/img/silhoutte.jpg" alt="" />
+        </div>
+        <div class="card-body">
+          <div class="card-header">
+            <h3>
+              <a href="#">Snoopy Brown</a>
+            </h3>
+            <div class="bio-title">
+              <span class="title">Senior Systems Engineer</span>
+              <span class="subtitle">Systems Engineering</span>
+            </div><!-- end bio-title -->
+          </div>
+          <div class="card-metatags">
+            <span class="meta tertiary"><a href="mailto:email123@lehigh.edu"><i class="fa-solid fa-envelope"></i><span
+                  class="meta-title">email123@lehigh.edu</span></a></span>
+            <span class="meta tertiary">
+              <i class="fa-solid fa-phone-volume"></i>
+              610-758-5555
+            </span>
+          </div><!-- end card-metatags -->
+        </div><!-- end card-body -->
+      </div><!-- end card-bio -->
+
+      <div class="card card-bio">
+        <div class="card-img">
+          <img src="src/img/silhoutte.jpg" alt="" />
+        </div>
+        <div class="card-body">
+          <div class="card-header">
+            <h3>
+              <a href="#">Beagle Scout</a>
+            </h3>
+            <div class="bio-title">
+              <span class="title">Senior Systems Engineer</span>
+              <span class="subtitle">Systems Engineering</span>
+            </div><!-- end bio-title -->
+          </div>
+          <div class="card-metatags">
+            <span class="meta tertiary"><a href="mailto:email123@lehigh.edu"><i class="fa-solid fa-envelope"></i><span
+                  class="meta-title">email123@lehigh.edu</span></a></span>
+            <span class="meta tertiary">
+              <i class="fa-solid fa-phone-volume"></i>
+              610-758-5555
+            </span>
+          </div><!-- end card-metatags -->
+        </div><!-- end card-body -->
+      </div><!-- end card-bio -->
     </section>
 
-    <h2>News Cards</h2>
-    <section class="card-grid">
-      <div class="card news">
-        <img src="src/img/DJI_0132R.jpg" alt="" />
-        <div class="card-body">
-          <h3 class="card-title">News Card title</h3>
-          <p class="card-date"><i class="fa-regular fa-calendar"></i> February 13, 2024</p>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <div class="card-buttons">
-            <a href="#" class="btn btn-navy">Go Somewhere</a>
-          </div><!-- end card-buttons -->
-        </div><!-- end card-body -->
-      </div><!-- end card -->
+    <section class="people_directory-grid">
+      <h2>Directory Listing - Grid</h2>
+      <div class="grid-wrapper">
+        <div class="card card-bio">
+          <div class="card-img">
+            <img src="src/img/silhoutte.jpg" alt="" />
+          </div>
+          <div class="card-body">
+            <div class="card-header">
+              <h3>
+                <a href="#">Joe Cool</a>
+              </h3>
+              <div class="bio-title">
+                <span class="title">Senior Systems Engineer</span>
+                <span class="subtitle">Systems Engineering</span>
+              </div><!-- end bio-title -->
+            </div>
+            <div class="card-metatags">
+              <span class="meta tertiary"><a href="mailto:email123@lehigh.edu"><i class="fa-solid fa-envelope"></i><span
+                    class="meta-title">email123@lehigh.edu</span></a></span>
+              <span class="meta tertiary">
+                <i class="fa-solid fa-phone-volume"></i>
+                610-758-5555
+              </span>
+            </div><!-- end card-metatags -->
+          </div><!-- end card-body -->
+        </div><!-- end card-bio -->
 
-      <div class="card news">
-        <div class="card-body">
-          <h3 class="card-title">News Card title: No Image</h3>
-          <p class="card-date"><i class="fa-regular fa-calendar"></i> February 13, 2024</p>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <div class="card-buttons">
-            <a href="#" class="btn btn-navy">Go Somewhere</a>
-          </div><!-- end card-buttons -->
-        </div><!-- end card-body -->
-      </div><!-- end card -->
+        <div class="card card-bio">
+          <div class="card-img">
+            <img src="src/img/silhoutte.jpg" alt="" />
+          </div>
+          <div class="card-body">
+            <div class="card-header">
+              <h3>
+                <a href="#">Flying Ace</a>
+              </h3>
+              <div class="bio-title">
+                <span class="title">Senior Systems Engineer</span>
+                <span class="subtitle">Systems Engineering</span>
+              </div><!-- end bio-title -->
+            </div>
+            <div class="card-metatags">
+              <span class="meta tertiary"><a href="mailto:email123@lehigh.edu"><i class="fa-solid fa-envelope"></i><span
+                    class="meta-title">email123@lehigh.edu</span></a></span>
+              <span class="meta tertiary">
+                <i class="fa-solid fa-phone-volume"></i>
+                610-758-5555
+              </span>
+            </div><!-- end card-metatags -->
+          </div><!-- end card-body -->
+        </div><!-- end card-bio -->
+
+        <div class="card card-bio">
+          <div class="card-img">
+            <img src="src/img/silhoutte.jpg" alt="" />
+          </div>
+          <div class="card-body">
+            <div class="card-header">
+              <h3>
+                <a href="#">Snoopy Brown</a>
+              </h3>
+              <div class="bio-title">
+                <span class="title">Senior Systems Engineer</span>
+                <span class="subtitle">Systems Engineering</span>
+              </div><!-- end bio-title -->
+            </div>
+            <div class="card-metatags">
+              <span class="meta tertiary"><a href="mailto:email123@lehigh.edu"><i class="fa-solid fa-envelope"></i><span
+                    class="meta-title">email123@lehigh.edu</span></a></span>
+              <span class="meta tertiary">
+                <i class="fa-solid fa-phone-volume"></i>
+                610-758-5555
+              </span>
+            </div><!-- end card-metatags -->
+          </div><!-- end card-body -->
+        </div><!-- end card-bio -->
+
+        <div class="card card-bio">
+          <div class="card-img">
+            <img src="src/img/silhoutte.jpg" alt="" />
+          </div>
+          <div class="card-body">
+            <div class="card-header">
+              <h3>
+                <a href="#">Beagle Scout</a>
+              </h3>
+              <div class="bio-title">
+                <span class="title">Senior Systems Engineer</span>
+                <span class="subtitle">Systems Engineering</span>
+              </div><!-- end bio-title -->
+            </div>
+            <div class="card-metatags">
+              <span class="meta tertiary"><a href="mailto:email123@lehigh.edu"><i class="fa-solid fa-envelope"></i><span
+                    class="meta-title">email123@lehigh.edu</span></a></span>
+              <span class="meta tertiary">
+                <i class="fa-solid fa-phone-volume"></i>
+                610-758-5555
+              </span>
+            </div><!-- end card-metatags -->
+          </div><!-- end card-body -->
+        </div><!-- end card-bio -->
+      </div><!-- end grid-wrapper -->
     </section>
-
-    <h2>Call to Actions</h2>
-    <div class="card cta">
-      <div class="card-body">
-        <h2 class="card-title">Call to Action with One Button</h2>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p>
-        <div class="card-buttons">
-          <a href="#" class="btn btn-navy">Go Somewhere</a>
-        </div><!-- end card-buttons -->
-      </div><!-- end card-body -->
-    </div><!-- end card -->
-
-    <div class="card cta">
-      <div class="card-body">
-        <h2 class="card-title">Call to Action with Two Buttons</h2>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p>
-        <div class="card-buttons">
-          <a href="#" class="btn btn-navy">Go Somewhere</a>
-          <a href="#" class="btn btn-navy">Go Somewhere Else</a>
-        </div><!-- end card-buttons -->
-      </div><!-- end card-body -->
-    </div><!-- end card -->
-
-    <div class="card cta">
-      <div class="card-body">
-        <h2 class="card-title">Call to Action with Three Buttons</h2>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p>
-        <div class="card-buttons">
-          <a href="#" class="btn btn-navy">Go Somewhere</a>
-          <a href="#" class="btn btn-navy">Go Somewhere Else</a>
-          <a href="#" class="btn btn-navy">Go Anywhere</a>
-        </div><!-- end card-buttons -->
-      </div><!-- end card-body -->
-    </div><!-- end card -->
-
-    <div class="card cta-img">
-      <img src="src/img/snow.jpg" class="card-img-top" alt="" />
-      <div class="card-body">
-        <h2 class="card-title">Call to Action: Image</h2>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p>
-        <div class="card-buttons">
-          <a href="#" class="btn btn-navy">Go Somewhere</a>
-          <a href="#" class="btn btn-navy">Go Somewhere Else</a>
-          <a href="#" class="btn btn-navy">Go Anywhere</a>
-        </div><!-- end card-buttons -->
-      </div><!-- end card-body -->
-    </div><!-- end card -->
   </main>
 
   <footer class="footer global_footer">

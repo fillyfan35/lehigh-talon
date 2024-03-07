@@ -520,6 +520,59 @@ header {
         .no_scroll header .menu_bar .menu_wrapper .menu .navbar-toggler .x:nth-of-type(1), .no_scroll header .menu_bar .menu_wrapper .menu .navbar-toggler .x:nth-of-type(3), header.scrolling .menu_bar .menu_wrapper .menu .navbar-toggler .x:nth-of-type(1), header.scrolling .menu_bar .menu_wrapper .menu .navbar-toggler .x:nth-of-type(3) {
           width: 32px; } }
 
+.breadcrumb-section {
+  background-color: var(--beige, #fff6da);
+  width: 100%; }
+  .breadcrumb-section .breadcrumb-wrapper {
+    margin: 0 auto; }
+    @media (min-width: 768px) {
+      .breadcrumb-section .breadcrumb-wrapper {
+        padding: 0.5rem 0; } }
+  @media (min-width: 768px) and (min-width: 576px) {
+    .breadcrumb-section .breadcrumb-wrapper {
+      max-width: 540px; } }
+  @media (min-width: 768px) and (min-width: 768px) {
+    .breadcrumb-section .breadcrumb-wrapper {
+      max-width: 720px; } }
+  @media (min-width: 768px) and (min-width: 992px) {
+    .breadcrumb-section .breadcrumb-wrapper {
+      max-width: 960px; } }
+  @media (min-width: 768px) and (min-width: 1200px) {
+    .breadcrumb-section .breadcrumb-wrapper {
+      max-width: 1140px; } }
+  @media (min-width: 768px) and (min-width: 1400px) {
+    .breadcrumb-section .breadcrumb-wrapper {
+      max-width: 1320px; } }
+    .breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav {
+      margin: 0 0 1rem 0; }
+      .breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav .breadcrumbs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; }
+        .breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav .breadcrumbs li {
+          margin: 0 1rem 0 0;
+          font-size: .875rem;
+          color: var(--navy, #273868); }
+          .breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav .breadcrumbs li::after {
+            content: '>';
+            display: inline-block;
+            padding: 0 0 0 1rem;
+            color: var(--navy, #273868);
+            font-weight: 600; }
+          .breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav .breadcrumbs li:last-of-type {
+            margin: 0;
+            padding: 0; }
+            .breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav .breadcrumbs li:last-of-type::after {
+              content: ''; }
+          .breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav .breadcrumbs li a {
+            font-size: inherit;
+            color: var(--navy, #273868);
+            text-decoration: underline;
+            font-weight: 600; }
+            .breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav .breadcrumbs li a:focus, .breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav .breadcrumbs li a:hover {
+              color: var(--navy_dark, #040c21);
+              text-decoration: none; }
+
 .btn {
   border-radius: 5px;
   padding: 0.5rem 0.75rem;
@@ -610,8 +663,6 @@ header {
       transition: all 0.35s ease; }
   .card .card-body {
     padding: 1rem; }
-    .card .card-body .card-title {
-      width: fit-content; }
     .card .card-body p {
       margin: 0 0 1rem 0;
       line-height: 1.5rem; }
@@ -642,6 +693,90 @@ header {
     width: 20rem; }
     .card.news .card-body .card-title {
       font-size: 1.25rem; }
+
+.people_directory-column,
+.people_directory-grid {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 3rem 0; }
+  .people_directory-column .card-bio,
+  .people_directory-grid .card-bio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: unset;
+    border-radius: unset;
+    margin: 0 0 2rem 0;
+    padding: 1rem; }
+    .people_directory-column .card-bio:last-of-type,
+    .people_directory-grid .card-bio:last-of-type {
+      margin: 0; }
+    .people_directory-column .card-bio .card-img,
+    .people_directory-grid .card-bio .card-img {
+      border: 2px solid var(--navy, #273868);
+      background-color: var(--white, #fff);
+      padding: 3px;
+      margin: 0 2rem 0 0; }
+      .people_directory-column .card-bio .card-img img,
+      .people_directory-grid .card-bio .card-img img {
+        width: 150px; }
+    .people_directory-column .card-bio .card-body,
+    .people_directory-grid .card-bio .card-body {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 2rem; }
+      .people_directory-column .card-bio .card-body .card-header,
+      .people_directory-grid .card-bio .card-body .card-header {
+        display: flex;
+        flex-direction: column; }
+        .people_directory-column .card-bio .card-body .card-header h3,
+        .people_directory-grid .card-bio .card-body .card-header h3 {
+          font-size: 1.5rem; }
+        .people_directory-column .card-bio .card-body .card-header .bio-title,
+        .people_directory-grid .card-bio .card-body .card-header .bio-title {
+          display: flex;
+          flex-direction: column; }
+          .people_directory-column .card-bio .card-body .card-header .bio-title .title,
+          .people_directory-grid .card-bio .card-body .card-header .bio-title .title {
+            font-weight: 600;
+            font-size: 1.2rem; }
+      .people_directory-column .card-bio .card-body .card-metatags,
+      .people_directory-grid .card-bio .card-body .card-metatags {
+        display: flex;
+        flex-direction: column; }
+        .people_directory-column .card-bio .card-body .card-metatags .meta,
+        .people_directory-grid .card-bio .card-body .card-metatags .meta {
+          margin: 0 0 1rem 0; }
+          .people_directory-column .card-bio .card-body .card-metatags .meta i,
+          .people_directory-grid .card-bio .card-body .card-metatags .meta i {
+            margin: 0 0.5rem 0 0;
+            color: var(--navy, #273868); }
+          .people_directory-column .card-bio .card-body .card-metatags .meta:last-of-type,
+          .people_directory-grid .card-bio .card-body .card-metatags .meta:last-of-type {
+            margin: 0; }
+
+.people_directory-column .card-bio:nth-of-type(even) {
+  background-color: var(--grey_background, #e9ecef); }
+
+.people_directory-grid .grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem; }
+  .people_directory-grid .grid-wrapper .card-bio {
+    padding: 0; }
+    .people_directory-grid .grid-wrapper .card-bio .card-img {
+      flex: 1;
+      border: unset;
+      padding: 0;
+      margin: 0 1rem 0 0; }
+    .people_directory-grid .grid-wrapper .card-bio .card-body {
+      flex: 3;
+      padding: 0;
+      gap: 1rem; }
+      .people_directory-grid .grid-wrapper .card-bio .card-body .card-header,
+      .people_directory-grid .grid-wrapper .card-bio .card-body .card-metatags {
+        flex: 1; }
 
 footer {
   background-color: var(--lehigh_brown, #502d0e);
@@ -711,6 +846,7 @@ footer {
   --dark_teal: #1d5970;
   --dark_teal_hover: #17475a;
   --darkest_grey: #222;
+  --grey_background: #e9ecef;
   --gold: #ffe41e;
   --lehigh_brown: #502d0e;
   --light_blue: #94d0e9;
@@ -728,7 +864,7 @@ footer {
 
 body {
   color: var(--darkest_grey, #222);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   margin: 0; }
   body.no-scroll {
@@ -753,17 +889,32 @@ body {
   .skip-link:focus {
     transform: translateY(0%); }
 
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  /* 2 */
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important; }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  font-family: "Noto Serif", serif;
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  line-height: 1.2;
-  color: var(--bs-heading-color); }
+  line-height: 1.2; }
 
 h1 {
   font-size: calc(1.375rem + 1.5vw); }
@@ -797,7 +948,8 @@ h6 {
 
 h2,
 h3 {
-  position: relative; }
+  position: relative;
+  width: fit-content; }
   h2::after,
   h3::after {
     position: relative;
@@ -835,3 +987,16 @@ main {
   @media (min-width: 768px) and (min-width: 1400px) {
     main {
       max-width: 1320px; } }
+  main a {
+    color: var(--navy, #273868);
+    font-weight: 600;
+    text-decoration: none; }
+    main a:focus, main a:hover {
+      text-decoration: underline; }
+  main h2 a,
+  main h3 a {
+    text-decoration: none; }
+    main h2 a:focus, main h2 a:hover,
+    main h3 a:focus,
+    main h3 a:hover {
+      text-decoration: none; }
