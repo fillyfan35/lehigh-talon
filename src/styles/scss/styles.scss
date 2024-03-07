@@ -15,6 +15,7 @@
   --dark_teal: #1d5970;
   --dark_teal_hover: #17475a;
   --darkest_grey: #222;
+  --grey_background: #e9ecef;
   --gold: #ffe41e;
   --lehigh_brown: #502d0e;
   --light_blue: #94d0e9;
@@ -164,5 +165,28 @@ main {
     margin: $space_three auto;
     padding: 0;
     @include max-width;
+  }
+
+  a {
+    color: var(--navy, $navy);
+    font-weight: 600;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h2,
+  h3 {
+    a {
+      text-decoration: none;
+
+      &:focus,
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 }
