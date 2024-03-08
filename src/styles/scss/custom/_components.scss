@@ -5,6 +5,7 @@
 
   .breadcrumb-wrapper {
     margin: 0 auto;
+    padding: $spacer;
 
     @media (min-width: $width_md) {
       padding: $space_half 0;
@@ -244,30 +245,49 @@
     }
 
     .card-img {
-      border: 2px solid var(--navy, $navy);
-      background-color: var(--white, $white);
-      padding: 3px;
-      margin: 0 $space_two 0 0;
-
+      margin: 0 $spacer 0 0;
+      flex: 1;
+      
+      @media (min-width: $width_md) {
+        margin: 0 $space_two 0 0;
+      }
+      
       img {
+        border: 2px solid var(--navy, $navy);
+        background-color: var(--white, $white);
+        padding: 3px;
         width: 150px;
       }
     }
 
     .card-body {
       display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      gap: $space_two;
+      flex-direction: column;
+      gap: $space_half;
+      padding: 0;
+      flex: 3;
+      
+      @media (min-width: $width_sm) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: $spacer;
+      }
+
+      @media (min-width: $width_md) {
+        padding: 0 $spacer;
+        gap: $space_two;
+        flex-wrap: nowrap;
+      }
 
       .card-header {
         display: flex;
         flex-direction: column;
-
+        flex: 1;
+        
         h3 {
           font-size: 1.5rem;
         }
-
+        
         .bio-title {
           display: flex;
           flex-direction: column;
@@ -278,10 +298,17 @@
           }
         }
       }
-
+      
       .card-metatags {
         display: flex;
         flex-direction: column;
+        flex: 1;
+        word-break: break-all;
+        margin: $spacer 0 0 0;
+
+        @media (min-width: $width_sm) {
+          margin: 0;
+        }
 
         .meta {
           margin: 0 0 $spacer 0;
@@ -313,21 +340,43 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: $space_two;
+
+    @media (max-width: $width_sm) {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
     
     .card-bio {
       padding: 0;
-
+      
       .card-img {
-        flex: 1;
+        flex: unset;
         border: unset;
         padding: 0;
         margin: 0 $spacer 0 0;
-      }
+        
+        @media (min-width: $width_md) {
+          flex: 1;
+        }
 
+        img {
+          width: 100px;
+        }
+      }
+      
       .card-body {
-        flex: 3;
-        padding: 0;
+        flex-direction: column;
         gap: $spacer;
+        
+        @media (min-width: $width_md) {
+          flex: 3;
+          padding: 0;
+        }
+
+        .card-metatags {
+          margin: 0;
+        }
 
         .card-header,
         .card-metatags {

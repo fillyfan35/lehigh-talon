@@ -150,8 +150,7 @@ h3 {
     content: "";
     display: block;
     height: 0.125rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: $space_half 0;
     width: 5rem;
     @include transition;
   }
