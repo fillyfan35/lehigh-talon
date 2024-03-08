@@ -583,6 +583,7 @@ header {
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease; }
   .btn:focus, .btn:hover {
+    text-decoration: none;
     -webkit-transition: all 0.35s ease;
     -moz-transition: all 0.35s ease;
     -ms-transition: all 0.35s ease;
@@ -591,19 +592,35 @@ header {
   .btn.btn-dark_teal {
     color: var(--white, #fff);
     background-color: var(--dark_teal, #1d5970);
-    border-color: var(--dark_teal, #1d5970); }
+    border: 1px solid var(--dark_teal, #1d5970); }
     .btn.btn-dark_teal:focus, .btn.btn-dark_teal:hover {
       color: var(--white, #fff);
       background-color: var(--dark_teal_hover, #17475a);
-      border-color: var(--dark_teal_hover, #17475a); }
+      border: 1px solid var(--dark_teal_hover, #17475a); }
+  .btn.btn-gold {
+    color: var(--darkest_grey, #222);
+    background-color: var(--gold, #ffe41e);
+    border: 1px solid var(--gold, #ffe41e); }
+    .btn.btn-gold:focus, .btn.btn-gold:hover {
+      color: var(--darkest_grey, #222);
+      background-color: var(--white, #fff);
+      border: 1px solid var(--gold, #ffe41e); }
   .btn.btn-navy {
     color: var(--white, #fff);
     background-color: var(--navy, #273868);
-    border-color: var(--navy, #273868); }
+    border: 1px solid var(--navy, #273868); }
     .btn.btn-navy:focus, .btn.btn-navy:hover {
       color: var(--white, #fff);
       background-color: var(--navy_dark, #040c21);
-      border-color: var(--navy_dark, #040c21); }
+      border: 1px solid var(--navy_dark, #040c21); }
+
+.button-list {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; }
 
 .hero {
   position: relative;

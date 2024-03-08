@@ -68,34 +68,58 @@
 
   &:focus,
   &:hover {
+    text-decoration: none;
     @include transition;
   }
 
   &.btn-dark_teal {
     color: var(--white, $white);
     background-color: var(--dark_teal, $dark_teal);
-    border-color: var(--dark_teal, $dark_teal);
+    border: 1px solid var(--dark_teal, $dark_teal);
     
     &:focus,
     &:hover {
       color: var(--white, $white);
       background-color: var(--dark_teal_hover, $dark_teal_hover);
-      border-color: var(--dark_teal_hover, $dark_teal_hover);
+      border: 1px solid var(--dark_teal_hover, $dark_teal_hover);
+    }
+  }
+
+  &.btn-gold {
+    color: var(--darkest_grey, $darkest_grey);
+    background-color: var(--gold, $gold);
+    border: 1px solid var(--gold, $gold);
+    
+    &:focus,
+    &:hover {
+      color: var(--darkest_grey, $darkest_grey);
+      background-color: var(--white, $white);
+      border: 1px solid var(--gold, $gold);
     }
   }
 
   &.btn-navy {
     color: var(--white, $white);
     background-color: var(--navy, $navy);
-    border-color: var(--navy, $navy);
+    border: 1px solid var(--navy, $navy);
     
     &:focus,
     &:hover {
       color: var(--white, $white);
       background-color: var(--navy_dark, $navy_dark);
-      border-color: var(--navy_dark, $navy_dark);
+      border: 1px solid var(--navy_dark, $navy_dark);
     }
   }
+}
+
+// button list
+.button-list {
+  margin: $space_three 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $space_two;
 }
 
 // hero
