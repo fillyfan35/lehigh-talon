@@ -5,6 +5,7 @@
 
   .breadcrumb-wrapper {
     margin: 0 auto;
+    padding: $spacer;
 
     @media (min-width: $width_md) {
       padding: $space_half 0;
@@ -67,34 +68,58 @@
 
   &:focus,
   &:hover {
+    text-decoration: none;
     @include transition;
   }
 
   &.btn-dark_teal {
     color: var(--white, $white);
     background-color: var(--dark_teal, $dark_teal);
-    border-color: var(--dark_teal, $dark_teal);
+    border: 1px solid var(--dark_teal, $dark_teal);
     
     &:focus,
     &:hover {
       color: var(--white, $white);
       background-color: var(--dark_teal_hover, $dark_teal_hover);
-      border-color: var(--dark_teal_hover, $dark_teal_hover);
+      border: 1px solid var(--dark_teal_hover, $dark_teal_hover);
+    }
+  }
+
+  &.btn-gold {
+    color: var(--darkest_grey, $darkest_grey);
+    background-color: var(--gold, $gold);
+    border: 1px solid var(--gold, $gold);
+    
+    &:focus,
+    &:hover {
+      color: var(--darkest_grey, $darkest_grey);
+      background-color: var(--white, $white);
+      border: 1px solid var(--gold, $gold);
     }
   }
 
   &.btn-navy {
     color: var(--white, $white);
     background-color: var(--navy, $navy);
-    border-color: var(--navy, $navy);
+    border: 1px solid var(--navy, $navy);
     
     &:focus,
     &:hover {
       color: var(--white, $white);
       background-color: var(--navy_dark, $navy_dark);
-      border-color: var(--navy_dark, $navy_dark);
+      border: 1px solid var(--navy_dark, $navy_dark);
     }
   }
+}
+
+// button list
+.button-list {
+  margin: $space_three 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $space_two;
 }
 
 // hero
@@ -244,30 +269,49 @@
     }
 
     .card-img {
-      border: 2px solid var(--navy, $navy);
-      background-color: var(--white, $white);
-      padding: 3px;
-      margin: 0 $space_two 0 0;
-
+      margin: 0 $spacer 0 0;
+      flex: 1;
+      
+      @media (min-width: $width_md) {
+        margin: 0 $space_two 0 0;
+      }
+      
       img {
+        border: 2px solid var(--navy, $navy);
+        background-color: var(--white, $white);
+        padding: 3px;
         width: 150px;
       }
     }
 
     .card-body {
       display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      gap: $space_two;
+      flex-direction: column;
+      gap: $space_half;
+      padding: 0;
+      flex: 3;
+      
+      @media (min-width: $width_sm) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: $spacer;
+      }
+
+      @media (min-width: $width_md) {
+        padding: 0 $spacer;
+        gap: $space_two;
+        flex-wrap: nowrap;
+      }
 
       .card-header {
         display: flex;
         flex-direction: column;
-
+        flex: 1;
+        
         h3 {
           font-size: 1.5rem;
         }
-
+        
         .bio-title {
           display: flex;
           flex-direction: column;
@@ -278,10 +322,17 @@
           }
         }
       }
-
+      
       .card-metatags {
         display: flex;
         flex-direction: column;
+        flex: 1;
+        word-break: break-all;
+        margin: $spacer 0 0 0;
+
+        @media (min-width: $width_sm) {
+          margin: 0;
+        }
 
         .meta {
           margin: 0 0 $spacer 0;
@@ -313,21 +364,43 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: $space_two;
+
+    @media (max-width: $width_sm) {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
     
     .card-bio {
       padding: 0;
-
+      
       .card-img {
-        flex: 1;
+        flex: unset;
         border: unset;
         padding: 0;
         margin: 0 $spacer 0 0;
-      }
+        
+        @media (min-width: $width_md) {
+          flex: 1;
+        }
 
+        img {
+          width: 100px;
+        }
+      }
+      
       .card-body {
-        flex: 3;
-        padding: 0;
+        flex-direction: column;
         gap: $spacer;
+        
+        @media (min-width: $width_md) {
+          flex: 3;
+          padding: 0;
+        }
+
+        .card-metatags {
+          margin: 0;
+        }
 
         .card-header,
         .card-metatags {
