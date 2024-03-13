@@ -615,12 +615,13 @@ header {
       border: 1px solid var(--navy_dark, #040c21); }
 
 .button-list {
-  margin: 3rem 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem; }
+  margin: 3rem 0; }
+  .button-list .button-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem; }
 
 .hero {
   position: relative;

@@ -115,11 +115,14 @@
 // button list
 .button-list {
   margin: $space_three 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: $space_two;
+
+  .button-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $space_two;
+  }
 }
 
 // hero
