@@ -168,7 +168,7 @@ header {
                   @media (min-width: $width_md) {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
-                    gap: $space_three $spacer;
+                    gap: $space_three $spacer_and_half;
                   }
                   
                   @media (min-width: $width_lg) {

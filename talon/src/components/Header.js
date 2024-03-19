@@ -5,7 +5,7 @@ import stainedGlassImage from '../img/stainedglass.jpg';
 
 function Header() {
   return (
-    <div>
+    <>
       <a href="#main-content" className="focusable skip-link">Skip to main content</a>
       <header>
         {/* UCPA Emergency Banner Alert */}
@@ -183,9 +183,9 @@ function Header() {
             {/* end search */}
           </div>
         </div>
-      </header >
+      </header>
 
-    </div >
+    </>
   );
 }
 
