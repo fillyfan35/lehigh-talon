@@ -1,9 +1,15 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import lehighLogo from '../img/lehigh_logo.png';
 import stainedGlassImage from '../img/stainedglass.jpg';
 
 
 function Header() {
+  const location = useLocation();
+
+  // Check if the current location is the HomePage
+  const isHomePage = location.pathname === '/';
+
   return (
     <>
       <a href="#main-content" className="focusable skip-link">Skip to main content</a>
@@ -17,7 +23,7 @@ function Header() {
         {/* End UCPA Emergency Banner Alert */}
         <div className="department_bar">
           <div className="department_wrapper">
-            <a href="index.html">Department Name Here Department Name Here</a>
+            <a href="/">Department Name Here Department Name Here</a>
           </div>
           {/* end department_wrapper */}
         </div>
@@ -50,8 +56,8 @@ function Header() {
                           <li className="nav-item dropdown"><a className="nav-link title dropdown-toggle" href="#" role="button"
                             aria-expanded="false">Component List <i className="fa-solid fa-chevron-down"></i></a>
                             <ul className="dropdown-menu">
-                              <li><a className="dropdown-item" href="people.html">People</a></li>
-                              <li><a className="dropdown-item" href="buttons.html">Buttons</a></li>
+                              <li><a className="dropdown-item" href="/components/people">People</a></li>
+                              <li><a className="dropdown-item" href="/components/buttons">Buttons</a></li>
                               <li><a className="dropdown-item" href="#">Partners</a></li>
                               <li><a className="dropdown-item" href="#">Map to Lehigh</a></li>
                               <li><a className="dropdown-item" href="#">Giving to Creative Inquiry</a></li>
@@ -185,6 +191,23 @@ function Header() {
         </div>
       </header>
 
+      {/* Conditionally render breadcrumbs */}
+      {!isHomePage && (
+        <section className="breadcrumb-section">
+          <div className="breadcrumb-wrapper">
+            <nav className="breadcrumb-nav">
+              <ul className="breadcrumbs">
+                <li id="home"><a href="/"><i className="fa-solid fa-house-chimney"></i><span
+                  className="sr-only">home</span></a></li>
+                <li><a href="#">avaliable components</a></li>
+                <li className="active">people on this page</li>
+              </ul>
+            </nav>
+            <h1>People On This Page</h1>
+          </div>
+          {/*  breadcrumb-wrapper */}
+        </section>
+      )}
     </>
   );
 }
