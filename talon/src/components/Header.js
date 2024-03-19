@@ -1,5 +1,7 @@
 import React from 'react';
 import lehighLogo from '../img/lehigh_logo.png';
+import stainedGlassImage from '../img/stainedglass.jpg';
+
 
 function Header() {
   return (
@@ -33,7 +35,7 @@ function Header() {
               <div className="navbar main_nav">
                 <div className="collapse navbar-collapse main_nav_wrapper" id="navbarSupportedContent"
                   style={{
-                    background: `linear-gradient(90deg, rgba(33, 18, 5, 1.0), rgba(33, 18, 5, 1.0), rgba(33, 18, 5, 0.97), rgba(33, 18, 5, 0.95)), url('src/img/stainedglass.jpg')`
+                    background: `linear-gradient(90deg, rgba(33, 18, 5, 1.0), rgba(33, 18, 5, 1.0), rgba(33, 18, 5, 0.97), rgba(33, 18, 5, 0.95)), url(${stainedGlassImage})`
                   }}>
                   <div className="nav-container">
                     <form className="header-search" role="search">

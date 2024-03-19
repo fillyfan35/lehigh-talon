@@ -5,7 +5,7 @@ import { handleScroll } from './scripts/handle-scroll';
 import { hamburgerX } from './scripts/hamburger';
 import { headerHeight } from './scripts/header-height';
 import { stopScroll } from './scripts/stop-scroll';
-import { initializeDropdownToggles } from './scripts/dropdowns';
+import { dropdownToggles } from './scripts/dropdowns';
 import { focusSearch } from './scripts/focus-search';
 
 function Website() {
@@ -14,7 +14,7 @@ function Website() {
     hamburgerX();
     headerHeight();
     stopScroll();
-    initializeDropdownToggles();
+    dropdownToggles();
     focusSearch();
   }, []);
 
