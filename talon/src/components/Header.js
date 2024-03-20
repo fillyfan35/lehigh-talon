@@ -61,8 +61,8 @@ function Header(props) {
                               <li><a className="dropdown-item" href="/components/buttons">Buttons</a></li>
                               <li><a className="dropdown-item" href="/components/call-to-action">Call-To-Action</a></li>
                               <li><a className="dropdown-item" href="/components/cards">Cards</a></li>
+                              <li><a className="dropdown-item" href="/components/heros">Heros</a></li>
                               <li><a className="dropdown-item" href="/components/people">People</a></li>
-                              <li><a className="dropdown-item" href="#">Giving to Creative Inquiry</a></li>
                             </ul>
                           </li>
                           <li className="nav-item dropdown"><a className="nav-link title dropdown-toggle" href="#" role="button"

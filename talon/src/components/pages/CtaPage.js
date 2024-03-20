@@ -1,10 +1,9 @@
 import React from 'react';
 import snowImg from '../../img/snow.jpg';
 
-function CardsPage() {
+function CtaPage() {
   return (
     <>
-      <h2>Call to Actions</h2>
       <div className="card cta">
         <div className="card-body">
           <h2 className="card-title">Call to Action with One Button</h2>
@@ -70,4 +69,4 @@ function CardsPage() {
   );
 }
 
-export default CardsPage;
+export default CtaPage;
