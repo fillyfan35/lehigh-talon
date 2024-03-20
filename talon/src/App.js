@@ -11,8 +11,8 @@ import './styles/styles.scss';
 // Define route data
 const routesData = [
   { path: '/', pageTitle: 'Home' },
-  { path: '/components/people', pageTitle: 'People' },
-  { path: '/components/buttons', pageTitle: 'Buttons Hi' },
+  { path: '/components/people', pageTitle: 'People Components Page' },
+  { path: '/components/buttons', pageTitle: 'Buttons Components Page' },
   // Add more routes as needed
 ];
 
@@ -24,8 +24,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Website pageTitle="Home"><HomePage /></Website>} />
-        <Route path="/components/people" element={<Website pageTitle="People"><PeoplePage /></Website>} />
-        <Route path="/components/buttons" element={<Website pageTitle="Buttons Hi"><ButtonsPage /></Website>} />
+        <Route path="/components/people" element={<Website pageTitle="People Components Page"><PeoplePage /></Website>} />
+        <Route path="/components/buttons" element={<Website pageTitle="Buttons Components Page"><ButtonsPage /></Website>} />
         {/* Add more routes for other subpages */}
       </Routes>
     </Router>
