@@ -4,8 +4,10 @@ import lehighLogo from '../img/lehigh_logo.png';
 import stainedGlassImage from '../img/stainedglass.jpg';
 
 
-function Header() {
+function Header(props) {
   const location = useLocation();
+  const pathSegments = location.pathname.split('/').filter(segment => segment !== ''); // Split path and remove empty segments
+
 
   // Check if the current location is the HomePage
   const isHomePage = location.pathname === '/';
@@ -191,21 +193,27 @@ function Header() {
         </div>
       </header>
 
-      {/* Conditionally render breadcrumbs */}
+      {/* Conditionally render breadcrumbs outside header */}
       {!isHomePage && (
         <section className="breadcrumb-section">
           <div className="breadcrumb-wrapper">
             <nav className="breadcrumb-nav">
               <ul className="breadcrumbs">
-                <li id="home"><a href="/"><i className="fa-solid fa-house-chimney"></i><span
-                  className="sr-only">home</span></a></li>
-                <li><a href="#">avaliable components</a></li>
-                <li className="active">people on this page</li>
+                <li id="home"><Link to="/"><i className="fa-solid fa-house-chimney"></i><span className="sr-only">home</span></Link></li>
+                {pathSegments.map((segment, index) => (
+                  <li key={index}>
+                    {index === pathSegments.length - 1 ? (
+                      <span>{segment}</span>
+                    ) : (
+                      <Link to={`/${segment}`}>{segment}</Link>
+                    )}
+                  </li>
+                ))}
               </ul>
             </nav>
-            <h1>People On This Page</h1>
+            <h1>{props.pageTitle}</h1>
           </div>
-          {/*  breadcrumb-wrapper */}
+          {/* breadcrumb-wrapper */}
         </section>
       )}
     </>

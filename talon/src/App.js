@@ -1,56 +1,35 @@
-import React, { useEffect } from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import './styles/styles.scss';
+// App.js
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/pages/HomePage';
 import PeoplePage from './components/pages/PeoplePage';
 import ButtonsPage from './components/pages/ButtonsPage';
+import Website from './components/Website';
+import AppHeader from './components/AppHeader'; // Import the AppHeader component
+import './styles/styles.scss';
 
-function Website(props) {
-  useEffect(() => {
-    // Import and use JavaScript functions within the useEffect hook
-    const handleScroll = require('./scripts/handle-scroll').handleScroll;
-    const hamburgerX = require('./scripts/hamburger').hamburgerX;
-    const headerHeight = require('./scripts/header-height').headerHeight;
-    const stopScroll = require('./scripts/stop-scroll').stopScroll;
-    const dropdownToggles = require('./scripts/dropdowns').dropdownToggles;
-    const focusSearch = require('./scripts/focus-search').focusSearch;
-
-    handleScroll();
-    hamburgerX();
-    headerHeight();
-    stopScroll();
-    dropdownToggles();
-    focusSearch();
-  }, []);
-
-  return (
-    <>
-      <Header />
-      <main className="main_content" id="main-content">
-        {/* Render children components */}
-        {props.children}
-      </main>
-      <Footer />
-    </>
-  );
-}
+// Define route data
+const routesData = [
+  { path: '/', pageTitle: 'Home' },
+  { path: '/components/people', pageTitle: 'People' },
+  { path: '/components/buttons', pageTitle: 'Buttons Hi' },
+  // Add more routes as needed
+];
 
 function App() {
   return (
     <Router>
-      <Website>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/components/people" element={<PeoplePage />} />
-          <Route path="/components/buttons" element={<ButtonsPage />} />
-          {/* Add more routes for other subpages */}
-        </Routes>
-      </Website>
+      {/* Include the AppHeader component outside the Routes */}
+      <AppHeader routes={routesData} />
+
+      <Routes>
+        <Route path="/" element={<Website pageTitle="Home"><HomePage /></Website>} />
+        <Route path="/components/people" element={<Website pageTitle="People"><PeoplePage /></Website>} />
+        <Route path="/components/buttons" element={<Website pageTitle="Buttons Hi"><ButtonsPage /></Website>} />
+        {/* Add more routes for other subpages */}
+      </Routes>
     </Router>
   );
 }
 
 export default App;
-export { App };
