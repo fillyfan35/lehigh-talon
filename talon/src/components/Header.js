@@ -58,9 +58,9 @@ function Header(props) {
                           <li className="nav-item dropdown"><a className="nav-link title dropdown-toggle" href="#" role="button"
                             aria-expanded="false">Component List <i className="fa-solid fa-chevron-down"></i></a>
                             <ul className="dropdown-menu">
-                              <li><a className="dropdown-item" href="/components/people">People</a></li>
                               <li><a className="dropdown-item" href="/components/buttons">Buttons</a></li>
-                              <li><a className="dropdown-item" href="#">Partners</a></li>
+                              <li><a className="dropdown-item" href="/components/cards">Cards</a></li>
+                              <li><a className="dropdown-item" href="/components/people">People</a></li>
                               <li><a className="dropdown-item" href="#">Map to Lehigh</a></li>
                               <li><a className="dropdown-item" href="#">Giving to Creative Inquiry</a></li>
                             </ul>

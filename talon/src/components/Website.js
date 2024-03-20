@@ -22,7 +22,6 @@ function Website({ pageTitle, children }) {
 
   return (
     <>
-      {/* <Header pageTitle={pageTitle} /> */}
       <main className="main_content" id="main-content">
         {/* Render children components */}
         {children}
