@@ -1,4 +1,4 @@
-export function initializeDropdownToggles() {
+export function dropdownToggles() {
   const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
   dropdownToggles.forEach(toggle => {

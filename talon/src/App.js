@@ -1,27 +1,44 @@
-import Header from './components/Header';
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './components/pages/HomePage';
+import ButtonsPage from './components/pages/ButtonsPage';
+import CtaPage from './components/pages/CtaPage';
+import CardsPage from './components/pages/CardsPage';
+import HerosPage from './components/pages/HerosPage';
+import PeoplePage from './components/pages/PeoplePage';
+import Website from './components/Website';
+import AppHeader from './components/AppHeader'; // Import the AppHeader component
 import './styles/styles.scss';
-import React, { useEffect } from 'react';
-import { handleScroll } from './scripts/handle-scroll';
-import { hamburgerX } from './scripts/hamburger';
-import { headerHeight } from './scripts/header-height';
-import { stopScroll } from './scripts/stop-scroll';
-import { initializeDropdownToggles } from './scripts/dropdowns';
-import { focusSearch } from './scripts/focus-search';
 
-function Website() {
-  useEffect(() => {
-    handleScroll();
-    hamburgerX();
-    headerHeight();
-    stopScroll();
-    initializeDropdownToggles();
-    focusSearch();
-  }, []);
+// Define route data
+const routesData = [
+  { path: '/', pageTitle: 'Home' },
+  { path: '/components/buttons', pageTitle: 'Button Components Page' },
+  { path: '/components/call-to-action', pageTitle: 'Call-To-Action Components Page' },
+  { path: '/components/cards', pageTitle: 'Card Components Page' },
+  { path: '/components/heros', pageTitle: 'Hero Components Page' },
+  { path: '/components/people', pageTitle: 'People Components Page' },
+  // Add more routes as needed
+];
 
+function App() {
   return (
-    <siteScripts />,
-    <Header />
+    <Router>
+      {/* Include the AppHeader component outside the Routes */}
+      <AppHeader routes={routesData} />
+
+      <Routes>
+        <Route path="/" element={<Website pageTitle="Home"><HomePage /></Website>} />
+        <Route path="/components/buttons" element={<Website pageTitle="Button Components Page"><ButtonsPage /></Website>} />
+        <Route path="/components/call-to-action" element={<Website pageTitle="Call-To-Action Components Page"><CtaPage /></Website>} />
+        <Route path="/components/cards" element={<Website pageTitle="Card Components Page"><CardsPage /></Website>} />
+        <Route path="/components/heros" element={<Website pageTitle="Hero Components Page"><HerosPage /></Website>} />
+        <Route path="/components/people" element={<Website pageTitle="People Components Page"><PeoplePage /></Website>} />
+        {/* Add more routes for other subpages */}
+      </Routes>
+    </Router>
   );
 }
 
-export default Website;
+export default App;

@@ -1,9 +1,19 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import lehighLogo from '../img/lehigh_logo.png';
+import stainedGlassImage from '../img/stainedglass.jpg';
 
-function Header() {
+
+function Header(props) {
+  const location = useLocation();
+  const pathSegments = location.pathname.split('/').filter(segment => segment !== ''); // Split path and remove empty segments
+
+
+  // Check if the current location is the HomePage
+  const isHomePage = location.pathname === '/';
+
   return (
-    <div>
+    <>
       <a href="#main-content" className="focusable skip-link">Skip to main content</a>
       <header>
         {/* UCPA Emergency Banner Alert */}
@@ -15,7 +25,7 @@ function Header() {
         {/* End UCPA Emergency Banner Alert */}
         <div className="department_bar">
           <div className="department_wrapper">
-            <a href="index.html">Department Name Here Department Name Here</a>
+            <a href="/">Department Name Here Department Name Here</a>
           </div>
           {/* end department_wrapper */}
         </div>
@@ -33,7 +43,7 @@ function Header() {
               <div className="navbar main_nav">
                 <div className="collapse navbar-collapse main_nav_wrapper" id="navbarSupportedContent"
                   style={{
-                    background: `linear-gradient(90deg, rgba(33, 18, 5, 1.0), rgba(33, 18, 5, 1.0), rgba(33, 18, 5, 0.97), rgba(33, 18, 5, 0.95)), url('src/img/stainedglass.jpg')`
+                    background: `linear-gradient(90deg, rgba(33, 18, 5, 1.0), rgba(33, 18, 5, 1.0), rgba(33, 18, 5, 0.97), rgba(33, 18, 5, 0.95)), url(${stainedGlassImage})`
                   }}>
                   <div className="nav-container">
                     <form className="header-search" role="search">
@@ -48,11 +58,11 @@ function Header() {
                           <li className="nav-item dropdown"><a className="nav-link title dropdown-toggle" href="#" role="button"
                             aria-expanded="false">Component List <i className="fa-solid fa-chevron-down"></i></a>
                             <ul className="dropdown-menu">
-                              <li><a className="dropdown-item" href="people.html">People</a></li>
-                              <li><a className="dropdown-item" href="buttons.html">Buttons</a></li>
-                              <li><a className="dropdown-item" href="#">Partners</a></li>
-                              <li><a className="dropdown-item" href="#">Map to Lehigh</a></li>
-                              <li><a className="dropdown-item" href="#">Giving to Creative Inquiry</a></li>
+                              <li><a className="dropdown-item" href="/components/buttons">Buttons</a></li>
+                              <li><a className="dropdown-item" href="/components/call-to-action">Call-To-Action</a></li>
+                              <li><a className="dropdown-item" href="/components/cards">Cards</a></li>
+                              <li><a className="dropdown-item" href="/components/heros">Heros</a></li>
+                              <li><a className="dropdown-item" href="/components/people">People</a></li>
                             </ul>
                           </li>
                           <li className="nav-item dropdown"><a className="nav-link title dropdown-toggle" href="#" role="button"
@@ -181,9 +191,32 @@ function Header() {
             {/* end search */}
           </div>
         </div>
-      </header >
+      </header>
 
-    </div >
+      {/* Conditionally render breadcrumbs outside header */}
+      {!isHomePage && (
+        <section className="breadcrumb-section">
+          <div className="breadcrumb-wrapper">
+            <nav className="breadcrumb-nav">
+              <ul className="breadcrumbs">
+                <li id="home"><Link to="/"><i className="fa-solid fa-house-chimney"></i><span className="sr-only">home</span></Link></li>
+                {pathSegments.map((segment, index) => (
+                  <li key={index}>
+                    {index === pathSegments.length - 1 ? (
+                      <span>{segment}</span>
+                    ) : (
+                      <Link to={`/${segment}`}>{segment}</Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <h1>{props.pageTitle}</h1>
+          </div>
+          {/* breadcrumb-wrapper */}
+        </section>
+      )}
+    </>
   );
 }
 

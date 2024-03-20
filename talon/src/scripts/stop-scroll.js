@@ -5,7 +5,7 @@ export function stopScroll() {
   let dropdownMenus = document.querySelectorAll('.dropdown-menu');
   let dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
-  navbarToggler.addEventListener('click', function () {
+  function toggleScrollAndMenu() {
     document.body.classList.toggle('no_scroll');
     main_nav.classList.toggle('show');
     dropdownMenus.forEach(function (dropdownMenu) {
@@ -14,16 +14,20 @@ export function stopScroll() {
     dropdownToggles.forEach(function (dropdownToggle) {
       dropdownToggle.setAttribute('aria-expanded', 'false');
     });
-  });
+  }
 
-  searchbarToggler.addEventListener('click', function () {
-    document.body.classList.toggle('no_scroll');
-    main_nav.classList.toggle('show');
-    dropdownMenus.forEach(function (dropdownMenu) {
-      dropdownMenu.classList.remove('show');
+  // Check if event listeners are already added before adding them
+  if (navbarToggler && !navbarToggler.hasAttribute('data-click-listener')) {
+    navbarToggler.setAttribute('data-click-listener', 'true');
+    navbarToggler.addEventListener('click', function () {
+      toggleScrollAndMenu();
     });
-    dropdownToggles.forEach(function (dropdownToggle) {
-      dropdownToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  if (searchbarToggler && !searchbarToggler.hasAttribute('data-click-listener')) {
+    searchbarToggler.setAttribute('data-click-listener', 'true');
+    searchbarToggler.addEventListener('click', function () {
+      toggleScrollAndMenu();
     });
-  });
+  }
 }
