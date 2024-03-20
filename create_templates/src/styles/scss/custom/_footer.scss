@@ -1,0 +1,69 @@
+footer {
+  background-color: var(--lehigh_brown, $lehigh_brown);
+  color: var(--white, $white);
+  font-size: .875rem;
+  padding: $space_two $spacer;
+  
+  @media (min-width: $width_md) {
+    padding: $space_three 0;
+  }
+  
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
+    @media (min-width: $width_md) {
+      padding: $space_half 0;
+      @include max-width;
+    }
+  
+    a {
+      color: var(--white, $white);
+      
+      &:focus,
+      &:hover {
+        color: var(--white, $white);
+        text-decoration: none;
+      }
+
+      .extlink {
+        margin: 0 0 0 $space_quarter;
+        font-size: .75rem;
+      }
+    }
+
+    .logo {
+      width: 200px;
+      margin: 0 0 $spacer_and_half 0;
+    }
+
+    .copyright {
+      text-align: center;
+      margin: 0 0 $spacer 0;
+    }
+    
+    .common_links {
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include reset-list-nav;
+
+        li {
+          margin: 0 $space_half;
+
+          &:first-of-type {
+            margin: 0 $space_half 0 0;
+          }
+
+          &:last-of-type {
+            margin: 0 0 0 $space_half;
+          }
+        }
+      }
+    }
+  }
+}

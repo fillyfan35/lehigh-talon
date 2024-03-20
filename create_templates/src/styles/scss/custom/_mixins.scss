@@ -1,0 +1,106 @@
+/**************
+* General Mixins (put specific ones in component files where applicable)
+
+* Mixin - Clearfix.
+* Adds clearfix based on http://bourbon.io/docs/#clearfix
+* use example =   @include clearfix
+**************/
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin reset-list-style {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin transition {
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  -ms-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+@mixin fast_transition {
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+@mixin font-awesome-base {
+  font-family: $font-awesome;
+  font-weight: 600;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin font-awesome-brand {
+  font-family: $font-awesome-brand;
+  font-weight: 600;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin outline-base {
+  outline-style: solid;
+  outline-color: rgba(229, 151, 0, 0.7);
+  outline-width: 5px;
+}
+
+@mixin color-scheme-dark() {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+@mixin color-scheme-light() {
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
+}
+
+@mixin max-width {
+  @media (min-width: 576px) {
+    //sm
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    // md
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    // lg
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    // xl
+    max-width: 1140px;
+  }
+  @media (min-width: 1400px) {
+    // xxl
+    max-width: 1320px;
+  }
+}
