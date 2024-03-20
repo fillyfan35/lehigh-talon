@@ -1,0 +1,415 @@
+// breadcrumbs
+.breadcrumb-section {
+  background-color: var(--beige, $beige);
+  width: 100%;
+
+  .breadcrumb-wrapper {
+    margin: 0 auto;
+    padding: $spacer;
+
+    @media (min-width: $width_md) {
+      padding: $space_half 0;
+      @include max-width;
+    }
+
+    .breadcrumb-nav {
+      margin: 0 0 $spacer 0;
+
+      .breadcrumbs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        li {
+          margin: 0 $spacer 0 0;
+          font-size: .875rem;
+          color: var(--navy, $navy);
+          
+          &::after {
+            content: '>';
+            display: inline-block;
+            padding: 0 0 0 $spacer;
+            color: var(--navy, $navy);
+            font-weight: 600;
+          }
+
+          &:last-of-type {
+            margin: 0;
+            padding: 0;
+
+            &::after {
+              content: '';
+            }
+          }
+
+          a {
+            font-size: inherit;
+            color: var(--navy, $navy);
+            text-decoration: underline;
+            font-weight: 600;
+
+            &:focus,
+            &:hover {
+              color: var(--navy_dark, $navy_dark);
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// buttons
+.btn {
+  border-radius: $border_radius;
+  padding: $space_half $space_three_quarter;
+  @include transition;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    @include transition;
+  }
+
+  &.btn-dark_teal {
+    color: var(--white, $white);
+    background-color: var(--dark_teal, $dark_teal);
+    border: 1px solid var(--dark_teal, $dark_teal);
+    
+    &:focus,
+    &:hover {
+      color: var(--white, $white);
+      background-color: var(--dark_teal_hover, $dark_teal_hover);
+      border: 1px solid var(--dark_teal_hover, $dark_teal_hover);
+    }
+  }
+
+  &.btn-gold {
+    color: var(--darkest_grey, $darkest_grey);
+    background-color: var(--gold, $gold);
+    border: 1px solid var(--gold, $gold);
+    
+    &:focus,
+    &:hover {
+      color: var(--darkest_grey, $darkest_grey);
+      background-color: var(--white, $white);
+      border: 1px solid var(--gold, $gold);
+    }
+  }
+
+  &.btn-navy {
+    color: var(--white, $white);
+    background-color: var(--navy, $navy);
+    border: 1px solid var(--navy, $navy);
+    
+    &:focus,
+    &:hover {
+      color: var(--white, $white);
+      background-color: var(--navy_dark, $navy_dark);
+      border: 1px solid var(--navy_dark, $navy_dark);
+    }
+  }
+}
+
+// button list
+.button-list {
+  margin: $space_three 0;
+
+  .button-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $space_two;
+  }
+}
+
+// hero
+.hero {
+  position: relative;
+  margin: $spacer 0;
+  background-size: cover;
+  
+  @media (max-width: $width_md) {
+    background-image: unset !important;
+  }
+  
+  @media (min-width: $width_md) {
+    margin: $space_three 0;
+    aspect-ratio: 3 / 1;
+  }
+
+  .mobile_hero_img {
+    display: block;
+    // margin: 0 0 -5px 0;
+
+    @media (min-width: $width_md) {
+      display: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .hero_content {
+    // background-color: rgba(0, 0, 0, .8);
+    background: linear-gradient(to right,rgba(0,0,0,.8) 0,rgba(0,0,0,.6) 100%);
+    color: var(--white, $white);
+    border-left: $space_half solid var(--accent_color, $accent_color);
+    padding: $space_three_quarter;
+    
+    @media (min-width: $width_md) {
+      position: absolute;
+      margin: 0 10%;
+      bottom: 2%;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+// card
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: $spacer;
+  margin: 0 0 $space_three 0;
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid var(--border_color, $border_color);
+  border-radius: $border_radius;
+
+  img {
+    width: 100%;
+    @include transition;
+
+    &:focus,
+    &:hover {
+      transform: scale(1.01);
+      @include transition;
+    }
+  }
+  
+  .card-body {
+    padding: $spacer;
+
+    p {
+      margin: 0 0 $spacer 0;
+      line-height: 1.5rem;
+    }
+
+    .card-date {
+      font-family: "proxima-nova", sans-serif;
+      font-size: .875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--slate, $slate);
+    }
+
+    .card-buttons {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: $spacer;
+    }
+  }
+
+  &:focus-within,
+  &:hover {
+    h2,
+    h3 {
+      &::after {
+        position: relative;
+        width: 100%;
+        @include transition;
+      }
+    }
+  }
+
+  // call to action
+  &.cta {
+    margin: 0 0 $space_three 0;
+  }
+
+  // news card
+  &.news {
+    width: 20rem;
+
+    .card-body {
+      .card-title {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+// people
+.people_directory-column,
+.people_directory-grid {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 $space_three 0;
+
+  .card-bio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: unset;
+    border-radius: unset;
+    margin: 0 0 $space_two 0;
+    padding: $spacer;
+
+    &:last-of-type {
+      margin: 0;
+    }
+
+    .card-img {
+      margin: 0 $spacer 0 0;
+      flex: 1;
+      
+      @media (min-width: $width_md) {
+        margin: 0 $space_two 0 0;
+      }
+      
+      img {
+        border: 2px solid var(--navy, $navy);
+        background-color: var(--white, $white);
+        padding: 3px;
+        width: 150px;
+      }
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      gap: $space_half;
+      padding: 0;
+      flex: 3;
+      
+      @media (min-width: $width_sm) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: $spacer;
+      }
+
+      @media (min-width: $width_md) {
+        padding: 0 $spacer;
+        gap: $space_two;
+        flex-wrap: nowrap;
+      }
+
+      .card-header {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        
+        h3 {
+          font-size: 1.5rem;
+        }
+        
+        .bio-title {
+          display: flex;
+          flex-direction: column;
+
+          .title {
+            font-weight: 600;
+            font-size: 1.2rem;
+          }
+        }
+      }
+      
+      .card-metatags {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        word-break: break-all;
+        margin: $spacer 0 0 0;
+
+        @media (min-width: $width_sm) {
+          margin: 0;
+        }
+
+        .meta {
+          margin: 0 0 $spacer 0;
+
+          i {
+            margin: 0 $space_half 0 0;
+            color: var(--navy, $navy);
+          }
+
+          &:last-of-type {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.people_directory-column {
+  .card-bio {
+    &:nth-of-type(even) {
+      background-color: var(--grey_background, $grey_background);
+    }
+  }
+}
+
+.people_directory-grid {
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $space_two;
+
+    @media (max-width: $width_sm) {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    
+    .card-bio {
+      padding: 0;
+      
+      .card-img {
+        flex: unset;
+        border: unset;
+        padding: 0;
+        margin: 0 $spacer 0 0;
+        
+        @media (min-width: $width_md) {
+          flex: 1;
+        }
+
+        img {
+          width: 100px;
+        }
+      }
+      
+      .card-body {
+        flex-direction: column;
+        gap: $spacer;
+        
+        @media (min-width: $width_md) {
+          flex: 3;
+          padding: 0;
+        }
+
+        .card-metatags {
+          margin: 0;
+        }
+
+        .card-header,
+        .card-metatags {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
