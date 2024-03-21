@@ -8,7 +8,6 @@ function Header(props) {
   const location = useLocation();
   const pathSegments = location.pathname.split('/').filter(segment => segment !== ''); // Split path and remove empty segments
 
-
   // Check if the current location is the HomePage
   const isHomePage = location.pathname === '/';
 

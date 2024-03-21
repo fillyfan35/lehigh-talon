@@ -1,6 +1,18 @@
 import React, { useEffect } from 'react';
-// import Header from './Header';
+import { Link, useLocation } from 'react-router-dom';
 import Footer from './Footer';
+
+// Sample data structure representing parent pages and their corresponding siblings
+const siblingsData = {
+  '/components': [
+    { path: '/components/buttons', pageTitle: 'Buttons' },
+    { path: '/components/call-to-action', pageTitle: 'Call-To-Action' },
+    { path: '/components/cards', pageTitle: 'Cards' },
+    { path: '/components/heros', pageTitle: 'Heros' },
+    { path: '/components/people', pageTitle: 'People' },
+  ],
+  // Add more entries as needed
+};
 
 function Website({ pageTitle, children }) {
   useEffect(() => {
@@ -20,11 +32,39 @@ function Website({ pageTitle, children }) {
     focusSearch();
   }, []);
 
+  // Check if the current location is the HomePage
+  const location = useLocation();
+  const currentPath = location.pathname;
+  const isHomePage = location.pathname === '/';
+
+  // Extract the parent path to find siblings
+  const parentPath = '/components'; // Update this to your actual parent path
+
+  // Get siblings based on the current page's path
+  const siblings = siblingsData[parentPath] || [];
+
   return (
     <>
-      <main className="main_content" id="main-content">
-        {/* Render children components */}
-        {children}
+      <main className={`main_content${!isHomePage ? ' sidebar-present' : ''}`} id="main-content">
+        <div className="content-wrapper">
+          {/* Render children components */}
+          {children}
+        </div>
+        {/* end content-wrapper */}
+        {!isHomePage && (
+          <div className="sidebar">
+            <nav className="sidebar-nav">
+              <h2>In This Section</h2>
+              <ul>
+                {siblings.map(sibling => (
+                  <li key={sibling.path} className="nav-item">
+                    <Link to={sibling.path}>{sibling.pageTitle}</Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        )}
       </main>
       <Footer />
     </>
