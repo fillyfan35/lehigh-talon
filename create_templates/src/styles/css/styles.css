@@ -903,11 +903,19 @@ main {
   grid-template-columns: 1fr; }
   main.sidebar-present {
     grid-template-columns: 3.5fr 1fr;
-    gap: 2rem; }
-    main.sidebar-present .content-wrapper {
-      background-color: red; }
-    main.sidebar-present .sidebar {
-      background-color: blue; }
+    gap: 3rem; }
+    main.sidebar-present .sidebar .sidebar-nav {
+      margin: 0 0 3rem 0; }
+      main.sidebar-present .sidebar .sidebar-nav h2 {
+        font-size: 1.25rem; }
+      main.sidebar-present .sidebar .sidebar-nav ul {
+        margin: 0 0 0 1rem; }
+        main.sidebar-present .sidebar .sidebar-nav ul .nav-item {
+          border-left: 2px solid var(--accent_color, #ffe41e);
+          padding: 0 0 0 0.5rem;
+          margin: 1rem 0; }
+          main.sidebar-present .sidebar .sidebar-nav ul .nav-item a {
+            font-size: 1rem; }
 
 :root {
   --accent_color: #ffe41e;
