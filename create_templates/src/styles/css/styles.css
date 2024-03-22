@@ -616,6 +616,8 @@ header {
 
 .button-list {
   margin: 3rem 0; }
+  .button-list p {
+    margin: 0 0 1rem 0; }
   .button-list .button-wrapper {
     display: flex;
     flex-direction: row;

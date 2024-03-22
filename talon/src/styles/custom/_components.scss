@@ -116,6 +116,10 @@
 .button-list {
   margin: $space_three 0;
 
+  p {
+    margin: 0 0 $spacer 0;
+  }
+
   .button-wrapper {
     display: flex;
     flex-direction: row;
