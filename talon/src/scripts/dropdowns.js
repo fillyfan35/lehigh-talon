@@ -9,7 +9,7 @@ export function dropdownToggles() {
 
       // Close other dropdown menus and set aria-expanded to false
       document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        if (menu !== dropdownMenu) {
+        if (menu !== dropdownMenu && menu.classList.contains('show')) {
           menu.classList.remove('show');
           const toggle = menu.previousElementSibling;
           toggle.setAttribute('aria-expanded', 'false');
