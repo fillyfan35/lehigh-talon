@@ -19,6 +19,7 @@ function Website({ pageTitle, children }) {
     // Import and use JavaScript functions within the useEffect hook
     const handleScroll = require('../scripts/handle-scroll').handleScroll;
     const hamburgerX = require('../scripts/hamburger').hamburgerX;
+    const hamburgerSideX = require('../scripts/side-hamburger').hamburgerSideX;
     const headerHeight = require('../scripts/header-height').headerHeight;
     const stopScroll = require('../scripts/stop-scroll').stopScroll;
     const dropdownToggles = require('../scripts/dropdowns').dropdownToggles;
@@ -26,6 +27,7 @@ function Website({ pageTitle, children }) {
 
     handleScroll();
     hamburgerX();
+    hamburgerSideX();
     headerHeight();
     stopScroll();
     dropdownToggles();
@@ -53,8 +55,18 @@ function Website({ pageTitle, children }) {
         {/* end content-wrapper */}
         {!isHomePage && (
           <div className="sidebar">
-            <nav className="sidebar-nav">
+            <div className="toggler-wrapper">
+              <button className="sidenavbar-toggler nav-toggle" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle side navigation">
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
+              </button>
               <h2>In This Section</h2>
+            </div>
+            {/* end toggler-wrapper */}
+            <nav className="sidebar-nav">
               <ul>
                 {siblings.map(sibling => (
                   <li key={sibling.path} className="nav-item">
