@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // this function set changes the hamburger to and 'X' and vice-versa
     let navToggle = document.querySelector('.nav-toggle');
     let searchIcon = document.querySelector('.search .search_btn');
-    let bars = document.querySelectorAll('.bar');
+    let bars = document.querySelectorAll('header .bar');
 
     function toggleHamburger(e) {
       bars.forEach(bar => bar.classList.toggle('x'));
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let sideNav = document.querySelector('.sidebar .sidebar-nav ul');
 
     function toggleSideHamburger(e) {
-      sideBars.forEach(bar => bar.classList.toggle('x'));
+      sideBars.forEach(bars => bars.classList.toggle('x'));
 
       // toggle show class
       sideNav.classList.toggle('show');
