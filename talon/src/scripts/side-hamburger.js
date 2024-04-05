@@ -8,8 +8,8 @@ export function hamburgerSideX() {
     let sideNav = document.querySelector('.sidebar .sidebar-nav ul');
 
     function toggleHamburger(e) {
-      sideBars.forEach(bar => {
-        bar.classList.toggle('x');
+      sideBars.forEach(bars => {
+        bars.classList.toggle('x');
       });
 
       // toggle show class
