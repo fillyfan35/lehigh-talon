@@ -5,7 +5,7 @@ export function hamburgerX() {
   if (!eventListenerAdded) {
     let navToggle = document.querySelector('.nav-toggle');
     let searchIcon = document.querySelector('.search .search_btn');
-    let bars = document.querySelectorAll('.bar');
+    let bars = document.querySelectorAll('header .bar');
 
     function toggleHamburger(e) {
       bars.forEach(bar => {

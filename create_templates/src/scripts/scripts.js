@@ -28,11 +28,27 @@ document.addEventListener("DOMContentLoaded", function () {
     let bars = document.querySelectorAll('.bar');
 
     function toggleHamburger(e) {
-      bars.forEach(bar => bar.classList.toggle('x'))
+      bars.forEach(bar => bar.classList.toggle('x'));
     }
 
     navToggle.addEventListener('click', toggleHamburger);
     searchIcon.addEventListener('click', toggleHamburger);
+  }
+
+  function hamburgerSideX() {
+    // toggle side nav on mobile
+    let sideNavToggle = document.querySelector('.sidebar .nav-toggle');
+    let sideBars = document.querySelectorAll('.sidebar .bar');
+    let sideNav = document.querySelector('.sidebar .sidebar-nav ul');
+
+    function toggleSideHamburger(e) {
+      sideBars.forEach(bar => bar.classList.toggle('x'));
+
+      // toggle show class
+      sideNav.classList.toggle('show');
+    }
+
+    sideNavToggle.addEventListener('click', toggleSideHamburger);
   }
 
   function headerHeight() {
@@ -114,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial check in case the page is already scrolled when the script is executed
   handleScroll();
   hamburgerX();
+  hamburgerSideX();
   headerHeight();
   stopScroll();
   initializeDropdownToggles();

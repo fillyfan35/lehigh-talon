@@ -243,6 +243,12 @@
     margin: 0 0 $space_three 0;
   }
 
+  .card-body {
+    .card-title {
+      font-size: calc(1.3rem + 0.6vw);
+    }
+  }
+
   // news card
   &.news {
     width: 20rem;
