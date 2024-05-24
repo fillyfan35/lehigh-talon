@@ -7,17 +7,20 @@ export function hamburgerSideX() {
     let sideBars = document.querySelectorAll('.sidebar .bar');
     let sideNav = document.querySelector('.sidebar .sidebar-nav ul');
 
-    function toggleHamburger(e) {
-      sideBars.forEach(bars => {
-        bars.classList.toggle('x');
-      });
+    if (sideNavToggle && sideBars.length > 0 && sideNav) {
+      function toggleHamburger(e) {
+        sideBars.forEach(bars => {
+          bars.classList.toggle('x');
+        });
 
-      // toggle show class
-      sideNav.classList.toggle('show');
+        // toggle show class
+        sideNav.classList.toggle('show');
+      }
+
+      sideNavToggle.addEventListener('click', toggleHamburger);
+      eventListenerAdded = true; // Update the flag
+    } else {
+      console.error("Required elements not found in the DOM.");
     }
-
-    sideNavToggle.addEventListener('click', toggleHamburger);
-
-    eventListenerAdded = true; // Update the flag
   }
 }
