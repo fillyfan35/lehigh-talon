@@ -1,4 +1,6 @@
 footer {
+  // background-color: var(--lehigh_brown, $lehigh_brown);
+  // color: var(--white, $white);
   background-color: var(--grey_background, $grey_background);
   color: var(--lehigh_brown, $lehigh_brown);
   font-size: .875rem;
@@ -22,10 +24,12 @@ footer {
     }
   
     a {
+      // color: var(--white, $white);
       color: var(--lehigh_brown, $lehigh_brown);
       
       &:focus,
       &:hover {
+        // color: var(--white, $white);
         color: var(--lehigh_brown, $lehigh_brown);
         text-decoration: none;
       }
@@ -37,6 +41,7 @@ footer {
     }
 
     .logo {
+      // width: 200px;
       margin: 0 0 $spacer_and_half 0;
     }
 
