@@ -903,7 +903,6 @@ footer {
 
 .footer-image {
   position: relative;
-  background: linear-gradient(to top, #e9ecef, rgba(255, 255, 255, 0)), url("../../img/LU_Panorama.jpg");
   background: linear-gradient(to top, #e9ecef 0%, rgba(255, 255, 255, 0) 70%), url("../../img/LU_Panorama.jpg");
   background-size: cover;
   background-position: center bottom 34%;
