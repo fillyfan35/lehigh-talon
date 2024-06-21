@@ -1,13 +1,19 @@
 import React from 'react';
-import lehighLogo from '../img/lehigh_logo_white.svg';
+// import lehighLogo from '../img/lehigh_logo_white.svg';
+import lehighLogo from '../img/lehigh_logo.png';
 
 function Footer() {
   return (
     <>
+      <div class="footer-image">
+        <span class="sr-only">Footer banner</span>
+      </div>
+      {/* end footer-image */}
+
       <footer className="footer global_footer">
         <div className="footer-wrapper">
           <div className="logo">
-            <a href="https://www.lehigh.edu"><img src={lehighLogo} alt="Lehigh University logo" /></a>
+            <a href="https://www.lehigh.edu"><img src={lehighLogo} height={35} alt="Lehigh University logo" /></a>
           </div>
           {/* end logo */}
           <div className="copyright">

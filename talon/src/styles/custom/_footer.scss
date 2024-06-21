@@ -1,8 +1,12 @@
 footer {
-  background-color: var(--lehigh_brown, $lehigh_brown);
-  color: var(--white, $white);
+  // background-color: var(--lehigh_brown, $lehigh_brown);
+  // color: var(--white, $white);
+  background-color: var(--grey_background, $grey_background);
+  color: var(--lehigh_brown, $lehigh_brown);
   font-size: .875rem;
   padding: $space_two $spacer;
+  position: relative;
+  z-index: 2;
   
   @media (min-width: $width_md) {
     padding: $space_three 0;
@@ -20,11 +24,13 @@ footer {
     }
   
     a {
-      color: var(--white, $white);
+      // color: var(--white, $white);
+      color: var(--lehigh_brown, $lehigh_brown);
       
       &:focus,
       &:hover {
-        color: var(--white, $white);
+        // color: var(--white, $white);
+        color: var(--lehigh_brown, $lehigh_brown);
         text-decoration: none;
       }
 
@@ -35,7 +41,7 @@ footer {
     }
 
     .logo {
-      width: 200px;
+      // width: 200px;
       margin: 0 0 $spacer_and_half 0;
     }
 
@@ -66,4 +72,14 @@ footer {
       }
     }
   }
+}
+
+.footer-image {
+  position: relative;
+  background: linear-gradient(to top, rgba(233, 236, 239, 1) 0%, rgba(255, 255, 255, 0) 70%), url('../../img/LU_Panorama.jpg');
+  background-size: cover;
+  background-position: center bottom 34%;
+  aspect-ratio: 5 / 1;
+  bottom: -1px;
+  z-index: 1;
 }
