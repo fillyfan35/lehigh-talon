@@ -841,10 +841,12 @@ header {
         flex: 1; }
 
 footer {
-  background-color: var(--lehigh_brown, #502d0e);
-  color: var(--white, #fff);
+  background-color: var(--grey_background, #e9ecef);
+  color: var(--lehigh_brown, #502d0e);
   font-size: .875rem;
-  padding: 2rem 1rem; }
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 2; }
   @media (min-width: 768px) {
     footer {
       padding: 3rem 0; } }
@@ -872,15 +874,14 @@ footer {
     footer .footer-wrapper {
       max-width: 1320px; } }
     footer .footer-wrapper a {
-      color: var(--white, #fff); }
+      color: var(--lehigh_brown, #502d0e); }
       footer .footer-wrapper a:focus, footer .footer-wrapper a:hover {
-        color: var(--white, #fff);
+        color: var(--lehigh_brown, #502d0e);
         text-decoration: none; }
       footer .footer-wrapper a .extlink {
         margin: 0 0 0 0.25rem;
         font-size: .75rem; }
     footer .footer-wrapper .logo {
-      width: 200px;
       margin: 0 0 1.5rem 0; }
     footer .footer-wrapper .copyright {
       text-align: center;
@@ -899,6 +900,15 @@ footer {
           margin: 0 0.5rem 0 0; }
         footer .footer-wrapper .common_links ul li:last-of-type {
           margin: 0 0 0 0.5rem; }
+
+.footer-image {
+  position: relative;
+  background: linear-gradient(to top, #e9ecef 0%, rgba(255, 255, 255, 0) 70%), url("../../img/LU_Panorama.jpg");
+  background-size: cover;
+  background-position: center bottom 34%;
+  aspect-ratio: 5 / 1;
+  bottom: -1px;
+  z-index: 1; }
 
 main {
   display: grid;
