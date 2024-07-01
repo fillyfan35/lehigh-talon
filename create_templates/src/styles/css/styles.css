@@ -8,6 +8,9 @@
     - The "symbol *" part is to solve Firefox SVG sprite bug
     - The "html" attribute is exclud, because otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
  */
+@import url("https://use.typekit.net/fpb0tcn.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400&display=swap");
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
   all: unset;
   display: revert; }
@@ -520,6 +523,12 @@ header {
         .no_scroll header .menu_bar .menu_wrapper .menu .navbar-toggler .x:nth-of-type(1), .no_scroll header .menu_bar .menu_wrapper .menu .navbar-toggler .x:nth-of-type(3), header.scrolling .menu_bar .menu_wrapper .menu .navbar-toggler .x:nth-of-type(1), header.scrolling .menu_bar .menu_wrapper .menu .navbar-toggler .x:nth-of-type(3) {
           width: 32px; } }
 
+section {
+  margin: 3rem 0; }
+  section h2,
+  section h3 {
+    margin: 0 0 1.5rem 0; }
+
 .breadcrumb-section {
   background-color: var(--beige, #fff6da);
   width: 100%; }
@@ -656,7 +665,7 @@ header {
     .hero .hero_content h1 {
       font-size: 2rem; }
 
-.card-grid {
+.card-grid .card-grid-wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -839,6 +848,52 @@ header {
       .people_directory-grid .grid-wrapper .card-bio .card-body .card-header,
       .people_directory-grid .grid-wrapper .card-bio .card-body .card-metatags {
         flex: 1; }
+
+.stats {
+  margin: 3rem 0; }
+  .stats .stats-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem; }
+    .stats .stats-wrapper .stat {
+      background-color: transparent;
+      width: 300px;
+      height: 200px;
+      perspective: 1000px;
+      border-radius: 5px; }
+      .stats .stats-wrapper .stat .stat-inner-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d; }
+        .stats .stats-wrapper .stat .stat-inner-wrapper .value,
+        .stats .stats-wrapper .stat .stat-inner-wrapper .detail {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          border-radius: 5px; }
+        .stats .stats-wrapper .stat .stat-inner-wrapper .value {
+          flex-direction: column;
+          background-color: var(--navy, #273868);
+          color: var(--white, #fff);
+          font-family: "Times New Roman", Times, serif;
+          font-size: 4rem; }
+          .stats .stats-wrapper .stat .stat-inner-wrapper .value i {
+            margin: 0 0 0.5rem 0; }
+        .stats .stats-wrapper .stat .stat-inner-wrapper .detail {
+          background-color: var(--light_blue, #94d0e9);
+          transform: rotateY(180deg); }
+      .stats .stats-wrapper .stat:hover .stat-inner-wrapper {
+        transform: rotateY(180deg); }
 
 footer {
   background-color: var(--grey_background, #e9ecef);
@@ -1040,7 +1095,7 @@ main {
 
 body {
   color: var(--darkest_grey, #222);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "proxima-nova",sans-serif;
   font-size: 16px;
   margin: 0; }
   body.no-scroll {

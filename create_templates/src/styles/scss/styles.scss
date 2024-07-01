@@ -6,6 +6,16 @@
 @import 'custom/components';
 @import 'custom/footer';
 @import 'custom/sidebar';
+// Proxima Nova typekit link from Lehigh team
+@import url('https://use.typekit.net/fpb0tcn.css');
+
+// Noto Serif
+// If approved, since this is a Google font, we could download the files, or just reference this way.
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// Noto Sans Mono Space
+// This is not called for in the design, but wanted to include a mono-spaced font for possible future use
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400&display=swap');
 
 :root {
   --accent_color: #ffe41e;
@@ -37,7 +47,7 @@
 
 body {
 	color: var(--darkest_grey, $darkest_grey);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "proxima-nova",sans-serif;
   font-size: 16px;
   margin: 0;
 

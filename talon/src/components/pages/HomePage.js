@@ -19,28 +19,90 @@ function HomePage() {
         </div>
       </section>
 
-      <h2>News Cards</h2>
-      <section className="card-grid">
-        <div className="card news">
-          <img src={libraryImg} alt="" />
-          <div className="card-body">
-            <h3 className="card-title">News Card title</h3>
-            <p className="card-date"><i className="fa-regular fa-calendar"></i> February 13, 2024</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <div className="card-buttons">
-              <a href="#" className="btn btn-navy">Go Somewhere</a>
-            </div>
-            {/* end card-buttons */}
-          </div>
-          {/* end card-body */}
-        </div>
-        {/* end card */}
+      <section className="stats">
+        <h2>Stats</h2>
+        <div className="stats-wrapper">
+          <div className="stat">
+            <div className="stat-inner-wrapper">
+              <div className="value">
+                <i className="fa-solid fa-basketball"></i>
+                100%
+              </div>{/* end value */}
+              <div className="detail">
+                <p>Shots missed you don't take</p>
+              </div>{/* end detail */}
+            </div>{/* end stat-inner-wrapper */}
+          </div>{/* end stat */}
 
-        <div className="card news">
+          <div className="stat">
+            <div className="stat-inner-wrapper">
+              <div className="value">
+                <i className="fa-solid fa-graduation-cap"></i>
+                102
+              </div>{/* end value */}
+              <div className="detail">
+                <p>Majors Lehigh University provides</p>
+              </div>{/* end detail */}
+            </div>{/* end stat-inner-wrapper */}
+          </div>{/* end stat */}
+
+          <div className="stat">
+            <div className="stat-inner-wrapper">
+              <div className="value">
+                <i className="fa-solid fa-ticket"></i>
+                15,000+
+              </div>{/* end value */}
+              <div className="detail">
+                <p>IT Tickets answered by LTS</p>
+              </div>{/* end detail */}
+            </div>{/* end stat-inner-wrapper */}
+          </div>{/* end stat */}
+        </div>{/* end stats-wrapper */}
+
+      </section>
+
+      <section className="card-grid">
+        <h2>News Cards</h2>
+        <div className='card-grid-wrapper'>
+          <div className="card news">
+            <img src={libraryImg} alt="" />
+            <div className="card-body">
+              <h3 className="card-title">News Card title</h3>
+              <p className="card-date"><i className="fa-regular fa-calendar"></i> February 13, 2024</p>
+              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <div className="card-buttons">
+                <a href="#" className="btn btn-navy">Go Somewhere</a>
+              </div>
+              {/* end card-buttons */}
+            </div>
+            {/* end card-body */}
+          </div>
+          {/* end card */}
+
+          <div className="card news">
+            <div className="card-body">
+              <h3 className="card-title">News Card title: No Image</h3>
+              <p className="card-date"><i className="fa-regular fa-calendar"></i> February 13, 2024</p>
+              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <div className="card-buttons">
+                <a href="#" className="btn btn-navy">Go Somewhere</a>
+              </div>
+              {/* end card-buttons */}
+            </div>
+            {/* end card-body */}
+          </div>
+          {/* end card */}
+        </div>
+        {/* end card-grid-wrapper */}
+      </section>
+
+      <section>
+        <h2>Call to Actions</h2>
+        <div className="card cta">
           <div className="card-body">
-            <h3 className="card-title">News Card title: No Image</h3>
-            <p className="card-date"><i className="fa-regular fa-calendar"></i> February 13, 2024</p>
+            <h2 className="card-title">Call to Action with One Button</h2>
             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
             <div className="card-buttons">
@@ -53,68 +115,59 @@ function HomePage() {
         {/* end card */}
       </section>
 
-      <h2>Call to Actions</h2>
-      <div className="card cta">
-        <div className="card-body">
-          <h2 className="card-title">Call to Action with One Button</h2>
-          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <div className="card-buttons">
-            <a href="#" className="btn btn-navy">Go Somewhere</a>
+      <section>
+        <div className="card cta">
+          <div className="card-body">
+            <h2 className="card-title">Call to Action with Two Buttons</h2>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <div className="card-buttons">
+              <a href="#" className="btn btn-navy">Go Somewhere</a>
+              <a href="#" className="btn btn-navy">Go Somewhere Else</a>
+            </div>
+            {/* end card-buttons */}
           </div>
-          {/* end card-buttons */}
+          {/* end card-body */}
         </div>
-        {/* end card-body */}
-      </div>
-      {/* end card */}
+        {/* end card */}
+      </section>
 
-      <div className="card cta">
-        <div className="card-body">
-          <h2 className="card-title">Call to Action with Two Buttons</h2>
-          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <div className="card-buttons">
-            <a href="#" className="btn btn-navy">Go Somewhere</a>
-            <a href="#" className="btn btn-navy">Go Somewhere Else</a>
+      <section>
+        <div className="card cta">
+          <div className="card-body">
+            <h2 className="card-title">Call to Action with Three Buttons</h2>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <div className="card-buttons">
+              <a href="#" className="btn btn-navy">Go Somewhere</a>
+              <a href="#" className="btn btn-navy">Go Somewhere Else</a>
+              <a href="#" className="btn btn-navy">Go Anywhere</a>
+            </div>
+            {/* end card-buttons */}
           </div>
-          {/* end card-buttons */}
+          {/* end card-body */}
         </div>
-        {/* end card-body */}
-      </div>
-      {/* end card */}
+        {/* end card */}
+      </section>
 
-      <div className="card cta">
-        <div className="card-body">
-          <h2 className="card-title">Call to Action with Three Buttons</h2>
-          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <div className="card-buttons">
-            <a href="#" className="btn btn-navy">Go Somewhere</a>
-            <a href="#" className="btn btn-navy">Go Somewhere Else</a>
-            <a href="#" className="btn btn-navy">Go Anywhere</a>
+      <section>
+        <div className="card cta-img">
+          <img src={snowImg} className="card-img-top" alt="" />
+          <div className="card-body">
+            <h2 className="card-title">Call to Action: Image</h2>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <div className="card-buttons">
+              <a href="#" className="btn btn-navy">Go Somewhere</a>
+              <a href="#" className="btn btn-navy">Go Somewhere Else</a>
+              <a href="#" className="btn btn-navy">Go Anywhere</a>
+            </div>
+            {/* end card-buttons */}
           </div>
-          {/* end card-buttons */}
+          {/* end card-body */}
         </div>
-        {/* end card-body */}
-      </div>
-      {/* end card */}
-
-      <div className="card cta-img">
-        <img src={snowImg} className="card-img-top" alt="" />
-        <div className="card-body">
-          <h2 className="card-title">Call to Action: Image</h2>
-          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <div className="card-buttons">
-            <a href="#" className="btn btn-navy">Go Somewhere</a>
-            <a href="#" className="btn btn-navy">Go Somewhere Else</a>
-            <a href="#" className="btn btn-navy">Go Anywhere</a>
-          </div>
-          {/* end card-buttons */}
-        </div>
-        {/* end card-body */}
-      </div>
-      {/* end card */}
+        {/* end card */}
+      </section>
     </>
   );
 }
