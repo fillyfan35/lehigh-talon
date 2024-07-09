@@ -895,6 +895,23 @@ section {
       .stats .stats-wrapper .stat:hover .stat-inner-wrapper {
         transform: rotateY(180deg); }
 
+blockquote {
+  width: 100%;
+  font-size: 2rem;
+  color: var(--black, #000);
+  padding: 0 1.5rem;
+  margin: 1rem 0;
+  border-left: 3px solid var(--accent_color, #ffe41e); }
+  blockquote .byline {
+    display: block;
+    font-size: 1rem;
+    font-style: italic;
+    font-family: "Times New Roman", Times, serif; }
+    blockquote .byline::before {
+      display: inline-block;
+      content: '-';
+      margin: 0 0.5rem 0 1rem; }
+
 footer {
   background-color: var(--grey_background, #e9ecef);
   color: var(--lehigh_brown, #502d0e);

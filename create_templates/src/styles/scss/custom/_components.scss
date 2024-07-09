@@ -493,3 +493,25 @@ section {
     }
   }
 }
+
+blockquote {
+  width: 100%;
+  font-size: 2rem;
+  color: var(--black, $black);
+  padding: 0 $spacer_and_half;
+  margin: $spacer 0;
+  border-left: 3px solid var(--accent_color, $accent_color);
+
+  .byline {
+    display: block;
+    font-size: 1rem;
+    font-style: italic;
+    font-family: "Times New Roman", Times, serif;
+
+    &::before {
+      display: inline-block;
+      content: '-';
+      margin: 0 $space_half 0 $spacer;
+    }
+  }
+}
