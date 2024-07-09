@@ -98,6 +98,12 @@ function HomePage() {
         {/* end card-grid-wrapper */}
       </section>
 
+      <blockquote>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean placerat, odio a viverra commodo, augue neque
+        viverra ex, ut ornare erat lacus vitae nulla. Nulla convallis semper velit."
+        <span className="byline">Joe Smith</span>
+      </blockquote>
+
       <section>
         <h2>Call to Actions</h2>
         <div className="card cta">
