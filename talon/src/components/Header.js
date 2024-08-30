@@ -42,7 +42,7 @@ function Header(props) {
               <div className="navbar main_nav">
                 <div className="collapse navbar-collapse main_nav_wrapper" id="navbarSupportedContent"
                   style={{
-                    background: `linear-gradient(90deg, rgba(33, 18, 5, 1.0), rgba(33, 18, 5, 1.0), rgba(33, 18, 5, 0.97), rgba(33, 18, 5, 0.95)), url(${stainedGlassImage})`
+                    background: `linear-gradient(90deg, rgba(33, 18, 5, 1.0), rgba(33, 18, 5, 1.0), rgba(33, 18, 5, 0.95), rgba(33, 18, 5, 0.9)), url(${stainedGlassImage})`
                   }}>
                   <div className="nav-container">
                     <form className="header-search" role="search">
