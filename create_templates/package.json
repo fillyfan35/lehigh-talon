@@ -1,15 +1,16 @@
 {
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.2",
+    "async-foreach": "^0.1.3",
     "bootstrap": "^5.3.2",
-    "node-sass": "^9.0.0"
+    "sass": "^1.82.0"
   },
   "name": "lehigh-talon",
   "description": "New theme for Lehigh WMS being slowly developed.",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w src/styles/scss/ -o src/styles/css/ --recursive"
+    "sass": "sass --watch src/styles/scss/:src/styles/css/"
   },
   "repository": {
     "type": "git",
