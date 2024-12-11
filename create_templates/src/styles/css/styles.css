@@ -1103,7 +1103,8 @@ main {
   --peach: #fecb86;
   --slate: #6c757d;
   --success: #198754;
-  --white: #fff; }
+  --white: #fff;
+  --red: #FF0000; }
 
 * {
   -webkit-font-smoothing: antialiased;
