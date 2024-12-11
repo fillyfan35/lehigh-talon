@@ -141,7 +141,7 @@ section {
 // hero
 .hero {
   position: relative;
-  margin: $spacer 0;
+  margin: 0;
   background-size: cover;
   
   @media (max-width: $width_md) {
@@ -149,7 +149,6 @@ section {
   }
   
   @media (min-width: $width_md) {
-    margin: $space_three 0;
     aspect-ratio: 3 / 1;
   }
 
