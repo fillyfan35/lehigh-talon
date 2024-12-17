@@ -1,3 +1,6 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
 main {
   display: grid;
   grid-template-columns: 1fr;
