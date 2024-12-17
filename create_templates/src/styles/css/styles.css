@@ -670,6 +670,9 @@ header .menu_bar .menu_wrapper .search .search_btn {
 section {
   margin: 3rem 0;
 }
+section.breadcrumb-section {
+  margin: 0 0 3rem 0;
+}
 section h2,
 section h3 {
   margin: 0 0 1.5rem 0;

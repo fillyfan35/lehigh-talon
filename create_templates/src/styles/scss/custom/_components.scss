@@ -1,5 +1,9 @@
 section {
   margin: $space_three 0;
+
+  &.breadcrumb-section {
+    margin: 0 0 $space_three 0;
+  }
   
   h2,
   h3 {
