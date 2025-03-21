@@ -1398,24 +1398,76 @@ main.sidebar-present .sidebar .sidebar-nav ul .nav-item a {
   display: flex;
 }
 
-.lu-d-flex-r {
+.lu-flex-row {
   flex-direction: row;
 }
 
-.lu-d-flex-c {
+.lu-flex-column {
   flex-direction: column;
 }
 
-.lu-d-flex-r-w {
+.lu-flex-wrap {
   flex-wrap: wrap;
 }
 
-.lu-d-flex-r-nw {
+.lu-flex-nowrap {
   flex-wrap: nowrap;
+}
+
+.lu-justify-content-start {
+  justify-content: start;
+}
+
+.lu-justify-content-end {
+  justify-content: end;
+}
+
+.lu-justify-content-center {
+  justify-content: center;
+}
+
+.lu-justify-content-space-between {
+  justify-content: space-between;
+}
+
+.lu-justify-content-space-around {
+  justify-content: space-around;
+}
+
+.lu-justify-content-space-evenly {
+  justify-content: space-evenly;
+}
+
+.lu-align-items-start {
+  align-items: start;
+}
+
+.lu-align-items-end {
+  align-items: end;
+}
+
+.lu-align-items-center {
+  align-items: center;
+}
+
+.lu-align-self-start {
+  align-self: flex-start;
+}
+
+.lu-align-self-end {
+  align-self: flex-end;
+}
+
+.lu-align-self-center {
+  align-self: center;
 }
 
 .lu-gap-1 {
   gap: 1rem;
+}
+
+.lu-gap-2 {
+  gap: 2rem;
 }
 
 :root {
