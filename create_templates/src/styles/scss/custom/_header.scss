@@ -33,7 +33,7 @@ header {
         @include transition;
 
         @media (min-width: $width_md) {
-          font-size: 1.25rem;
+          font-size: 1.125rem;
         }
       }
     }
@@ -402,7 +402,7 @@ header {
           @include transition;
           
           @media (min-width: $width_md) {
-            height: 50px;
+            height: 40px;
           }
         }
       }
