@@ -1102,12 +1102,6 @@ section h3 {
 .stats {
   margin: 3rem 0;
 }
-.stats .stats-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
 .stats .stats-wrapper .stat {
   background-color: transparent;
   width: 300px;
@@ -1398,6 +1392,30 @@ main.sidebar-present .sidebar .sidebar-nav ul .nav-item {
 }
 main.sidebar-present .sidebar .sidebar-nav ul .nav-item a {
   font-size: 1rem;
+}
+
+.lu-d-flex {
+  display: flex;
+}
+
+.lu-d-flex-r {
+  flex-direction: row;
+}
+
+.lu-d-flex-c {
+  flex-direction: column;
+}
+
+.lu-d-flex-r-w {
+  flex-wrap: wrap;
+}
+
+.lu-d-flex-r-nw {
+  flex-wrap: nowrap;
+}
+
+.lu-gap-1 {
+  gap: 1rem;
 }
 
 :root {

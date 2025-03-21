@@ -448,11 +448,6 @@ section {
   margin: $space_three 0;
 
   .stats-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: $spacer;
-
     .stat {
       background-color: transparent;
       width: 300px;

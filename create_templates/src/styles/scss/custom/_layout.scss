@@ -1,0 +1,26 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.lu-d-flex {
+  display: flex;
+}
+
+.lu-d-flex-r {
+  flex-direction: row;
+}
+
+.lu-d-flex-c {
+  flex-direction: column;
+}
+
+.lu-d-flex-r-w {
+  flex-wrap: wrap;
+}
+
+.lu-d-flex-r-nw {
+  flex-wrap: nowrap;
+}
+
+.lu-gap-1 {
+  gap: $spacer;
+}
