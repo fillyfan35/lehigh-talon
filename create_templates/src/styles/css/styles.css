@@ -930,6 +930,14 @@ section h3 {
   font-size: 1.25rem;
 }
 
+.card-info {
+  position: relative;
+  width: 100%;
+}
+.card-info img {
+  width: 100%;
+}
+
 .people_directory-column,
 .people_directory-grid {
   display: flex;

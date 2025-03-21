@@ -272,6 +272,15 @@ section {
   }
 }
 
+.card-info {
+  position: relative;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}
+
 // people
 .people_directory-column,
 .people_directory-grid {
