@@ -1,3 +1,6 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
 header {
 	margin: 0 auto;
   background-color: var(--white, $white);
@@ -338,17 +341,17 @@ header {
                   overflow: scroll;
                   height: calc(100% - 150px);
                   
-                  @media (min-width: $width_md) {
-                    height: calc(100% - 250px);
-                  }
-
                   // hide scroll bar for windows
                   -ms-overflow-style: none;  /* hide scrollbar for IE and Edge */
                   scrollbar-width: none;  /* hide scrollbar for Firefox */
-
+                  
                   // hide scrollbar for Chrome, Safari, and Opera
                   &::-webkit-scrollbar {
                     display: none;
+                  }
+
+                  @media (min-width: $width_md) {
+                    height: calc(100% - 250px);
                   }
                 }
 

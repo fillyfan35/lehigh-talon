@@ -1,11 +1,11 @@
 // @import "../../../node_modules/bootstrap/scss/bootstrap";
-@import 'custom/reset';
-@import 'custom/mixins';
-@import 'custom/variables';
-@import 'custom/header';
-@import 'custom/components';
-@import 'custom/footer';
-@import 'custom/sidebar';
+@use 'custom/reset';
+@use 'custom/mixins' as *;
+@use 'custom/variables' as *;
+@use 'custom/header';
+@use 'custom/components';
+@use 'custom/footer';
+@use 'custom/sidebar';
 // Proxima Nova typekit link from Lehigh team
 @import url('https://use.typekit.net/fpb0tcn.css');
 
