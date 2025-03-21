@@ -169,7 +169,7 @@ header .department_bar .department_wrapper a {
 }
 @media (min-width: 768px) {
   header .department_bar .department_wrapper a {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 }
 header .menu_bar {
@@ -588,7 +588,7 @@ header .menu_bar .menu_wrapper .logo img {
 }
 @media (min-width: 768px) {
   header .menu_bar .menu_wrapper .logo img {
-    height: 50px;
+    height: 40px;
   }
 }
 header .menu_bar .menu_wrapper .search {
@@ -1102,12 +1102,6 @@ section h3 {
 .stats {
   margin: 3rem 0;
 }
-.stats .stats-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
 .stats .stats-wrapper .stat {
   background-color: transparent;
   width: 300px;
@@ -1156,7 +1150,7 @@ section h3 {
 
 blockquote {
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--black, #000);
   padding: 0 1.5rem;
   margin: 1rem 0;
@@ -1398,6 +1392,30 @@ main.sidebar-present .sidebar .sidebar-nav ul .nav-item {
 }
 main.sidebar-present .sidebar .sidebar-nav ul .nav-item a {
   font-size: 1rem;
+}
+
+.lu-d-flex {
+  display: flex;
+}
+
+.lu-d-flex-r {
+  flex-direction: row;
+}
+
+.lu-d-flex-c {
+  flex-direction: column;
+}
+
+.lu-d-flex-r-w {
+  flex-wrap: wrap;
+}
+
+.lu-d-flex-r-nw {
+  flex-wrap: nowrap;
+}
+
+.lu-gap-1 {
+  gap: 1rem;
 }
 
 :root {

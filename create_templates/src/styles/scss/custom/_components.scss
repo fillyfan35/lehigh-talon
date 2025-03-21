@@ -448,11 +448,6 @@ section {
   margin: $space_three 0;
 
   .stats-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: $spacer;
-
     .stat {
       background-color: transparent;
       width: 300px;
@@ -511,7 +506,7 @@ section {
 
 blockquote {
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--black, $black);
   padding: 0 $spacer_and_half;
   margin: $spacer 0;
