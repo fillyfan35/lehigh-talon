@@ -107,9 +107,6 @@ header {
   margin: 0 auto;
   background-color: var(--white, #ffffff);
   border-bottom: 2px solid var(--lehigh_brown, #502d0e);
-  position: sticky;
-  top: 0;
-  z-index: 1020;
   -webkit-transition: all 0.35s ease;
   -moz-transition: all 0.35s ease;
   -ms-transition: all 0.35s ease;
@@ -214,10 +211,6 @@ header .menu_bar .menu_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-header .menu_bar .menu_wrapper .menu {
-  display: flex;
-  align-items: center;
-}
 header .menu_bar .menu_wrapper .menu .navbar-toggler {
   display: flex;
   flex-direction: column;
@@ -225,11 +218,16 @@ header .menu_bar .menu_wrapper .menu .navbar-toggler {
   height: 22px;
   width: 30px;
   cursor: pointer;
+  border: none;
+  padding: unset;
   -webkit-transition: all 0.35s ease;
   -moz-transition: all 0.35s ease;
   -ms-transition: all 0.35s ease;
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
+}
+header .menu_bar .menu_wrapper .menu .navbar-toggler:focus {
+  box-shadow: none;
 }
 @media (min-width: 768px) {
   header .menu_bar .menu_wrapper .menu .navbar-toggler {
@@ -412,11 +410,11 @@ header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container 
   transition: all 0.35s ease;
 }
 header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .main_menu .navbar-nav .nav-item .dropdown-menu {
+  background-color: unset;
+  border: none;
   position: relative;
-  margin: 0 0 0 1rem;
   opacity: 0;
   max-height: 0;
-  overflow: hidden;
   z-index: 1;
   -webkit-transition: all 0.35s ease;
   -moz-transition: all 0.35s ease;
@@ -447,9 +445,11 @@ header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container 
 header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .main_menu .navbar-nav .nav-item .dropdown-menu li .dropdown-item {
   color: var(--white, #ffffff);
   text-decoration: none;
+  white-space: normal;
 }
 header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .main_menu .navbar-nav .nav-item .dropdown-menu li .dropdown-item:focus, header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .main_menu .navbar-nav .nav-item .dropdown-menu li .dropdown-item:hover {
   text-decoration: underline;
+  background-color: unset;
 }
 header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .main_menu .navbar-nav .nav-item .dropdown-menu li.dropdown .submenu {
   overflow: unset;
