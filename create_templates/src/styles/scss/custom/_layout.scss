@@ -1,82 +1,82 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
-.lu-d-flex {
+.d-flex {
   display: flex;
 }
 
-.lu-d-grid {
+.d-grid {
   display: grid;
 }
 
-.lu-flex-row {
+.flex-row {
   flex-direction: row;
 }
 
-.lu-flex-column {
+.flex-column {
   flex-direction: column;
 }
 
-.lu-flex-wrap {
+.flex-wrap {
   flex-wrap: wrap;
 }
 
-.lu-flex-nowrap {
+.flex-nowrap {
   flex-wrap: nowrap;
 }
 
-.lu-justify-content-start {
+.justify-content-start {
   justify-content: start;
 }
 
-.lu-justify-content-end {
+.justify-content-end {
   justify-content: end;
 }
 
-.lu-justify-content-center {
+.justify-content-center {
   justify-content: center;
 }
 
-.lu-justify-content-space-between {
+.justify-content-space-between {
   justify-content: space-between;
 }
 
-.lu-justify-content-space-around {
+.justify-content-space-around {
   justify-content: space-around;
 }
 
-.lu-justify-content-space-evenly {
+.justify-content-space-evenly {
   justify-content: space-evenly;
 }
 
-.lu-align-items-start {
+.align-items-start {
   align-items: start;
 }
 
-.lu-align-items-end {
+.align-items-end {
   align-items: end;
 }
 
-.lu-align-items-center {
+.align-items-center {
   align-items: center;
 }
 
-.lu-align-self-start {
+.align-self-start {
   align-self: flex-start;
 }
 
-.lu-align-self-end {
+.align-self-end {
   align-self: flex-end
 }
 
-.lu-align-self-center {
+.align-self-center {
   align-self: center;
 }
 
-.lu-gap-1 {
+.gap-1 {
   gap: $spacer;
 }
 
-.lu-gap-2 {
+.gap-2 {
   gap: $space_two;
 }
