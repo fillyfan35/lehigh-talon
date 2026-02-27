@@ -216,10 +216,6 @@ header .menu_bar .menu_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-header .menu_bar .menu_wrapper .menu {
-  display: flex;
-  align-items: center;
-}
 header .menu_bar .menu_wrapper .menu .navbar-toggler {
   display: flex;
   flex-direction: column;
@@ -227,11 +223,16 @@ header .menu_bar .menu_wrapper .menu .navbar-toggler {
   height: 22px;
   width: 30px;
   cursor: pointer;
+  border: none;
+  padding: unset;
   -webkit-transition: all 0.35s ease;
   -moz-transition: all 0.35s ease;
   -ms-transition: all 0.35s ease;
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
+}
+header .menu_bar .menu_wrapper .menu .navbar-toggler:focus {
+  box-shadow: none;
 }
 @media (min-width: 768px) {
   header .menu_bar .menu_wrapper .menu .navbar-toggler {

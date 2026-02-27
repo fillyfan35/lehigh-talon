@@ -54,9 +54,6 @@ header {
       grid-template-columns: 1fr 1fr 1fr;
 
       .menu {
-        display: flex;
-        align-items: center;
-
         .navbar-toggler {
           display: flex;
           flex-direction: column;
@@ -64,7 +61,13 @@ header {
           height: 22px;
           width: 30px;
           cursor: pointer;
+          border: none;
+          padding: unset;
           @include transition;
+
+          &:focus {
+            box-shadow: none;
+          }
           
           @media (min-width: $width_md) {
             height: 30px;
