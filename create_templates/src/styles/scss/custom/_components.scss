@@ -32,10 +32,6 @@ section {
       margin: 0 0 $spacer 0;
 
       .breadcrumbs {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-
         li {
           margin: 0 $spacer 0 0;
           font-size: .875rem;
@@ -135,14 +131,6 @@ section {
   p {
     margin: 0 0 $spacer 0;
   }
-
-  .button-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: $space_two;
-  }
 }
 
 // hero
@@ -194,11 +182,6 @@ section {
 // card
 .card-grid {
   .card-grid-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: start;
-    gap: $spacer;
     margin: 0 0 $space_three 0;
   }
 }
@@ -233,13 +216,6 @@ section {
       font-weight: 600;
       text-transform: uppercase;
       color: var(--slate, $slate);
-    }
-
-    .card-buttons {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: $spacer;
     }
   }
 
@@ -284,8 +260,8 @@ section {
 // people
 .people_directory-column,
 .people_directory-grid {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   margin: 0 0 $space_three 0;
 
   .card-bio {
@@ -393,7 +369,7 @@ section {
 }
 
 .people_directory-grid {
-  .grid-wrapper {
+  .people_directory-grid-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: $space_two;
@@ -465,9 +441,6 @@ section {
       
         .value,
         .detail {
-          display: flex;
-          justify-content: center;
-          align-items: center;
           height: 100%;
           position: absolute;
           width: 100%;
@@ -478,7 +451,6 @@ section {
         }
         
         .value {
-          flex-direction: column;
           background-color: var(--navy, $navy);
           color: var(--white, $white);
           font-family: "Times New Roman", Times, serif;

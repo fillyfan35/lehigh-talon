@@ -719,11 +719,6 @@ section h3 {
 .breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav {
   margin: 0 0 1rem 0;
 }
-.breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav .breadcrumbs {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
 .breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav .breadcrumbs li {
   margin: 0 1rem 0 0;
   font-size: 0.875rem;
@@ -808,13 +803,6 @@ section h3 {
 .button-list p {
   margin: 0 0 1rem 0;
 }
-.button-list .button-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
 
 .hero {
   position: relative;
@@ -860,11 +848,6 @@ section h3 {
 }
 
 .card-grid .card-grid-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: start;
-  gap: 1rem;
   margin: 0 0 3rem 0;
 }
 
@@ -903,12 +886,6 @@ section h3 {
   text-transform: uppercase;
   color: var(--slate, #6c757d);
 }
-.card .card-body .card-buttons {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
 .card:focus-within h2::after,
 .card:focus-within h3::after, .card:hover h2::after,
 .card:hover h3::after {
@@ -940,8 +917,6 @@ section h3 {
 
 .people_directory-column,
 .people_directory-grid {
-  display: flex;
-  flex-direction: column;
   margin: 0 0 3rem 0;
 }
 .people_directory-column .card-bio,
@@ -1052,50 +1027,50 @@ section h3 {
   background-color: var(--grey_background, #e9ecef);
 }
 
-.people_directory-grid .grid-wrapper {
+.people_directory-grid .people_directory-grid-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 @media (max-width: 576px) {
-  .people_directory-grid .grid-wrapper {
+  .people_directory-grid .people_directory-grid-wrapper {
     display: flex;
     flex-direction: column;
     gap: 0;
   }
 }
-.people_directory-grid .grid-wrapper .card-bio {
+.people_directory-grid .people_directory-grid-wrapper .card-bio {
   padding: 0;
 }
-.people_directory-grid .grid-wrapper .card-bio .card-img {
+.people_directory-grid .people_directory-grid-wrapper .card-bio .card-img {
   flex: unset;
   border: unset;
   padding: 0;
   margin: 0 1rem 0 0;
 }
 @media (min-width: 768px) {
-  .people_directory-grid .grid-wrapper .card-bio .card-img {
+  .people_directory-grid .people_directory-grid-wrapper .card-bio .card-img {
     flex: 1;
   }
 }
-.people_directory-grid .grid-wrapper .card-bio .card-img img {
+.people_directory-grid .people_directory-grid-wrapper .card-bio .card-img img {
   width: 100px;
 }
-.people_directory-grid .grid-wrapper .card-bio .card-body {
+.people_directory-grid .people_directory-grid-wrapper .card-bio .card-body {
   flex-direction: column;
   gap: 1rem;
 }
 @media (min-width: 768px) {
-  .people_directory-grid .grid-wrapper .card-bio .card-body {
+  .people_directory-grid .people_directory-grid-wrapper .card-bio .card-body {
     flex: 3;
     padding: 0;
   }
 }
-.people_directory-grid .grid-wrapper .card-bio .card-body .card-metatags {
+.people_directory-grid .people_directory-grid-wrapper .card-bio .card-body .card-metatags {
   margin: 0;
 }
-.people_directory-grid .grid-wrapper .card-bio .card-body .card-header,
-.people_directory-grid .grid-wrapper .card-bio .card-body .card-metatags {
+.people_directory-grid .people_directory-grid-wrapper .card-bio .card-body .card-header,
+.people_directory-grid .people_directory-grid-wrapper .card-bio .card-body .card-metatags {
   flex: 1;
 }
 
@@ -1119,9 +1094,6 @@ section h3 {
 }
 .stats .stats-wrapper .stat .stat-inner-wrapper .value,
 .stats .stats-wrapper .stat .stat-inner-wrapper .detail {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
   position: absolute;
   width: 100%;
@@ -1131,7 +1103,6 @@ section h3 {
   border-radius: 5px;
 }
 .stats .stats-wrapper .stat .stat-inner-wrapper .value {
-  flex-direction: column;
   background-color: var(--navy, #273868);
   color: var(--white, #ffffff);
   font-family: "Times New Roman", Times, serif;
@@ -1396,6 +1367,10 @@ main.sidebar-present .sidebar .sidebar-nav ul .nav-item a {
 
 .lu-d-flex {
   display: flex;
+}
+
+.lu-d-grid {
+  display: grid;
 }
 
 .lu-flex-row {
