@@ -1,4 +1,5 @@
 @use 'custom/reset';
+@use 'custom/fonts';
 @use 'custom/mixins' as *;
 @use 'custom/variables' as *;
 @use 'custom/header';
@@ -7,16 +8,6 @@
 @use 'custom/sidebar';
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 // @use 'custom/layout';
-// Proxima Nova typekit link from Lehigh team
-@import url('https://use.typekit.net/fpb0tcn.css');
-
-// Noto Serif
-// If approved, since this is a Google font, we could download the files, or just reference this way.
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-// Noto Sans Mono Space
-// This is not called for in the design, but wanted to include a mono-spaced font for possible future use
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400&display=swap');
 
 :root {
   --accent_color: #ffe41e;
@@ -48,7 +39,7 @@
 
 body {
 	color: var(--darkest_grey, $darkest_grey);
-  font-family: "proxima-nova",sans-serif;
+  font-family: $font_family_sans_serif;
   font-size: 16px;
   margin: 0;
 
@@ -91,13 +82,16 @@ body {
   white-space: nowrap !important;
 }
 
-h1,
+h1 {
+  font-family: $font_family_serif;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Noto Serif", serif;
+  font-family: $heading_sans_serif;
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
