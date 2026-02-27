@@ -5,9 +5,6 @@ header {
 	margin: 0 auto;
   background-color: var(--white, $white);
   border-bottom: 2px solid var(--lehigh_brown, $lehigh_brown);
-  position: sticky;
-  top: 0;
-  z-index: 1020;
   @include transition;
   
   .department_bar {
