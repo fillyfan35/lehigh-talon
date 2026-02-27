@@ -1,10 +1,5 @@
 @charset "UTF-8";
-/*!
- * Bootstrap  v5.3.8 (https://getbootstrap.com/)
- * Copyright 2011-2025 The Bootstrap Authors
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
-@import url("https://use.typekit.net/fpb0tcn.css");
+@import url("https://use.typekit.net/beo2rid.css");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400&display=swap");
 /***
@@ -101,6 +96,22 @@ meter {
   all: revert;
 }
 
+@font-face {
+  font-family: DopisRegular;
+  src: url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisRegular.woff2") format("woff2"), url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisRegular.woff") format("woff");
+}
+@font-face {
+  font-family: DopisBold;
+  src: url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisBold.woff2") format("woff2"), url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisBold.woff") format("woff");
+}
+@font-face {
+  font-family: DopisCondensedRegular;
+  src: url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisCondensedRegular.woff2") format("woff2"), url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisCondensedRegular.woff") format("woff");
+}
+@font-face {
+  font-family: DopisCondensedBold;
+  src: url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisCondensedBold.woff2") format("woff2"), url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisCondensedBold.woff") format("woff");
+}
 /**************
 * General Mixins (put specific ones in component files where applicable)
 
@@ -1372,6 +1383,11 @@ main.sidebar-present .sidebar .sidebar-nav ul .nav-item a {
   font-size: 1rem;
 }
 
+/*!
+ * Bootstrap  v5.3.8 (https://getbootstrap.com/)
+ * Copyright 2011-2025 The Bootstrap Authors
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -1439,7 +1455,7 @@ main.sidebar-present .sidebar .sidebar-nav ul .nav-item a {
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: "inter-variable", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -13257,7 +13273,7 @@ textarea.form-control-lg {
 
 body {
   color: var(--darkest_grey, #222);
-  font-family: "proxima-nova", sans-serif;
+  font-family: "inter-variable", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 16px;
   margin: 0;
 }
@@ -13302,9 +13318,11 @@ body.no-scroll {
   white-space: nowrap !important;
 }
 
-h1, .h1,
-h2,
-.h2,
+h1, .h1 {
+  font-family: meursault-variable, Georgia, Palatino, serif;
+}
+
+h2, .h2,
 h3,
 .h3,
 h4,
@@ -13313,7 +13331,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: "Noto Serif", serif;
+  font-family: DopisBold, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
