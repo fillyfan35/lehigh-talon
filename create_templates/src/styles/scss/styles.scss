@@ -9,28 +9,6 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 // @use 'custom/layout';
 
-:root {
-  --accent_color: #ffe41e;
-  --almost_black: #15181b;
-  --beige: #fff6da;
-  --black: #000;
-  --dark_teal: #1d5970;
-  --dark_teal_hover: #17475a;
-  --darkest_grey: #222;
-  --grey_background: #e9ecef;
-  --gold: #ffe41e;
-  --lehigh_brown: #502d0e;
-  --light_blue: #94d0e9;
-  --light_grey: #f9fafb;
-  --navy: #273868;
-  --navy_dark: #040c21;
-  --peach: #fecb86;
-  --slate: #6c757d;
-  --success: #198754;
-  --white: #fff;
-  --red: #FF0000;
-}
-
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,8 +16,8 @@
 }
 
 body {
-	color: var(--darkest_grey, $darkest_grey);
-  font-family: $font_family_sans_serif;
+	color: var(--darkest_grey);
+  font-family: var(--font_family_sans_serif);
   font-size: 16px;
   margin: 0;
 
@@ -49,9 +27,9 @@ body {
 }
 
 .skip-link {
-  background-color: var(--white, $white);
-  color: var(--lehigh_brown, $lehigh_brown);
-  padding: $space_half;
+  background-color: var(--white);
+  color: var(--lehigh_brown);
+  padding: var(--space_half);
   left: 50%;
   position: absolute;
   transform: translateY(-100%);
@@ -59,7 +37,7 @@ body {
   z-index: 1021;
   
   &:hover {
-    color: var(--lehigh_brown, $lehigh_brown);
+    color: var(--lehigh_brown);
     text-decoration: none;
   }
 
@@ -83,7 +61,7 @@ body {
 }
 
 h1 {
-  font-family: $font_family_serif;
+  font-family: var(--font_family_serif);
 }
 
 h2,
@@ -91,7 +69,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $heading_sans_serif;
+  font-family: var(--heading_sans_serif);
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -101,7 +79,7 @@ h6 {
 h1 {
   font-size: calc(1.375rem + 1.5vw);
 
-  @media (min-width: $width_xl) {
+  @media (min-width: var(--width_xl)) {
     h1 {
       font-size: 2.5rem;
     }
@@ -111,7 +89,7 @@ h1 {
 h2 {
   font-size: calc(1.325rem + 0.9vw);
 
-  @media (min-width: $width_xl) {
+  @media (min-width: var(--width_xl)) {
     h2 {
       font-size: 2rem; 
     }
@@ -121,7 +99,7 @@ h2 {
 h3 {
   font-size: calc(1.3rem + 0.6vw);
 
-  @media (min-width: $width_xl) {
+  @media (min-width: var(--width_xl)) {
     h3 {
       font-size: 1.75rem;
     }
@@ -131,7 +109,7 @@ h3 {
 h4 {
   font-size: calc(1.275rem + 0.3vw);
 
-  @media (min-width: $width_xl) {
+  @media (min-width: var(--width_xl)) {
     h4 {
       font-size: 1.5rem;
     }
@@ -153,27 +131,27 @@ h3 {
 
   &::after {
     position: relative;
-    background-color: var(--accent_color ,$accent_color);
+    background-color: var(--accent_color);
     content: "";
     display: block;
     height: 0.125rem;
-    margin: $space_half 0;
+    margin: var(--space_half) 0;
     width: 5rem;
     @include transition;
   }
 }
 
 main {
-  margin: $spacer;
+  margin: var(--spacer);
   
-  @media (min-width: $width_md) {
-    margin: $space_three auto;
+  @media (min-width: var(--width_md)) {
+    margin: var(--space_three) auto;
     padding: 0;
     @include max-width;
   }
 
   a {
-    color: var(--navy, $navy);
+    color: var(--navy);
     font-weight: 600;
     text-decoration: none;
 

@@ -1,70 +1,62 @@
-// Colors
-$accent_color: #ffe41e;
+:root {
+  // Colors
+  --accent_color: #ffe41e;
+  --almost_black: #15181b;
+  --beige: #fff6da;
+  --black: #000;
+  --dark_teal: #1d5970;
+  --dark_teal_hover: #17475a;
+  --darkest_grey: #222;
+  --grey_background: #e9ecef;
+  --gold: #ffe41e;
+  --lehigh_brown: #502d0e;
+  --light_blue: #94d0e9;
+  --light_grey: #f9fafb;
+  --navy: #273868;
+  --navy_dark: #040c21;
+  --peach: #fecb86;
+  --slate: #6c757d;
+  --success: #198754;
+  --white: #fff;
+  --red: #FF0000;
 
-$almost_black: #15181b;
-$beige: #fff6da;
-$black: #000;
-$border_color: #d2d2d2;
-$dark_teal: #1d5970;
-$dark_teal_hover: #17475a;
-$darkest_grey: #222;
-$grey_background: #e9ecef;
-$gold: #ffe41e;
-$lehigh_brown: #502d0e;
-$light_blue: #94d0e9;
-$light_grey: #f9fafb;
-$navy: #273868;
-$navy_dark: #040c21;
-$peach: #fecb86;
-$slate: #6c757d;
-$success: #198754;
-$white: #ffffff;
+  // Fonts
+  --heading_sans_serif: DopisBold, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font_family_sans_serif: "inter-variable", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font_family_serif: meursault-variable, Georgia, Palatino, serif;
 
-$width_sm: 576px;
-$width_md: 768px;
-$width_lg: 992px;
-$width_xl: 1200px;
-$width_xxl: 1400px;
+  // Spacing
+  --spacer: 1rem;
+  --spacer_and_quarter: 1.25rem;
+  --spacer_and_half: 1.5rem;
+  --space_two: 2rem;
+  --space_two_and_half: 2.5rem;
+  --space_three: 3rem;
+  --space_four: 4rem;
+  --space_five: 5rem;
+  --space_six: 6rem;
+  --space_seven: 7rem;
+  --space_eight: 8rem;
+  --space_nine: 9rem;
+  --space_ten: 10rem;
+  --space_quarter: .25rem;
+  --space_half: .5rem;
+  --space_three_quarter: .75rem;
 
-$heading_sans_serif: DopisBold, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font_family_sans_serif: "inter-variable", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font_family_serif: meursault-variable, Georgia, Palatino, serif;
+  // Border Radius
+  --border_radius: 5px;
 
-// // breakpoints
-// $grid-breakpoints: (
-//   xs: 0,
-//   sm: 576px,
-//   md: 768px,
-//   lg: 992px,
-//   xl: 1200px,
-//   xxl: 1400px
-// );
+  // Widths
+  --width_sm: 576px;
+  --width_md: 768px;
+  --width_lg: 992px;
+  --width_xl: 1200px;
+  --width_xxl: 1400px;
 
-// // reset max widths
-// $container-max-widths: (
-//   sm: 640px,
-//   md: 820px,
-//   lg: 960px,
-//   xl: 1280px,
-//   xxl: 1600px
-// ) !default;
-
-// Spacing
-$spacer: 1rem;
-$spacer_and_quarter: 1.25rem;
-$spacer_and_half: 1.5rem;
-$space_two: 2rem;
-$space_two_and_half: 2.5rem;
-$space_three: 3rem;
-$space_four: 4rem;
-$space_five: 5rem;
-$space_six: 6rem;
-$space_seven: 7rem;
-$space_eight: 8rem;
-$space_nine: 9rem;
-$space_ten: 10rem;
-$space_quarter: .25rem;
-$space_half: .5rem;
-$space_three_quarter: .75rem;
-
-$border_radius: 5px;
+  // Breakpoints
+  // --breakpoint_sm: 576px;
+  // --breakpoint_md: 768px;
+  // --breakpoint_lg: 992px;
+  // --breakpoint_xl: 1200px;
+  // --breakpoint_xxl: 1400px;  
+}

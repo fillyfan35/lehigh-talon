@@ -7,21 +7,21 @@ main {
   
   &.sidebar-present {
     grid-template-columns: 1fr;
-    gap: $space_two;
+    gap: var(--space_two);
     
-    @media (min-width: $width_md) {
+    @media (min-width: var(--width_md)) {
       grid-template-columns: 3.5fr 1fr;
-      gap: $space_three;
+      gap: var(--space_three);
     }
 
     .content-wrapper {
-      @media (max-width: $width_md) {
+        @media (max-width: var(--width_md)) {
         grid-row: 2/3;
       }
     }
 
     .sidebar {
-      @media (max-width: $width_md) {
+      @media (max-width: var(--width_md)) {
         grid-row: 1/2;
       }
 
@@ -29,7 +29,7 @@ main {
         display: flex; 
         flex-direction: row;
         flex-wrap: nowrap;
-        gap: $spacer;
+        gap: var(--spacer);
 
         h2 {
           font-size: 1.25rem;
@@ -45,14 +45,14 @@ main {
           cursor: pointer;
           @include transition;
           
-          @media (min-width: $width_md) {
+          @media (min-width: var(--width_md)) {
             display: none;
           }
 
           .bar {
             height: 3px;
             width: 100%;
-            background-color: var(--black, $black);
+            background-color: var(--black);
             @include transition;
 
             &::last-of-type {
@@ -84,24 +84,16 @@ main {
       }
 
       .sidebar-nav {
-        @media (min-width: $width_md) {
-          margin: 0 0 $space_three 0;
+        @media (min-width: var(--width_md)) {
+          margin: 0 0 var(--space_three) 0;
         }
 
         ul {
-          margin: 0 0 0 $spacer;
+          margin: 0 0 0 var(--spacer);
           height: 0;
           opacity: 0;
           visibility: hidden;
           @include fast_transition;
-
-          @media (min-width: $width_md) {
-            display: flex;
-            flex-direction: column;
-            height: unset;
-            visibility: visible;
-            opacity: unset;
-          }
 
           &.show {
             height: 100%;
@@ -111,9 +103,9 @@ main {
           }
 
           .nav-item {
-            border-left: 2px solid var(--accent_color, $accent_color);
-            padding: 0 0 0 $space_half;
-            margin: 0 0 $spacer 0;
+            border-left: 2px solid var(--accent_color);
+            padding: 0 0 0 var(--space_half);
+            margin: 0 0 var(--spacer) 0;
 
             a {
               font-size: 1rem;
