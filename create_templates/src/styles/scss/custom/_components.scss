@@ -29,19 +29,17 @@ section {
     }
 
     .breadcrumb-nav {
-      margin: 0 0 var(--spacer) 0;
-
       .breadcrumbs {
         li {
           margin: 0 var(--spacer) 0 0;
           font-size: .875rem;
-          color: var(--navy);
+          color: var(--night_sky);
           
           &::after {
             content: '>';
             display: inline-block;
             padding: 0 0 0 var(--spacer);
-            color: var(--navy);
+            color: var(--night_sky);
             font-weight: 600;
           }
 
@@ -56,7 +54,7 @@ section {
 
           a {
             font-size: inherit;
-            color: var(--navy);
+            color: var(--night_sky);
             text-decoration: underline;
             font-weight: 600;
 
@@ -68,6 +66,10 @@ section {
           }
         }
       }
+    }
+    
+    h1 {
+      margin: 0;
     }
   }
 }
@@ -99,21 +101,21 @@ section {
 
   &.btn-gold {
     color: var(--darkest_grey);
-    background-color: var(--gold);
-    border: 1px solid var(--gold);
+    background-color: var(--golden_hour);
+    border: 1px solid var(--golden_hour);
     
     &:focus,
     &:hover {
       color: var(--darkest_grey);
       background-color: var(--white);
-      border: 1px solid var(--gold);
+      border: 1px solid var(--golden_hour);
     }
   }
 
   &.btn-navy {
     color: var(--white);
-    background-color: var(--navy);
-    border: 1px solid var(--navy);
+    background-color: var(--night_sky);
+    border: 1px solid var(--night_sky);
     
     &:focus,
     &:hover {
@@ -210,9 +212,8 @@ section {
     }
 
     .card-date {
-      font-family: "proxima-nova", sans-serif;
+      font-family: var(--heading_sans_serif);
       font-size: .875rem;
-      font-weight: 600;
       text-transform: uppercase;
       color: var(--slate);
     }
@@ -285,7 +286,7 @@ section {
       }
       
       img {
-        border: 2px solid var(--navy);
+        border: 2px solid var(--night_sky);
         background-color: var(--white);
         padding: 3px;
         width: 150px;
@@ -347,7 +348,7 @@ section {
 
           i {
             margin: 0 var(--space_half) 0 0;
-            color: var(--navy);
+            color: var(--night_sky);
           }
 
           &:last-of-type {
@@ -450,9 +451,9 @@ section {
         }
         
         .value {
-          background-color: var(--navy);
+          background-color: var(--night_sky);
           color: var(--white);
-          font-family: "Times New Roman", Times, serif;
+          font-family: var(--font_family_serif);
           font-size: 4rem;
 
           i {
@@ -487,7 +488,7 @@ blockquote {
     display: block;
     font-size: 1rem;
     font-style: italic;
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font_family_serif);
 
     &::before {
       display: inline-block;
