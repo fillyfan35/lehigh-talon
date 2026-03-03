@@ -9,19 +9,19 @@ main {
     grid-template-columns: 1fr;
     gap: var(--space_two);
     
-    @media (min-width: var(--width_md)) {
+    @media (min-width: $width_md) {
       grid-template-columns: 3.5fr 1fr;
       gap: var(--space_three);
     }
 
     .content-wrapper {
-        @media (max-width: var(--width_md)) {
+        @media (max-width: $width_md) {
         grid-row: 2/3;
       }
     }
 
     .sidebar {
-      @media (max-width: var(--width_md)) {
+      @media (max-width: $width_md) {
         grid-row: 1/2;
       }
 
@@ -45,7 +45,7 @@ main {
           cursor: pointer;
           @include transition;
           
-          @media (min-width: var(--width_md)) {
+          @media (min-width: $width_md) {
             display: none;
           }
 
@@ -84,7 +84,7 @@ main {
       }
 
       .sidebar-nav {
-        @media (min-width: var(--width_md)) {
+        @media (min-width: $width_md) {
           margin: 0 0 var(--space_three) 0;
         }
 
