@@ -13424,33 +13424,33 @@ h3::after,
 main {
   margin: var(--spacer);
 }
-@media (min-width: var(--width_md)) {
+@media (min-width: 768px) {
   main {
     margin: var(--space_three) auto;
     padding: 0;
   }
 }
-@media (min-width: var(--width_md)) and (min-width: 576px) {
+@media (min-width: 768px) and (min-width: 576px) {
   main {
     max-width: 540px;
   }
 }
-@media (min-width: var(--width_md)) and (min-width: 768px) {
+@media (min-width: 768px) and (min-width: 768px) {
   main {
     max-width: 720px;
   }
 }
-@media (min-width: var(--width_md)) and (min-width: 992px) {
+@media (min-width: 768px) and (min-width: 992px) {
   main {
     max-width: 960px;
   }
 }
-@media (min-width: var(--width_md)) and (min-width: 1200px) {
+@media (min-width: 768px) and (min-width: 1200px) {
   main {
     max-width: 1140px;
   }
 }
-@media (min-width: var(--width_md)) and (min-width: 1400px) {
+@media (min-width: 768px) and (min-width: 1400px) {
   main {
     max-width: 1320px;
   }
