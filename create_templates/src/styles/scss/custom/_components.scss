@@ -211,9 +211,8 @@ section {
     }
 
     .card-date {
-      font-family: "proxima-nova", sans-serif;
+      font-family: var(--heading_sans_serif);
       font-size: .875rem;
-      font-weight: 600;
       text-transform: uppercase;
       color: var(--slate);
     }
@@ -453,7 +452,7 @@ section {
         .value {
           background-color: var(--navy);
           color: var(--white);
-          font-family: "Times New Roman", Times, serif;
+          font-family: var(--font_family_serif);
           font-size: 4rem;
 
           i {
@@ -488,7 +487,7 @@ blockquote {
     display: block;
     font-size: 1rem;
     font-style: italic;
-    font-family: "Times New Roman", Times, serif;
+    font-family: var(--font_family_serif);
 
     &::before {
       display: inline-block;

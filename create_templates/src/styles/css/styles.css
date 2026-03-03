@@ -944,9 +944,8 @@ section .h3 {
   line-height: 1.5rem;
 }
 .card .card-body .card-date {
-  font-family: "proxima-nova", sans-serif;
+  font-family: var(--heading_sans_serif);
   font-size: 0.875rem;
-  font-weight: 600;
   text-transform: uppercase;
   color: var(--slate);
 }
@@ -1172,7 +1171,7 @@ section .h3 {
 .stats .stats-wrapper .stat .stat-inner-wrapper .value {
   background-color: var(--navy);
   color: var(--white);
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--font_family_serif);
   font-size: 4rem;
 }
 .stats .stats-wrapper .stat .stat-inner-wrapper .value i {
@@ -1198,7 +1197,7 @@ blockquote .byline {
   display: block;
   font-size: 1rem;
   font-style: italic;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--font_family_serif);
 }
 blockquote .byline::before {
   display: inline-block;
