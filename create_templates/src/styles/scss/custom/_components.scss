@@ -2,46 +2,46 @@
 @use 'mixins' as *;
 
 section {
-  margin: $space_three 0;
+  margin: var(--space_three) 0;
 
   &.breadcrumb-section {
-    margin: 0 0 $space_three 0;
+    margin: 0 0 var(--space_three) 0;
   }
   
   h2,
   h3 {
-    margin: 0 0 $spacer_and_half 0;
+    margin: 0 0 var(--spacer_and_half) 0;
   }
 }
 
 // breadcrumbs
 .breadcrumb-section {
-  background-color: var(--beige, $beige);
+  background-color: var(--beige);
   width: 100%;
 
   .breadcrumb-wrapper {
     margin: 0 auto;
-    padding: $spacer;
+    padding: var(--spacer);
 
-    @media (min-width: $width_md) {
-      padding: $space_half 0;
+    @media (min-width: var(--width_md)) {
+      padding: var(--space_half) 0;
       @include max-width;
     }
 
     .breadcrumb-nav {
-      margin: 0 0 $spacer 0;
+      margin: 0 0 var(--spacer) 0;
 
       .breadcrumbs {
         li {
-          margin: 0 $spacer 0 0;
+          margin: 0 var(--spacer) 0 0;
           font-size: .875rem;
-          color: var(--navy, $navy);
+          color: var(--navy);
           
           &::after {
             content: '>';
             display: inline-block;
-            padding: 0 0 0 $spacer;
-            color: var(--navy, $navy);
+            padding: 0 0 0 var(--spacer);
+            color: var(--navy);
             font-weight: 600;
           }
 
@@ -56,13 +56,13 @@ section {
 
           a {
             font-size: inherit;
-            color: var(--navy, $navy);
+            color: var(--navy);
             text-decoration: underline;
             font-weight: 600;
 
             &:focus,
             &:hover {
-              color: var(--navy_dark, $navy_dark);
+              color: var(--navy_dark);
               text-decoration: none;
             }
           }
@@ -74,8 +74,8 @@ section {
 
 // buttons
 .btn {
-  border-radius: $border_radius;
-  padding: $space_half $space_three_quarter;
+  border-radius: var(--border_radius);
+  padding: var(--space_half) var(--space_three_quarter);
   @include transition;
 
   &:focus,
@@ -85,51 +85,51 @@ section {
   }
 
   &.btn-dark_teal {
-    color: var(--white, $white);
-    background-color: var(--dark_teal, $dark_teal);
-    border: 1px solid var(--dark_teal, $dark_teal);
+    color: var(--white);
+    background-color: var(--dark_teal);
+    border: 1px solid var(--dark_teal);
     
     &:focus,
     &:hover {
-      color: var(--white, $white);
-      background-color: var(--dark_teal_hover, $dark_teal_hover);
-      border: 1px solid var(--dark_teal_hover, $dark_teal_hover);
+      color: var(--white);
+      background-color: var(--dark_teal_hover);
+      border: 1px solid var(--dark_teal_hover);
     }
   }
 
   &.btn-gold {
-    color: var(--darkest_grey, $darkest_grey);
-    background-color: var(--gold, $gold);
-    border: 1px solid var(--gold, $gold);
+    color: var(--darkest_grey);
+    background-color: var(--gold);
+    border: 1px solid var(--gold);
     
     &:focus,
     &:hover {
-      color: var(--darkest_grey, $darkest_grey);
-      background-color: var(--white, $white);
-      border: 1px solid var(--gold, $gold);
+      color: var(--darkest_grey);
+      background-color: var(--white);
+      border: 1px solid var(--gold);
     }
   }
 
   &.btn-navy {
-    color: var(--white, $white);
-    background-color: var(--navy, $navy);
-    border: 1px solid var(--navy, $navy);
+    color: var(--white);
+    background-color: var(--navy);
+    border: 1px solid var(--navy);
     
     &:focus,
     &:hover {
-      color: var(--white, $white);
-      background-color: var(--navy_dark, $navy_dark);
-      border: 1px solid var(--navy_dark, $navy_dark);
+      color: var(--white);
+      background-color: var(--navy_dark);
+      border: 1px solid var(--navy_dark);
     }
   }
 }
 
 // button list
 .button-list {
-  margin: $space_three 0;
+  margin: var(--space_three) 0;
 
   p {
-    margin: 0 0 $spacer 0;
+    margin: 0 0 var(--spacer) 0;
   }
 }
 
@@ -139,11 +139,11 @@ section {
   margin: 0;
   background-size: cover;
   
-  @media (max-width: $width_md) {
+  @media (max-width: var(--width_md)) {
     background-image: unset !important;
   }
   
-  @media (min-width: $width_md) {
+  @media (min-width: var(--width_md)) {
     aspect-ratio: 3 / 1;
   }
 
@@ -151,7 +151,7 @@ section {
     display: block;
     // margin: 0 0 -5px 0;
 
-    @media (min-width: $width_md) {
+    @media (min-width: var(--width_md)) {
       display: none;
     }
 
@@ -163,11 +163,11 @@ section {
   .hero_content {
     // background-color: rgba(0, 0, 0, .8);
     background: linear-gradient(to right,rgba(0,0,0,.8) 0,rgba(0,0,0,.6) 100%);
-    color: var(--white, $white);
-    border-left: $space_half solid var(--accent_color, $accent_color);
-    padding: $space_three_quarter;
+    color: var(--white);
+    border-left: var(--space_half) solid var(--accent_color);
+    padding: var(--space_three_quarter);
     
-    @media (min-width: $width_md) {
+    @media (min-width: var(--width_md)) {
       position: absolute;
       margin: 0 10%;
       bottom: 2%;
@@ -182,14 +182,14 @@ section {
 // card
 .card-grid {
   .card-grid-wrapper {
-    margin: 0 0 $space_three 0;
+    margin: 0 0 var(--space_three) 0;
   }
 }
 
 .card {
   overflow: hidden;
-  border: 1px solid var(--border_color, $border_color);
-  border-radius: $border_radius;
+  border: 1px solid var(--border_color);
+  border-radius: var(--border_radius);
 
   img {
     width: 100%;
@@ -203,10 +203,10 @@ section {
   }
   
   .card-body {
-    padding: $spacer;
+    padding: var(--spacer);
 
     p {
-      margin: 0 0 $spacer 0;
+      margin: 0 0 var(--spacer) 0;
       line-height: 1.5rem;
     }
 
@@ -215,7 +215,7 @@ section {
       font-size: .875rem;
       font-weight: 600;
       text-transform: uppercase;
-      color: var(--slate, $slate);
+      color: var(--slate);
     }
   }
 
@@ -233,7 +233,7 @@ section {
 
   // call to action
   &.cta {
-    margin: 0 0 $space_three 0;
+    margin: 0 0 var(--space_three) 0;
   }
 
   // news card
@@ -262,7 +262,7 @@ section {
 .people_directory-grid {
   // display: flex;
   // flex-direction: column;
-  margin: 0 0 $space_three 0;
+  margin: 0 0 var(--space_three) 0;
 
   .card-bio {
     display: flex;
@@ -270,24 +270,24 @@ section {
     flex-wrap: wrap;
     border: unset;
     border-radius: unset;
-    margin: 0 0 $space_two 0;
-    padding: $spacer;
+    margin: 0 0 var(--space_two) 0;
+    padding: var(--spacer);
 
     &:last-of-type {
       margin: 0;
     }
 
     .card-img {
-      margin: 0 $spacer 0 0;
+      margin: 0 var(--spacer) 0 0;
       flex: 1;
       
-      @media (min-width: $width_md) {
-        margin: 0 $space_two 0 0;
+      @media (min-width: var(--width_md)) {
+        margin: 0 var(--space_two) 0 0;
       }
       
       img {
-        border: 2px solid var(--navy, $navy);
-        background-color: var(--white, $white);
+        border: 2px solid var(--navy);
+        background-color: var(--white);
         padding: 3px;
         width: 150px;
       }
@@ -296,19 +296,19 @@ section {
     .card-body {
       display: flex;
       flex-direction: column;
-      gap: $space_half;
+      gap: var(--space_half);
       padding: 0;
       flex: 3;
       
-      @media (min-width: $width_sm) {
+      @media (min-width: var(--width_sm)) {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: $spacer;
+        gap: var(--spacer);
       }
 
-      @media (min-width: $width_md) {
-        padding: 0 $spacer;
-        gap: $space_two;
+      @media (min-width: var(--width_md)) {
+        padding: 0 var(--spacer);
+        gap: var(--space_two);
         flex-wrap: nowrap;
       }
 
@@ -337,18 +337,18 @@ section {
         flex-direction: column;
         flex: 1;
         word-break: break-all;
-        margin: $spacer 0 0 0;
+        margin: var(--spacer) 0 0 0;
 
-        @media (min-width: $width_sm) {
+        @media (min-width: var(--width_sm)) {
           margin: 0;
         }
 
         .meta {
-          margin: 0 0 $spacer 0;
+          margin: 0 0 var(--spacer) 0;
 
           i {
-            margin: 0 $space_half 0 0;
-            color: var(--navy, $navy);
+            margin: 0 var(--space_half) 0 0;
+            color: var(--navy);
           }
 
           &:last-of-type {
@@ -363,7 +363,7 @@ section {
 .people_directory-column {
   .card-bio {
     &:nth-of-type(even) {
-      background-color: var(--grey_background, $grey_background);
+      background-color: var(--grey_background);
     }
   }
 }
@@ -372,9 +372,9 @@ section {
   .people_directory-grid-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: $space_two;
+    gap: var(--space_two);
 
-    @media (max-width: $width_sm) {
+    @media (max-width: var(--width_sm)) {
       display: flex;
       flex-direction: column;
       gap: 0;
@@ -387,9 +387,9 @@ section {
         flex: unset;
         border: unset;
         padding: 0;
-        margin: 0 $spacer 0 0;
+        margin: 0 var(--spacer) 0 0;
         
-        @media (min-width: $width_md) {
+        @media (min-width: var(--width_md)) {
           flex: 1;
         }
 
@@ -400,9 +400,9 @@ section {
       
       .card-body {
         flex-direction: column;
-        gap: $spacer;
+        gap: var(--spacer);
         
-        @media (min-width: $width_md) {
+        @media (min-width: var(--width_md)) {
           flex: 3;
           padding: 0;
         }
@@ -421,7 +421,7 @@ section {
 }
 
 .stats {
-  margin: $space_three 0;
+  margin: var(--space_three) 0;
 
   .stats-wrapper {
     .stat {
@@ -451,18 +451,18 @@ section {
         }
         
         .value {
-          background-color: var(--navy, $navy);
-          color: var(--white, $white);
+          background-color: var(--navy);
+          color: var(--white);
           font-family: "Times New Roman", Times, serif;
           font-size: 4rem;
 
           i {
-            margin: 0 0 $space_half 0;
+            margin: 0 0 var(--space_half) 0;
           }
         }
         
         .detail {
-          background-color: var(--light_blue, $light_blue);
+          background-color: var(--light_blue);
           transform: rotateY(180deg);
         }
       }
@@ -479,10 +479,10 @@ section {
 blockquote {
   width: 100%;
   font-size: 1.5rem;
-  color: var(--black, $black);
-  padding: 0 $spacer_and_half;
-  margin: $spacer 0;
-  border-left: 3px solid var(--accent_color, $accent_color);
+  color: var(--black);
+  padding: 0 var(--spacer_and_half);
+  margin: var(--spacer) 0;
+  border-left: 3px solid var(--accent_color);
 
   .byline {
     display: block;
@@ -493,7 +493,7 @@ blockquote {
     &::before {
       display: inline-block;
       content: '-';
-      margin: 0 $space_half 0 $spacer;
+      margin: 0 var(--space_half) 0 var(--spacer);
     }
   }
 }

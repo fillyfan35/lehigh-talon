@@ -31,15 +31,17 @@ document.addEventListener("DOMContentLoaded", function () {
       bars.forEach(bar => bar.classList.toggle('x'));
     }
 
-    navToggle.addEventListener('click', toggleHamburger);
-    searchIcon.addEventListener('click', toggleHamburger);
+    if (navToggle) navToggle.addEventListener('click', toggleHamburger);
+    if (searchIcon) searchIcon.addEventListener('click', toggleHamburger);
   }
 
   function hamburgerSideX() {
-    // toggle side nav on mobile
+    // toggle side nav on mobile (only when sidebar exists)
     let sideNavToggle = document.querySelector('.sidebar .nav-toggle');
     let sideBars = document.querySelectorAll('.sidebar .bar');
     let sideNav = document.querySelector('.sidebar .sidebar-nav ul');
+
+    if (!sideNavToggle || !sideNav || sideBars.length === 0) return;
 
     function toggleSideHamburger(e) {
       sideBars.forEach(bars => bars.classList.toggle('x'));
@@ -66,11 +68,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function stopScroll() {
-    let navbarToggler = document.querySelector('.navbar-toggler');
-    let searchbarToggler = document.querySelector('.search_btn');
+    let navbarToggler = document.querySelector('header .navbar-toggler');
+    let searchbarToggler = document.querySelector('.search .search_btn');
     let main_nav = document.querySelector('.main_nav_wrapper');
     let dropdownMenus = document.querySelectorAll('.dropdown-menu');
     let dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+    if (!navbarToggler || !main_nav) return;
 
     navbarToggler.addEventListener('click', function () {
       document.body.classList.toggle('no_scroll');
@@ -83,16 +87,18 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    searchbarToggler.addEventListener('click', function () {
-      document.body.classList.toggle('no_scroll');
-      main_nav.classList.toggle('show');
-      dropdownMenus.forEach(function (dropdownMenu) {
-        dropdownMenu.classList.remove('show');
+    if (searchbarToggler) {
+      searchbarToggler.addEventListener('click', function () {
+        document.body.classList.toggle('no_scroll');
+        main_nav.classList.toggle('show');
+        dropdownMenus.forEach(function (dropdownMenu) {
+          dropdownMenu.classList.remove('show');
+        });
+        dropdownToggles.forEach(function (dropdownToggle) {
+          dropdownToggle.setAttribute('aria-expanded', 'false');
+        });
       });
-      dropdownToggles.forEach(function (dropdownToggle) {
-        dropdownToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
+    }
   }
 
   function initializeDropdownToggles() {

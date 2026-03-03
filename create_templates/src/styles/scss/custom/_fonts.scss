@@ -1,0 +1,33 @@
+@font-face {
+  font-family: DopisRegular;
+  src: url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisRegular.woff2") format("woff2"),
+    url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisRegular.woff") format("woff");
+}
+
+@font-face {
+  font-family: DopisBold;
+  src: url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisBold.woff2") format("woff2"),
+    url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: DopisCondensedRegular;
+  src: url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisCondensedRegular.woff2") format("woff2"),
+    url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisCondensedRegular.woff") format("woff");
+}
+
+@font-face {
+  font-family: DopisCondensedBold;
+  src: url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisCondensedBold.woff2") format("woff2"),
+    url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisCondensedBold.woff") format("woff");
+}
+
+@import url('https://use.typekit.net/beo2rid.css');
+
+// Noto Serif
+// If approved, since this is a Google font, we could download the files, or just reference this way.
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// Noto Sans Mono Space
+// This is not called for in the design, but wanted to include a mono-spaced font for possible future use
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400&display=swap');
