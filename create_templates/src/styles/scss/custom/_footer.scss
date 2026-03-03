@@ -2,15 +2,15 @@
 @use 'mixins' as *;
 
 footer {
-  background-color: var(--grey_background, $grey_background);
-  color: var(--lehigh_brown, $lehigh_brown);
+  background-color: var(--grey_background);
+  color: var(--lehigh_brown);
   font-size: .875rem;
-  padding: $space_two $spacer;
+  padding: var(--space_two) var(--spacer);
   position: relative;
   z-index: 2;
   
-  @media (min-width: $width_md) {
-    padding: $space_three 0;
+  @media (min-width: var(--width_md)) {
+    padding: var(--space_three) 0;
   }
   
   .footer-wrapper {
@@ -19,36 +19,33 @@ footer {
     align-items: center;
     margin: 0 auto;
 
-    @media (min-width: $width_md) {
-      padding: $space_half 0;
+    @media (min-width: var(--width_md)) {
+      padding: var(--space_half) 0;
       @include max-width;
     }
   
     a {
-      // color: var(--white, $white);
-      color: var(--lehigh_brown, $lehigh_brown);
+      color: var(--lehigh_brown);
       
       &:focus,
       &:hover {
-        // color: var(--white, $white);
-        color: var(--lehigh_brown, $lehigh_brown);
+        color: var(--lehigh_brown);
         text-decoration: none;
       }
 
       .extlink {
-        margin: 0 0 0 $space_quarter;
+        margin: 0 0 0 var(--space_quarter);
         font-size: .75rem;
       }
     }
 
     .logo {
-      // width: 200px;
-      margin: 0 0 $spacer_and_half 0;
+      margin: 0 0 var(--spacer_and_half) 0;
     }
 
     .copyright {
       text-align: center;
-      margin: 0 0 $spacer 0;
+      margin: 0 0 var(--spacer) 0;
     }
     
     .common_links {
@@ -60,14 +57,14 @@ footer {
         @include reset-list-nav;
 
         li {
-          margin: 0 $space_half;
+          margin: 0 var(--space_half);
 
           &:first-of-type {
-            margin: 0 $space_half 0 0;
+            margin: 0 var(--space_half) 0 0;
           }
 
           &:last-of-type {
-            margin: 0 0 0 $space_half;
+            margin: 0 0 0 var(--space_half);
           }
         }
       }
