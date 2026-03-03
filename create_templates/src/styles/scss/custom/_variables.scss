@@ -46,13 +46,6 @@
   // Border Radius
   --border_radius: 5px;
 
-  // Widths
-  --width_sm: 576px;
-  --width_md: 768px;
-  --width_lg: 992px;
-  --width_xl: 1200px;
-  --width_xxl: 1400px;
-
   // Breakpoints
   // --breakpoint_sm: 576px;
   // --breakpoint_md: 768px;
@@ -60,3 +53,10 @@
   // --breakpoint_xl: 1200px;
   // --breakpoint_xxl: 1400px;  
 }
+
+// Widths
+$width_sm: 576px;
+$width_md: 768px;
+$width_lg: 992px;
+$width_xl: 1200px;
+$width_xxl: 1400px;
