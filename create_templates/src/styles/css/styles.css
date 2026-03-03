@@ -120,25 +120,33 @@ meter {
 * use example =   @include clearfix
 **************/
 :root {
-  --accent_color: #ffe41e;
+  --accent_color: #FFE41E;
   --almost_black: #15181b;
   --beige: #fff6da;
   --black: #000;
   --dark_teal: #1d5970;
   --dark_teal_hover: #17475a;
-  --darkest_grey: #222;
   --grey_background: #e9ecef;
-  --gold: #ffe41e;
-  --lehigh_brown: #502d0e;
   --light_blue: #94d0e9;
   --light_grey: #f9fafb;
-  --navy: #273868;
-  --navy_dark: #040c21;
-  --peach: #fecb86;
   --slate: #6c757d;
   --success: #198754;
-  --white: #fff;
   --red: #FF0000;
+  --lehigh_brown: #502D0E;
+  --white: #FFFFFF;
+  --first_light: #F5E9AD;
+  --cherry_blossom: #FCD8D6;
+  --golden_hour: #FFE41E;
+  --autumn_dusk: #EBA033;
+  --mountaintop_mist: #D1E9E8;
+  --bethlehem_sky: #66b0ff;
+  --spring_violet: #5E74EE;
+  --night_sky: #12354C;
+  --patina_green: #AFEDC9;
+  --valley_green: #2CB357;
+  --serenity_garden: #1B3A24;
+  --darkest_grey: #212529;
+  --navy_dark: #040C21;
   --heading_sans_serif: DopisBold, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font_family_sans_serif: "inter-variable", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font_family_serif: meursault-variable, Georgia, Palatino, serif;
@@ -210,7 +218,7 @@ header .department_bar .department_wrapper {
   }
 }
 header .department_bar .department_wrapper a {
-  font-family: "Merriweather", Georgia, Palatino, serif;
+  font-family: var(--font_family_serif);
   font-weight: 300;
   color: var(--white);
   font-size: 0.875rem;
@@ -381,7 +389,7 @@ header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container 
   }
 }
 header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .header-search .search_box:focus, header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .header-search .search_box:focus-within {
-  border: 3px solid var(--peach);
+  border: 3px solid var(--autumn_dusk);
 }
 header .menu_bar .menu_wrapper .menu .main_nav .main_nav_wrapper .nav-container .header-search .btn {
   background-color: var(--success);
@@ -775,19 +783,16 @@ section .h3 {
     max-width: 1320px;
   }
 }
-.breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav {
-  margin: 0 0 var(--spacer) 0;
-}
 .breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav .breadcrumbs li {
   margin: 0 var(--spacer) 0 0;
   font-size: 0.875rem;
-  color: var(--navy);
+  color: var(--night_sky);
 }
 .breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav .breadcrumbs li::after {
   content: ">";
   display: inline-block;
   padding: 0 0 0 var(--spacer);
-  color: var(--navy);
+  color: var(--night_sky);
   font-weight: 600;
 }
 .breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav .breadcrumbs li:last-of-type {
@@ -799,13 +804,16 @@ section .h3 {
 }
 .breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav .breadcrumbs li a {
   font-size: inherit;
-  color: var(--navy);
+  color: var(--night_sky);
   text-decoration: underline;
   font-weight: 600;
 }
 .breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav .breadcrumbs li a:focus, .breadcrumb-section .breadcrumb-wrapper .breadcrumb-nav .breadcrumbs li a:hover {
   color: var(--navy_dark);
   text-decoration: none;
+}
+.breadcrumb-section .breadcrumb-wrapper h1, .breadcrumb-section .breadcrumb-wrapper .h1 {
+  margin: 0;
 }
 
 .btn {
@@ -837,18 +845,18 @@ section .h3 {
 }
 .btn.btn-gold {
   color: var(--darkest_grey);
-  background-color: var(--gold);
-  border: 1px solid var(--gold);
+  background-color: var(--golden_hour);
+  border: 1px solid var(--golden_hour);
 }
 .btn.btn-gold:focus, .btn.btn-gold:hover {
   color: var(--darkest_grey);
   background-color: var(--white);
-  border: 1px solid var(--gold);
+  border: 1px solid var(--golden_hour);
 }
 .btn.btn-navy {
   color: var(--white);
-  background-color: var(--navy);
-  border: 1px solid var(--navy);
+  background-color: var(--night_sky);
+  border: 1px solid var(--night_sky);
 }
 .btn.btn-navy:focus, .btn.btn-navy:hover {
   color: var(--white);
@@ -939,9 +947,8 @@ section .h3 {
   line-height: 1.5rem;
 }
 .card .card-body .card-date {
-  font-family: "proxima-nova", sans-serif;
+  font-family: var(--heading_sans_serif);
   font-size: 0.875rem;
-  font-weight: 600;
   text-transform: uppercase;
   color: var(--slate);
 }
@@ -1007,7 +1014,7 @@ section .h3 {
 }
 .people_directory-column .card-bio .card-img img,
 .people_directory-grid .card-bio .card-img img {
-  border: 2px solid var(--navy);
+  border: 2px solid var(--night_sky);
   background-color: var(--white);
   padding: 3px;
   width: 150px;
@@ -1078,7 +1085,7 @@ section .h3 {
 .people_directory-column .card-bio .card-body .card-metatags .meta i,
 .people_directory-grid .card-bio .card-body .card-metatags .meta i {
   margin: 0 var(--space_half) 0 0;
-  color: var(--navy);
+  color: var(--night_sky);
 }
 .people_directory-column .card-bio .card-body .card-metatags .meta:last-of-type,
 .people_directory-grid .card-bio .card-body .card-metatags .meta:last-of-type {
@@ -1165,9 +1172,9 @@ section .h3 {
   border-radius: 5px;
 }
 .stats .stats-wrapper .stat .stat-inner-wrapper .value {
-  background-color: var(--navy);
+  background-color: var(--night_sky);
   color: var(--white);
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--font_family_serif);
   font-size: 4rem;
 }
 .stats .stats-wrapper .stat .stat-inner-wrapper .value i {
@@ -1193,7 +1200,7 @@ blockquote .byline {
   display: block;
   font-size: 1rem;
   font-style: italic;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--font_family_serif);
 }
 blockquote .byline::before {
   display: inline-block;
@@ -13456,7 +13463,7 @@ main {
   }
 }
 main a {
-  color: var(--navy);
+  color: var(--night_sky);
   font-weight: 600;
   text-decoration: none;
 }

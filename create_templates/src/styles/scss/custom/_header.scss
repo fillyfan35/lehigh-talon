@@ -21,7 +21,7 @@ header {
       }
       
       a {
-        font-family: "Merriweather", Georgia, Palatino, serif;
+        font-family: var(--font_family_serif);
         font-weight: 300;
         color: var(--white);
         font-size: .875rem;
@@ -133,7 +133,7 @@ header {
 
                   &:focus,
                   &:focus-within {
-                    border: 3px solid var(--peach);
+                    border: 3px solid var(--autumn_dusk);
                   }
                 }
                 
