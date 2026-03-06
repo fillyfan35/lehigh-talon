@@ -254,6 +254,10 @@ header {
                         font-weight: bold;
                         padding: 0;
                         z-index: 3;
+
+                        &::after {
+                          display: none;
+                        }
                       }
 
                       &.dropdown-toggle {
