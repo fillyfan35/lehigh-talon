@@ -1,0 +1,72 @@
+:root {
+  /* Colors */
+  --accent_color: #FFE41E;
+  --almost_black: #15181b;
+  --beige: #fff6da;
+  --black: #000;
+  --dark_teal: #1d5970;
+  --dark_teal_hover: #17475a;
+  --grey_background: #e9ecef;
+  --light_blue: #94d0e9;
+  --light_grey: #f9fafb;
+  --slate: #6c757d;
+  --success: #198754;
+  --red: #FF0000;
+  
+  --lehigh_brown: #502D0E;
+  --white: #FFFFFF;
+  --first_light: #F5E9AD;
+  --cherry_blossom: #FCD8D6;
+  --golden_hour: #FFE41E;
+  --autumn_dusk: #EBA033;
+  --mountaintop_mist: #D1E9E8;
+  --bethlehem_sky: #66b0ff;
+  --spring_violet: #5E74EE;
+  --night_sky: #12354C;
+  --patina_green: #AFEDC9;
+  --valley_green: #2CB357;
+  --serenity_garden: #1B3A24;
+  --darkest_grey: #212529;
+  --navy_dark: #040C21;
+  --border_color: #D2D2D2;
+
+/* Fonts */
+  --heading_sans_serif: DopisBold, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font_family_sans_serif: "inter-variable", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font_family_serif: meursault-variable, Georgia, Palatino, serif;
+
+/* Spacing */
+  --spacer: 1rem;
+  --spacer_and_quarter: 1.25rem;
+  --spacer_and_half: 1.5rem;
+  --space_two: 2rem;
+  --space_two_and_half: 2.5rem;
+  --space_three: 3rem;
+  --space_four: 4rem;
+  --space_five: 5rem;
+  --space_six: 6rem;
+  --space_seven: 7rem;
+  --space_eight: 8rem;
+  --space_nine: 9rem;
+  --space_ten: 10rem;
+  --space_quarter: .25rem;
+  --space_half: .5rem;
+  --space_three_quarter: .75rem;
+
+/* Border Radius */
+  --border_radius: 5px;
+
+  /* Breakpoints
+  --breakpoint_sm: 576px;
+  --breakpoint_md: 768px;
+  --breakpoint_lg: 992px;
+  --breakpoint_xl: 1200px;
+  --breakpoint_xxl: 1400px;   */
+  
+  /* Widths */
+  --width_sm: 576px;
+  --width_md: 768px;
+  --width_lg: 992px;
+  --width_xl: 1200px;
+  --width_xxl: 1400px;
+}
