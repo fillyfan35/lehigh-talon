@@ -1,0 +1,31 @@
+@import url('https://use.typekit.net/beo2rid.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400&display=swap');
+
+/* Regular Weight */
+@font-face {
+  font-family: 'Dopis';
+  src: url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisRegular.woff2") format("woff2"),
+       url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold Weight - Same name, different weight */
+@font-face {
+  font-family: 'DopisBold';
+  src: url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisBold.woff2") format("woff2"),
+       url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Condensed Version (Keeping separate as it's a different visual style) */
+@font-face {
+  font-family: 'Dopis Condensed';
+  src: url("https://www.lehigh.edu/~inis/fonts/Web-Dopis-Family-Pack/DopisCondensedRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}

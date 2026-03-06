@@ -1,0 +1,106 @@
+@import '_reset.css';
+@import '_fonts.css';
+@import '_variables.css';
+
+footer {
+  background-color: var(--grey_background);
+  color: var(--lehigh_brown);
+  font-size: .875rem;
+  padding: var(--space_two) var(--spacer);
+  position: relative;
+  z-index: 2;
+  
+  @media (min-width: 768px) {
+    padding: var(--space_three) 0;
+  }
+  
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      padding: var(--space_half) 0;
+
+      @media (min-width: 576px) {
+        /* sm */
+        max-width: 540px;
+      }
+      @media (min-width: 768px) {
+        /* md */
+        max-width: 720px;
+      }
+      @media (min-width: 992px) {
+        /* lg */
+        max-width: 960px;
+      }
+      @media (min-width: 1200px) {
+        /* xl */
+        max-width: 1140px;
+      }
+      @media (min-width: 1400px) {
+        /* xxl */
+        max-width: 1320px;
+      }
+    }
+  
+    a {
+      color: var(--lehigh_brown);
+      
+      &:focus,
+      &:hover {
+        color: var(--lehigh_brown);
+        text-decoration: none;
+      }
+
+      .extlink {
+        margin: 0 0 0 var(--space_quarter);
+        font-size: .75rem;
+      }
+    }
+
+    .logo {
+      margin: 0 0 var(--spacer_and_half) 0;
+    }
+
+    .copyright {
+      text-align: center;
+      margin: 0 0 var(--spacer) 0;
+    }
+    
+    .common_links {
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          margin: 0 var(--space_half);
+
+          &:first-of-type {
+            margin: 0 var(--space_half) 0 0;
+          }
+
+          &:last-of-type {
+            margin: 0 0 0 var(--space_half);
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-image {
+  position: relative;
+  background: linear-gradient(to top, rgba(233, 236, 239, 1) 0%, rgba(255, 255, 255, 0) 70%), url('../../../img/LU_Panorama.jpg');
+  background-size: cover;
+  background-position: center bottom 34%;
+  aspect-ratio: 5 / 1;
+  bottom: -1px;
+  z-index: 1;
+}
