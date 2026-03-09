@@ -34,8 +34,10 @@ body {
     text-decoration: none;
   }
 
-  &:focus {
+  &:focus,
+  &:focus-within {
     transform: translateY(0%);
+    outline: 3px solid var(--autumn_dusk);
   }
 }
 
