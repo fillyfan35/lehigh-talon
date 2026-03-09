@@ -89,7 +89,7 @@ section {
       }
     }
     
-    h1 {
+    .page-title {
       margin: 0;
     }
   }
@@ -173,7 +173,6 @@ section {
 
   .mobile_hero_img {
     display: block;
-    /* margin: 0 0 -5px 0; */
 
     @media (min-width: 768px) {
       display: none;
@@ -196,7 +195,8 @@ section {
       bottom: 2%;
     }
 
-    h1 {
+    .hero_title {
+      font-family: var(--font_family_serif);
       font-size: 2rem;
     }
   }
@@ -243,8 +243,7 @@ section {
 
   &:focus-within,
   &:hover {
-    h2,
-    h3 {
+    .card-title {
       &::after {
         position: relative;
         width: 100%;
