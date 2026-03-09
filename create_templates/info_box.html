@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <a href="#main-content" class="focusable skip-link">Skip to main content</a>
+  <a href="#main-content" class="focusable skip-link" tabindex="1">Skip to main content</a>
   <header class="sticky-top bg-white">
     <!--UCPA Emergency Banner Alert-->
     <div id="emergencyalert">
@@ -28,7 +28,7 @@
     <div class="menu_bar">
       <div class="menu_wrapper">
         <div class="menu navbar">
-          <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse"
+          <button class="navbar-toggler nav-toggle" tabindex="2" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="bar"></span>
@@ -169,12 +169,12 @@
           </div>
         </div><!-- end menu -->
         <div class="logo">
-          <img src="src/img/lehigh_logo.png" alt="Lehigh University logo" />
+          <a href="#" tabindex="3"><img src="src/img/lehigh_logo.png" alt="Lehigh University logo" /></a>
         </div><!-- end logo -->
         <div class="search">
-          <div class="fa-solid fa-magnifying-glass search_btn navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation"><span class="sr-only">Search</span></div>
+          <div class="fa-solid fa-magnifying-glass search_btn navbar-toggler" tabindex="4" role="button" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation"><span class="sr-only">Search</span></div>
         </div><!-- end search -->
       </div>
     </div>
@@ -194,7 +194,7 @@
           <li class="active">info boxes page</li>
         </ul>
       </nav>
-      <h1>Information Box Options</h1>
+      <h1 class="page-title">Information Box Options</h1>
     </div><!-- end breadcrumb-wrapper -->
   </section>
 

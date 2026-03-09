@@ -106,8 +106,11 @@ header {
           padding: unset;
           transition: all 0.35s ease;
 
-          &:focus {
+          &:focus,
+          &:focus-within {
             box-shadow: none;
+            outline: 3px solid var(--autumn_dusk);
+            outline-offset: 4px;
           }
           
           @media (min-width: 768px) {
@@ -465,6 +468,14 @@ header {
         display: flex;
         justify-content: center;
 
+        a {
+          &:focus,
+          &:focus-within {
+            outline: 3px solid var(--autumn_dusk);
+            outline-offset: 4px;
+          }
+        }
+
         img {
           height: 35px;
           transition: all 0.35s ease;
@@ -487,6 +498,12 @@ header {
           
           @media (min-width: 768px) {
             font-size: 36px;
+          }
+
+          &:focus,
+          &:focus-within {
+            outline: 3px solid var(--autumn_dusk);
+            outline-offset: 4px;
           }
         }
       }
