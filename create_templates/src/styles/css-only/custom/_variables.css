@@ -33,7 +33,7 @@
 /* Fonts */
   --heading_sans_serif: DopisBold, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font_family_sans_serif: "inter-variable", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font_family_serif: meursault-variable, Georgia, Palatino, serif;
+  --font_family_serif: "meursault-variable", Georgia, Palatino, serif;
 
 /* Spacing */
   --spacer: 1rem;
