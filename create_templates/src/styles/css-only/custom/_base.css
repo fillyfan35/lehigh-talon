@@ -9,7 +9,7 @@
 }
 
 body {
-	color: var(--darkest_grey);
+	color: var(--lt-color-darkest_grey);
   font-family: var(--font_family_sans_serif);
   font-size: 16px;
   margin: 0;
@@ -20,8 +20,8 @@ body {
 }
 
 .skip-link {
-  background-color: var(--white);
-  color: var(--lehigh_brown);
+  background-color: var(--lt-color-white);
+  color: var(--lt-color-lehigh_brown);
   padding: var(--space_half);
   left: 50%;
   position: absolute;
@@ -30,14 +30,14 @@ body {
   z-index: 1021;
   
   &:hover {
-    color: var(--lehigh_brown);
+    color: var(--lt-color-lehigh_brown);
     text-decoration: none;
   }
 
   &:focus,
   &:focus-within {
     transform: translateY(0%);
-    outline: 3px solid var(--autumn_dusk);
+    outline: 3px solid var(--lt-color-autumn_dusk);
   }
 }
 
@@ -126,7 +126,7 @@ h3 {
 
   &::after {
     position: relative;
-    background-color: var(--accent_color);
+    background-color: var(--lt-color-accent_color);
     content: "";
     display: block;
     height: 0.125rem;
@@ -166,7 +166,7 @@ main {
   }
 
   a {
-    color: var(--night_sky);
+    color: var(--lt-color-night_sky);
     font-weight: 600;
     text-decoration: none;
 

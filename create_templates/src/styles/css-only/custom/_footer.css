@@ -3,8 +3,8 @@
 @import '_variables.css';
 
 footer {
-  background-color: var(--grey_background);
-  color: var(--lehigh_brown);
+  background-color: var(--lt-color-grey_background);
+  color: var(--lt-color-lehigh_brown);
   font-size: .875rem;
   padding: var(--space_two) var(--spacer);
   position: relative;
@@ -46,11 +46,11 @@ footer {
     }
   
     a {
-      color: var(--lehigh_brown);
+      color: var(--lt-color-lehigh_brown);
       
       &:focus,
       &:hover {
-        color: var(--lehigh_brown);
+        color: var(--lt-color-lehigh_brown);
         text-decoration: none;
       }
 
