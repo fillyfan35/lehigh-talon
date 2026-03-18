@@ -1,36 +1,36 @@
 :root {
   /* Colors */
-  --accent_color: #FFE41E;
   --almost_black: #15181b;
-  --beige: #fff6da;
-  --black: #000;
-  --dark_teal: #1d5970;
-  --dark_teal_hover: #17475a;
-  --grey_background: #e9ecef;
-  --light_blue: #94d0e9;
   --light_grey: #f9fafb;
-  --slate: #6c757d;
-  --success: #198754;
   --red: #FF0000;
   
-  --lehigh_brown: #502D0E;
-  --white: #FFFFFF;
-  --first_light: #F5E9AD;
-  --cherry_blossom: #FCD8D6;
-  --golden_hour: #FFE41E;
-  --autumn_dusk: #EBA033;
-  --mountaintop_mist: #D1E9E8;
-  --bethlehem_sky: #66b0ff;
-  --spring_violet: #5E74EE;
-  --night_sky: #12354C;
-  --patina_green: #AFEDC9;
-  --valley_green: #2CB357;
-  --serenity_garden: #1B3A24;
-  --darkest_grey: #212529;
-  --navy_dark: #040C21;
-  --border_color: #D2D2D2;
+  --lt-color-accent_color: #FFE41E;
+  --lt-color-lehigh_brown: #502D0E;
+  --lt-color-white: #FFFFFF;
+  --lt-color-first_light: #F5E9AD;
+  --lt-color-cherry_blossom: #FCD8D6;
+  --lt-color-golden_hour: #FFE41E;
+  --lt-color-autumn_dusk: #EBA033;
+  --lt-color-mountaintop_mist: #D1E9E8;
+  --lt-color-bethlehem_sky: #66b0ff;
+  --lt-color-spring_violet: #5E74EE;
+  --lt-color-night_sky: #12354C;
+  --lt-color-patina_green: #AFEDC9;
+  --lt-color-valley_green: #2CB357;
+  --lt-color-serenity_garden: #1B3A24;
+  --lt-color-darkest_grey: #212529;
+  --lt-color-navy_dark: #040C21;
+  --lt-color-border_color: #D2D2D2;
+  --lt-color-beige: #FFF6DA;
+  --lt-color-black: #000000;
+  --lt-color-dark_teal: #1D5970;
+  --lt-color-dark_teal_hover: #17475A;
+  --lt-color-grey_background: #E9ECEF;
+  --lt-color-light_blue: #94D0E9;
+  --lt-color-slate: #6C757D;
+  --lt-color-success: #198754;
 
-/* Fonts */
+  /* Fonts */
   --heading_sans_serif: DopisBold, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font_family_sans_serif: "inter-variable", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font_family_serif: "meursault-variable", Georgia, Palatino, serif;

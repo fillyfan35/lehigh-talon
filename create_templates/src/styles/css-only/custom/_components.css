@@ -17,7 +17,7 @@ section {
 
 /* breadcrumbs */
 .breadcrumb-section {
-  background-color: var(--beige);
+  background-color: var(--lt-color-beige);
   width: 100%;
 
   .breadcrumb-wrapper {
@@ -54,13 +54,13 @@ section {
         li {
           margin: 0 var(--spacer) 0 0;
           font-size: .875rem;
-          color: var(--night_sky);
+          color: var(--lt-color-night_sky);
           
           &::after {
             content: '>';
             display: inline-block;
             padding: 0 0 0 var(--spacer);
-            color: var(--night_sky);
+            color: var(--lt-color-night_sky);
             font-weight: 600;
           }
 
@@ -75,13 +75,13 @@ section {
 
           a {
             font-size: inherit;
-            color: var(--night_sky);
+            color: var(--lt-color-night_sky);
             text-decoration: underline;
             font-weight: 600;
 
             &:focus,
             &:hover {
-              color: var(--navy_dark);
+              color: var(--lt-color-navy_dark);
               text-decoration: none;
             }
           }
@@ -109,41 +109,41 @@ section {
   }
 
   &.btn-dark_teal {
-    color: var(--white);
-    background-color: var(--dark_teal);
-    border: 1px solid var(--dark_teal);
+    color: var(--lt-color-white);
+    background-color: var(--lt-color-dark_teal);
+    border: 1px solid var(--lt-color-dark_teal);
     
     &:focus,
     &:hover {
-      color: var(--white);
-      background-color: var(--dark_teal_hover);
-      border: 1px solid var(--dark_teal_hover);
+      color: var(--lt-color-white);
+      background-color: var(--lt-color-dark_teal_hover);
+      border: 1px solid var(--lt-color-dark_teal_hover);
     }
   }
 
   &.btn-gold {
-    color: var(--darkest_grey);
-    background-color: var(--golden_hour);
-    border: 1px solid var(--golden_hour);
+    color: var(--lt-color-darkest_grey);
+    background-color: var(--lt-color-golden_hour);
+    border: 1px solid var(--lt-color-golden_hour);
     
     &:focus,
     &:hover {
-      color: var(--darkest_grey);
-      background-color: var(--white);
-      border: 1px solid var(--golden_hour);
+      color: var(--lt-color-darkest_grey);
+      background-color: var(--lt-color-white);
+      border: 1px solid var(--lt-color-golden_hour);
     }
   }
 
   &.btn-navy {
-    color: var(--white);
-    background-color: var(--night_sky);
-    border: 1px solid var(--night_sky);
+    color: var(--lt-color-white);
+    background-color: var(--lt-color-night_sky);
+    border: 1px solid var(--lt-color-night_sky);
     
     &:focus,
     &:hover {
-      color: var(--white);
-      background-color: var(--navy_dark);
-      border: 1px solid var(--navy_dark);
+      color: var(--lt-color-white);
+      background-color: var(--lt-color-navy_dark);
+      border: 1px solid var(--lt-color-navy_dark);
     }
   }
 }
@@ -185,8 +185,8 @@ section {
 
   .hero_content {
     background: linear-gradient(to right,rgba(0,0,0,.8) 0,rgba(0,0,0,.6) 100%);
-    color: var(--white);
-    border-left: var(--space_half) solid var(--accent_color);
+    color: var(--lt-color-white);
+    border-left: var(--space_half) solid var(--lt-color-accent_color);
     padding: var(--space_three_quarter);
     
     @media (min-width: 768px) {
@@ -211,7 +211,7 @@ section {
 
 .card {
   overflow: hidden;
-  border: 1px solid var(--border_color);
+  border: 1px solid var(--lt-color-border_color);
   border-radius: var(--border_radius);
 
   img {
@@ -237,7 +237,7 @@ section {
       font-family: var(--heading_sans_serif);
       font-size: .875rem;
       text-transform: uppercase;
-      color: var(--slate);
+      color: var(--lt-color-slate);
     }
   }
 
@@ -305,8 +305,8 @@ section {
       }
       
       img {
-        border: 2px solid var(--night_sky);
-        background-color: var(--white);
+        border: 2px solid var(--lt-color-night_sky);
+        background-color: var(--lt-color-white);
         padding: 3px;
         width: 150px;
       }
@@ -367,7 +367,7 @@ section {
 
           i {
             margin: 0 var(--space_half) 0 0;
-            color: var(--night_sky);
+            color: var(--lt-color-night_sky);
           }
 
           &:last-of-type {
@@ -382,7 +382,7 @@ section {
 .people_directory-column {
   .card-bio {
     &:nth-of-type(even) {
-      background-color: var(--grey_background);
+      background-color: var(--lt-color-grey_background);
     }
   }
 }
@@ -470,8 +470,8 @@ section {
         }
         
         .value {
-          background-color: var(--night_sky);
-          color: var(--white);
+          background-color: var(--lt-color-night_sky);
+          color: var(--lt-color-white);
           font-family: var(--font_family_serif);
           font-size: 4rem;
 
@@ -481,7 +481,7 @@ section {
         }
         
         .detail {
-          background-color: var(--light_blue);
+          background-color: var(--lt-color-light_blue);
           transform: rotateY(180deg);
         }
       }
@@ -498,10 +498,10 @@ section {
 blockquote {
   width: 100%;
   font-size: 1.5rem;
-  color: var(--black);
+  color: var(--lt-color-black);
   padding: 0 var(--spacer_and_half);
   margin: var(--spacer) 0;
-  border-left: 3px solid var(--accent_color);
+  border-left: 3px solid var(--lt-color-accent_color);
 
   .byline {
     display: block;
